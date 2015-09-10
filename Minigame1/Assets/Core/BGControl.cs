@@ -18,8 +18,9 @@ public class BGControl : MonoBehaviour {
 	
 	}
 
-    void OnMouseDown()
+    void OnMouseDrag()
     {
+        Debug.Log(Input.mousePosition);
 
         if (Input.mousePosition.x >= Elephant.transform.position.x)
         {

@@ -74,7 +74,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  control: 0
+  spawnInLanes: 1
 --- !u!135 &13583460
 SphereCollider:
   m_ObjectHideFlags: 1
