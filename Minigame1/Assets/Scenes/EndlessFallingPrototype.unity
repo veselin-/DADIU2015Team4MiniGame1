@@ -522,7 +522,7 @@ GameObject:
   - 65: {fileID: 1511423590}
   - 23: {fileID: 1511423589}
   - 114: {fileID: 1511423593}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
