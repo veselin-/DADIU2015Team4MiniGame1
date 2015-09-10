@@ -20,6 +20,19 @@ public class BGControl : MonoBehaviour {
 
     void OnMouseDrag()
     {
+
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit = new RaycastHit();
+
+
+        if (Physics.Raycast(ray, out hit, 100, 8))
+        {
+
+
+
+        }
+            
+
         Debug.Log(Input.mousePosition);
 
         if (Input.mousePosition.x >= Elephant.transform.position.x)
