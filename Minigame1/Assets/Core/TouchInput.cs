@@ -26,6 +26,12 @@ namespace Assets.Core
                 var span = (now - _lastInputDown).Milliseconds;
                 comboHandler.DoPress(span > MsBeforeLongPress ? PressType.Long : PressType.Short);
             }
+
+            // TODO PJT: This is just added for debugging
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                comboHandler.StartCombo();
+            }
         }
     }
 }
