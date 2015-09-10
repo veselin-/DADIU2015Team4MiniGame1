@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using UnityEngine;
 
 namespace Assets.Core
@@ -28,7 +29,7 @@ namespace Assets.Core
             }
 
             // TODO PJT: This is just added for debugging
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.Space) || Input.touches.Length > 2)
             {
                 comboHandler.StartCombo();
             }

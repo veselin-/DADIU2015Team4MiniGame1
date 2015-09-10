@@ -41,6 +41,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 0}
+  BackGround: {fileID: 0}
 --- !u!114 &11489440
 MonoBehaviour:
   m_ObjectHideFlags: 1

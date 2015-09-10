@@ -33,12 +33,14 @@ namespace Assets.Core
 
                 if (_currentPresses.Count != _currentGoal.Count) return;
                 _playerAnimationControl.DidPose(_goalId);
+                ScoreSystem.poseComplete = true;
                 _goalId = -1;
                 control.EnableMovement();
             }
             else
             {
                 _playerAnimationControl.FailedPose();
+                ScoreSystem.poseFail = true;
                 _goalId = -1;
                 control.EnableMovement();
             }
