@@ -3,7 +3,7 @@ using System.Collections;
 
 public class cubeDeath : MonoBehaviour {
 
-    public bool control = true;
+    public bool enableControl = true;
 
     public float speed = 5f;
 
@@ -14,7 +14,7 @@ public class cubeDeath : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (control) {
+        if (enableControl) {
             if (Input.GetKey("left"))
             {
                 transform.Translate(Vector3.left * Time.deltaTime * speed);
@@ -26,14 +26,11 @@ public class cubeDeath : MonoBehaviour {
             }
         }
 
-        if (Input.GetButtonDown("Fire1"))
-        {
-           
-        }
-
 
     }
 
+
+    //Restart the level when you hit an object
     void OnTriggerEnter(Collider coll)
     {
        // Debug.Log("HIT");
