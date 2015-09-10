@@ -23,7 +23,7 @@ public class obstacleMovement : MonoBehaviour {
 
         if (transform.position.y > 5f)
         {
-            Respawn();
+            //Respawn();
         }
 
 
