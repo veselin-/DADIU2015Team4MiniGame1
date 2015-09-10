@@ -25,8 +25,7 @@ namespace Assets.Characters.Elephant.Scripts
                 _material.color = Color.white;
             }
         }
-
-
+        
         public void DidPose(int animationId)
         {
             _material.color = Color.green;
@@ -41,12 +40,18 @@ namespace Assets.Characters.Elephant.Scripts
 
         public void ReadyToPose()
         {
+            CancelReturnToNeutral();
             _material.color = Color.yellow;
         }
 
         public void ReturnToNeutral()
         {
             _goBackToNeutral = DateTime.Now.AddSeconds(2);
+        }
+
+        public void CancelReturnToNeutral()
+        {
+            _goBackToNeutral = null;
         }
 
     }
