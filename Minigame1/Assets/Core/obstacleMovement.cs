@@ -5,15 +5,19 @@ public class obstacleMovement : MonoBehaviour {
 
     public float speed = 5f;
 
-    public bool control = true;
+    public bool spawnInLanes = true;
+
+    GameObject[] spawns;
 
 	// Use this for initialization
 	void Start () {
-	
+
+        spawns = GameObject.FindGameObjectsWithTag ("SpawnPoint");
+
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
 
         transform.Translate(Vector3.up * Time.deltaTime * speed);
 
@@ -21,31 +25,21 @@ public class obstacleMovement : MonoBehaviour {
         {
             Respawn();
         }
-
-        if (control) { 
-
-        if (Input.GetKey("right"))
-        {
-            transform.Translate(Vector3.left * Time.deltaTime * speed);
-        }
-
-        if (Input.GetKey("left"))
-        {
-            transform.Translate(Vector3.right * Time.deltaTime * speed);
-        }
-
-
-}
-
-
     }
 
 
     void Respawn()
     {
 
-        transform.position = new Vector3(Random.Range(-3f, 3f), -5, 0);
+        if (spawnInLanes)
+        {
 
+            transform.position = spawns[Random.Range(0, spawns.Length)].transform.position;
+
+        }
+        else { 
+        transform.position = new Vector3(Random.Range(-3f, 3f), -5, 0);
+        }
     }
 
 }

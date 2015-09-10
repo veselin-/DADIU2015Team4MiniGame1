@@ -5,36 +5,60 @@ public class BGControl : MonoBehaviour {
 
     public GameObject Elephant;
 
-    public float speed = 5f;
+    public float Speed = 5f;
 
-	// Use this for initialization
+    private float _destination = 0f;
+    private bool _movementEnbaled = true;
+
+    // Use this for initialization
 	void Start () {
 	
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
 
-	
-	}
+        if (_destination >= Elephant.transform.position.x && _movementEnbaled)
+        {
+
+            Elephant.transform.Translate(Vector3.right * Time.deltaTime * Speed);
+
+        }
+
+        if (_destination < Elephant.transform.position.x && _movementEnbaled)
+        {
+
+            Elephant.transform.Translate(Vector3.left * Time.deltaTime * Speed);
+
+        }
+
+
+    }
 
     void OnMouseDown()
     {
 
-        if (Input.mousePosition.x >= Elephant.transform.position.x)
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit = new RaycastHit();
+
+
+        if (Physics.Raycast(ray, out hit, 100))
         {
 
-            Elephant.transform.Translate(Vector3.right * Time.deltaTime * speed);
+            _destination = hit.point.x;
 
         }
+            
+    }
 
-        if (Input.mousePosition.x < Elephant.transform.position.x)
-        {
+    public void DisableMovement()
+    {
+        _movementEnbaled = false;
+    }
 
-            Elephant.transform.Translate(Vector3.left * Time.deltaTime * speed);
-
-        }
-
+    public void EnableMovement()
+    {
+        _movementEnbaled = true;
     }
 
 }
