@@ -22,11 +22,14 @@ namespace Assets.Core
 		private bool _isCalledInThisFrame;
 		
 		private bool _isFirstPose = true;
-		
+
+		public Text HoldCounterText;
+
 		void Start()
 		{
 			_playerAnimationControl = Player.GetComponent<AnimationControl>();
 			_control = BackGround.GetComponent<BGControl>();
+			HoldCounterText.gameObject.SetActive (false);
 		}
 		
 		public void DoPress(PressType press)
@@ -62,7 +65,7 @@ namespace Assets.Core
 		
 		public void StartCombo()
 		{
-			
+			HoldCounterText.gameObject.SetActive (true);
 			_isCalledInThisFrame = true;
 			
 			// Reset current presses 
@@ -125,6 +128,7 @@ namespace Assets.Core
 			_control.EnableMovement();
 			GoalText.text = "";
 			PoseButton.SetActive(true);
+			HoldCounterText.gameObject.SetActive (false);
 		}
 	}
 	
