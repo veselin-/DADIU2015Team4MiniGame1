@@ -29,8 +29,8 @@ public class LanguageManager : ScriptableObject
 
     void Awake()
     {
-        languagePath = Application.dataPath + "/Core/Languages/";
-        CollectLanguages();
+        //languagePath = Application.dataPath + "/Core/Languages/";
+        //CollectLanguages();
     }
 
     void OnDestroy()
@@ -39,6 +39,7 @@ public class LanguageManager : ScriptableObject
         root = null;
     }
 
+	/*
     private void CollectLanguages()
     {
         try
@@ -58,7 +59,9 @@ public class LanguageManager : ScriptableObject
             Debug.Log(e.Message);
         }
     }
+	*/
 
+	/*
     private string GetLanguageFile(string language)
     {
         foreach (string langGo in languageFiles)
@@ -70,17 +73,19 @@ public class LanguageManager : ScriptableObject
         }
         return string.Empty;
     }
+	*/
 
     public void LoadLanguage(string language)
     {
         try
         {
-            string loadFile = GetLanguageFile(language);
+			TextAsset textAsset = (TextAsset)Resources.Load(language, typeof(TextAsset));
+            //string loadFile = GetLanguageFile(language);
             mainDoc = new XmlDocument();
-            StreamReader reader = new StreamReader(loadFile);
-            mainDoc.Load(reader);
+            //StreamReader reader = new StreamReader(loadFile);
+            mainDoc.LoadXml(textAsset.text);
             root = mainDoc.DocumentElement;
-            reader.Close();
+            //reader.Close();
         }
         catch (System.Exception e)
         {
