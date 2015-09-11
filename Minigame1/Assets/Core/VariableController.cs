@@ -11,6 +11,8 @@ public class VariableController : MonoBehaviour {
     public bool UseLanes = true;
 
     public float ObstacleDistance = 2f;
+    public bool ObstacleIsEnabled = true;
+
 
     // Use this for initialization
     void Awake () {
@@ -21,6 +23,7 @@ public class VariableController : MonoBehaviour {
         obstacleMovement.speed = ObstacleSpeed;
         obstacleMovement.spawnInLanes = UseLanes;
         obstacleMovement.scale = ObstacleScale;
+        obstacleMovement.isEnabled = ObstacleIsEnabled;
 
 	}
 	

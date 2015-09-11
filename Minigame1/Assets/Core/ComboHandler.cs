@@ -36,9 +36,9 @@ namespace Assets.Core
 				_isCalledInThisFrame = false;
 				return;
 			}
-
+			
 			Debug.Log (_goalId);
-
+			
 			if (_goalId < 0) return;
 			
 			Debug.Log("Pressed: " + press);

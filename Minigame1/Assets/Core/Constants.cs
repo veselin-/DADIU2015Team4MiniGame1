@@ -14,12 +14,14 @@ namespace Assets.Core
             new List<PressType> {PressType.Short, PressType.Short, PressType.Short},
             new List<PressType> {PressType.Short, PressType.Short, PressType.Long},
             new List<PressType> {PressType.Short, PressType.Long, PressType.Long},
+			new List<PressType> {PressType.Short, PressType.Long, PressType.Long},
 			new List<PressType> {PressType.Short, PressType.Long, PressType.Short},
 			new List<PressType> {PressType.Long, PressType.Short, PressType.Short},
 			new List<PressType> {PressType.Long, PressType.Long, PressType.Short},
 			new List<PressType> {PressType.Long, PressType.Long, PressType.Long},
 			new List<PressType> {PressType.Long, PressType.Short, PressType.Long}
-	     };
+
+        };
 
     }
 }

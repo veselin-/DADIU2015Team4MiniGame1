@@ -9,10 +9,17 @@ public class obstacleMovement : MonoBehaviour {
 
     public static float scale = 1f;
 
+    public static bool isEnabled = true;
+
     GameObject[] spawns;
 
 	// Use this for initialization
 	void Start () {
+
+
+        gameObject.SetActive(isEnabled);
+
+
 
         spawns = GameObject.FindGameObjectsWithTag("SpawnPoint");
 

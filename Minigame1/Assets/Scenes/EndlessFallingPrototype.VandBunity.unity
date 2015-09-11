@@ -307,13 +307,10 @@ MonoBehaviour:
   scoreText: {fileID: 733284750}
   comboText: {fileID: 930112214}
   lifeText: {fileID: 1717291752}
-  points: 0
   pointsPose: 50
   pointsFail: 25
-  comboCount: 0
   lifes: 0
-  combo: 0
-  comboTimeDown: 20
+  comboReset: 20
 --- !u!114 &236915896 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11474912, guid: 9d6cd4a9298736e4cac125dc7881653d,
@@ -1028,11 +1025,7 @@ Prefab:
       objectReference: {fileID: 222847286}
     - target: {fileID: 11489440, guid: 9d6cd4a9298736e4cac125dc7881653d, type: 2}
       propertyPath: SecondsBeforeLongPress
-      value: .100000001
-      objectReference: {fileID: 0}
-    - target: {fileID: 11489440, guid: 9d6cd4a9298736e4cac125dc7881653d, type: 2}
-      propertyPath: SecToLongPress
-      value: .300000012
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9d6cd4a9298736e4cac125dc7881653d, type: 2}

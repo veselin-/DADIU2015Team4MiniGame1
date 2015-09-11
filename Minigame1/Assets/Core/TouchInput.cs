@@ -7,16 +7,16 @@ namespace Assets.Core
 {
     public class TouchInput : MonoBehaviour
     {
-        public float secToLongPress;
+		public float secToLongPress = 0.3f;
 		public Text HoldCounterText;
 
         private float _lastInputDown;
         private ComboHandler comboHandler;
 		private float _timeCounter;
-		//private float _startTime;
 
 		private bool _firstClick = true;
 		private bool _longPressDone = false;
+		private float _startTime;
 
 		private float span;
 
@@ -29,31 +29,33 @@ namespace Assets.Core
         void Update () {
 
 
-            if (Input.GetMouseButton(0))
-            {
-				float _startTime = 0;
-				if(_firstClick)
-				{
+            if (Input.GetMouseButton (0)) {
+
+				if (_firstClick) {
 					_startTime = Time.time;
 					_firstClick = false;
 				}
-				if(!_longPressDone)
-				{
-				_timeCounter += Time.deltaTime;
-				HoldCounterText.text = (_timeCounter - _startTime).ToString();
-				span = (_timeCounter - _startTime);
-				if(span > secToLongPress)
-				{
-					comboHandler.DoPress(PressType.Long);
-					_longPressDone = true;
-					Debug.Log("LONG PRESS");
 
-				}
+				if (!_longPressDone)
+				{
+					_timeCounter = Time.time;
+					HoldCounterText.text = (_timeCounter - _startTime).ToString();
+										
+					span = (_timeCounter - _startTime);
+					Debug.Log (span);
+					if (span > secToLongPress) {
+						comboHandler.DoPress (PressType.Long);
+						_longPressDone = true;
+						Debug.Log ("LONG PRESS");
 
+					}
 				}
+			}
+
+
                // _lastInputDown = DateTime.Now;
 				//longPressDone = true;
-            } 
+             
 
 			if (Input.GetMouseButtonUp(0))
             {
@@ -66,6 +68,7 @@ namespace Assets.Core
 				_firstClick = true;
 				_longPressDone = false;
 				_timeCounter = 0;
+
 				HoldCounterText.text = string.Empty;
 
 
@@ -88,10 +91,12 @@ namespace Assets.Core
 
 	
             // TODO PJT: This is just added for debugging
-            if (Input.GetKeyDown(KeyCode.Space) || Input.touches.Length > 2)
+			/*
+			if (Input.GetKeyDown(KeyCode.Space) || Input.touches.Length > 2)
             {
                 comboHandler.StartCombo();
             }
+            */
         }
     }
 }
