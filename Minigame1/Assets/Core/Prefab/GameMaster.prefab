@@ -10,6 +10,8 @@ GameObject:
   - 4: {fileID: 430962}
   - 114: {fileID: 11474912}
   - 114: {fileID: 11489440}
+  - 114: {fileID: 11443358}
+  - 114: {fileID: 11432962}
   m_Layer: 0
   m_Name: GameMaster
   m_TagString: GameMaster
@@ -29,6 +31,43 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!114 &11432962
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 140898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1890a5107dd07f54694f1da89b95005f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ElephantStrafeSpeed: 5.86999989
+  BackgroundScrollingSpeed: 1.38
+  ForegroundScrollingSpeed: 71.3300018
+  ObstacleScale: 1.04999995
+  ObstacleSpeed: 3.3499999
+  UseLanes: 1
+  LaneWidth: 2
+  ObstacleIsEnabled: 1
+--- !u!114 &11443358
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 140898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24fc86ea16da5f048b434beb78e59c80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreText: {fileID: 0}
+  comboText: {fileID: 0}
+  lifeText: {fileID: 0}
+  pointsPose: 50
+  pointsFail: 25
+  lifes: 0
+  comboReset: 20
 --- !u!114 &11474912
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -42,6 +81,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 0}
   BackGround: {fileID: 0}
+  TapTapTapFrequency: 50
+  GoalText: {fileID: 0}
+  PoseButton: {fileID: 0}
+  HoldCounterText: {fileID: 0}
 --- !u!114 &11489440
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -53,7 +96,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e73f7875a30ff3d48a4e2dd07440a6ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MsBeforeLongPress: 500
+  secToLongPress: .300000012
+  HoldCounterText: {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

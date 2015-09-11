@@ -14,7 +14,7 @@ public class ScoreSystem : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
-        lifes = 5;
+        //lifes = 5;
         comboCount = 1;
         comboTimeDown = comboReset;
         scoreText.text = "Score: " + points;
@@ -30,6 +30,7 @@ public class ScoreSystem : MonoBehaviour {
         {
             comboTime();
         }
+        lifes = cubeDeath.loseLife;
     }
 
     void pointSystem()
@@ -48,7 +49,6 @@ public class ScoreSystem : MonoBehaviour {
             }
             poseComplete = false;
             timeToCombo = true;
-            Debug.Log("IM HERE NOW PLEASE");
         }
         else if (poseFail)
         {
@@ -67,7 +67,6 @@ public class ScoreSystem : MonoBehaviour {
     {
         comboTimeDown -= Time.deltaTime;
         comboText.text = "ComboTime: " + comboTimeDown.ToString("f2");
-        Debug.Log("IM HERE NOW PLEASE22222222222222222");
         if (comboTimeDown < 0)
             {
             comboText.text = "ComboTime: No combo";
