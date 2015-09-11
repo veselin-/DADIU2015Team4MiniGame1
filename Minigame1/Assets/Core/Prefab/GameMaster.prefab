@@ -43,8 +43,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ElephantStrafeSpeed: 5.86999989
-  BackgroundScrollingSpeed: 14
-  ForegroundScrollingSpeed: 1
+  BackgroundScrollingSpeed: 1.38
+  ForegroundScrollingSpeed: 71.3300018
   ObstacleScale: 1.04999995
   ObstacleSpeed: 3.3499999
   UseLanes: 1
