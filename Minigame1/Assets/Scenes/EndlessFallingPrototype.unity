@@ -252,6 +252,19 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1112944354}
   m_Script: {fileID: 11500000, guid: 4f28e15f01bc43c4794293379c167a18, type: 3}
+--- !u!114 &236915899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 236915894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1890a5107dd07f54694f1da89b95005f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ElephantStrafeSpeed: 4.36999989
+  BackgroundScrollingSpeed: 4.30000019
 --- !u!1 &501214084
 GameObject:
   m_ObjectHideFlags: 0
@@ -506,7 +519,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbca888cb3dc5024296e55c3ad252ad6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
 --- !u!1001 &773721076
 Prefab:
   m_ObjectHideFlags: 0
@@ -1183,6 +1195,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 11479118, guid: c9dbcd7cfef72ac48b0670ddedf2d0c6, type: 2}
+      propertyPath: enableControl
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c9dbcd7cfef72ac48b0670ddedf2d0c6, type: 2}
   m_IsPrefabParent: 0
@@ -1272,7 +1288,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Elephant: {fileID: 1219448895}
-  Speed: 5
 --- !u!1001 &1511642987
 Prefab:
   m_ObjectHideFlags: 0
