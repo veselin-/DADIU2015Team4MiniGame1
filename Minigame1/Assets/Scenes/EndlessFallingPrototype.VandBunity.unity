@@ -307,13 +307,10 @@ MonoBehaviour:
   scoreText: {fileID: 733284750}
   comboText: {fileID: 930112214}
   lifeText: {fileID: 1717291752}
-  points: 0
   pointsPose: 50
   pointsFail: 25
-  comboCount: 0
   lifes: 0
-  combo: 0
-  comboTimeDown: 20
+  comboReset: 20
 --- !u!114 &236915896 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11474912, guid: 9d6cd4a9298736e4cac125dc7881653d,
@@ -574,7 +571,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbca888cb3dc5024296e55c3ad252ad6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
 --- !u!1001 &773721076
 Prefab:
   m_ObjectHideFlags: 0
@@ -1349,7 +1345,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Elephant: {fileID: 1219448895}
-  Speed: 5
 --- !u!1001 &1511642987
 Prefab:
   m_ObjectHideFlags: 0
