@@ -5,7 +5,7 @@ public class cubeDeath : MonoBehaviour {
 
     public bool enableControl = true;
 
-    public float speed = 5f;
+    public static float espeed;
 
     // Use this for initialization
     void Start () {
@@ -17,12 +17,12 @@ public class cubeDeath : MonoBehaviour {
         if (enableControl) {
             if (Input.GetKey("left"))
             {
-                transform.Translate(Vector3.left * Time.deltaTime * speed);
+                transform.Translate(Vector3.left * Time.deltaTime * espeed);
             }
 
             if (Input.GetKey("right"))
             {
-                transform.Translate(Vector3.right * Time.deltaTime * speed);
+                transform.Translate(Vector3.right * Time.deltaTime * espeed);
             }
         }
 
