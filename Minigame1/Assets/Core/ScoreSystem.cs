@@ -67,7 +67,7 @@ public class ScoreSystem : MonoBehaviour {
     {
         comboTimeDown -= Time.deltaTime;
         comboText.text = "ComboTime: " + comboTimeDown.ToString("f2");
-        if (comboTimeDown < 0)
+        if (comboTimeDown < 0 || lifes != cubeDeath.loseLife)
             {
             comboText.text = "ComboTime: No combo";
             timeToCombo = false;

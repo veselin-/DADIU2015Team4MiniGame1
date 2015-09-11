@@ -7,7 +7,7 @@ public class BGControl : MonoBehaviour {
 
     public static float Speed;
 
-    private float _destination = 0f;
+	private float _destination = 0f, edgeValue = 2.9f;
     private bool _movementEnbaled = true;
 
     // Use this for initialization
@@ -34,13 +34,13 @@ public class BGControl : MonoBehaviour {
     {
         _destination = hit.point.x;
             //IM SORRY - I CHEATED A LITLE BIT ---- FOR AW SCREEN ITS 3.74158 / -3.752747
-            if (3.1f < _destination)
+            if (edgeValue < _destination)
             {
-                _destination = 3.1f;
+                _destination = edgeValue;
             }
-            if (-3.1f > _destination)
+            if (-edgeValue > _destination)
             {
-                _destination = -3.1f;
+                _destination = -edgeValue;
             }
         }     
     }

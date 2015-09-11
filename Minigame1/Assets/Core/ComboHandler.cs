@@ -119,7 +119,7 @@ namespace Assets.Core
 		{
 			_playerAnimationControl.DidPose(_goalId);
 			ScoreSystem.poseComplete = true;
-			ElephantColor.materials[1].color = new Color(Random.Range(0.0f,1.0f),Random.Range(0.0f,1.0f),Random.Range(0.0f,1.0f)); 
+			ElephantColor.material.color = new Color(Random.Range(0.0f,1.0f),Random.Range(0.0f,1.0f),Random.Range(0.0f,1.0f)); 
 			Reset();
 		}
 		
