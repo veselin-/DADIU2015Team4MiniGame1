@@ -5,7 +5,7 @@ public class BGControl : MonoBehaviour {
 
     public GameObject Elephant;
 
-    public float Speed = 5f;
+    public static float Speed;
 
     private float _destination = 0f;
     private bool _movementEnbaled = true;
@@ -46,6 +46,7 @@ public class BGControl : MonoBehaviour {
         {
 
             _destination = hit.point.x;
+
 
         }
             
