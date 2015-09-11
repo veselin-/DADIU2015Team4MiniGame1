@@ -574,7 +574,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbca888cb3dc5024296e55c3ad252ad6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
 --- !u!1001 &773721076
 Prefab:
   m_ObjectHideFlags: 0
@@ -1029,7 +1028,11 @@ Prefab:
       objectReference: {fileID: 222847286}
     - target: {fileID: 11489440, guid: 9d6cd4a9298736e4cac125dc7881653d, type: 2}
       propertyPath: SecondsBeforeLongPress
-      value: 1
+      value: .100000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 11489440, guid: 9d6cd4a9298736e4cac125dc7881653d, type: 2}
+      propertyPath: SecToLongPress
+      value: .300000012
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9d6cd4a9298736e4cac125dc7881653d, type: 2}
@@ -1349,7 +1352,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Elephant: {fileID: 1219448895}
-  Speed: 5
 --- !u!1001 &1511642987
 Prefab:
   m_ObjectHideFlags: 0

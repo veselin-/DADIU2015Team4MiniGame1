@@ -7,16 +7,16 @@ namespace Assets.Core
 {
     public class TouchInput : MonoBehaviour
     {
-        public float SecondsBeforeLongPress;
+        public float secToLongPress;
 		public Text HoldCounterText;
 
         private float _lastInputDown;
         private ComboHandler comboHandler;
 		private float _timeCounter;
-		private float _startTime;
+		//private float _startTime;
 
-		public bool firstClick = true;
-		public bool longPressDone = false;
+		private bool _firstClick = true;
+		private bool _longPressDone = false;
 
 		private float span;
 
@@ -31,39 +31,41 @@ namespace Assets.Core
 
             if (Input.GetMouseButton(0))
             {
-			
-				if(firstClick)
+				float _startTime = 0;
+				if(_firstClick)
 				{
 					_startTime = Time.time;
-					firstClick = false;
+					_firstClick = false;
 				}
-
-				_timeCounter = Time.time;
-				HoldCounterText.text = _timeCounter.ToString();
+				if(!_longPressDone)
+				{
+				_timeCounter += Time.deltaTime;
+				HoldCounterText.text = (_timeCounter - _startTime).ToString();
 				span = (_timeCounter - _startTime);
-				if(span > SecondsBeforeLongPress && !longPressDone)
+				if(span > secToLongPress)
 				{
 					comboHandler.DoPress(PressType.Long);
-					longPressDone = true;
+					_longPressDone = true;
 					Debug.Log("LONG PRESS");
 
 				}
 
-
+				}
                // _lastInputDown = DateTime.Now;
 				//longPressDone = true;
             } 
 
 			if (Input.GetMouseButtonUp(0))
             {
-				if(!longPressDone)
+				if(!_longPressDone)
 				{
 					comboHandler.DoPress(PressType.Short);
 					Debug.Log("SHORT PRESS");
 				}
 
-				firstClick = true;
-				longPressDone = false;
+				_firstClick = true;
+				_longPressDone = false;
+				_timeCounter = 0;
 				HoldCounterText.text = string.Empty;
 
 
