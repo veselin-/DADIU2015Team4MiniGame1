@@ -891,6 +891,10 @@ Prefab:
       propertyPath: m_Name
       value: SpawnPoint (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 11448202, guid: 4f69b655938ef70479bf01caa5767a91, type: 2}
+      propertyPath: SpawnPoint
+      value: 
+      objectReference: {fileID: 112592, guid: 425358e517ac5c346b65b999d2eac6e4, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4f69b655938ef70479bf01caa5767a91, type: 2}
   m_IsPrefabParent: 0
@@ -1027,6 +1031,14 @@ Prefab:
       propertyPath: SecondsBeforeLongPress
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11474912, guid: 9d6cd4a9298736e4cac125dc7881653d, type: 2}
+      propertyPath: HoldCounterText
+      value: 
+      objectReference: {fileID: 222847286}
+    - target: {fileID: 11489440, guid: 9d6cd4a9298736e4cac125dc7881653d, type: 2}
+      propertyPath: secToLongPress
+      value: .5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9d6cd4a9298736e4cac125dc7881653d, type: 2}
   m_IsPrefabParent: 0
@@ -1073,6 +1085,10 @@ Prefab:
       propertyPath: m_Name
       value: SpawnPoint (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 11448202, guid: 4f69b655938ef70479bf01caa5767a91, type: 2}
+      propertyPath: SpawnPoint
+      value: 
+      objectReference: {fileID: 112592, guid: 425358e517ac5c346b65b999d2eac6e4, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4f69b655938ef70479bf01caa5767a91, type: 2}
   m_IsPrefabParent: 0
@@ -1119,6 +1135,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11448202, guid: 4f69b655938ef70479bf01caa5767a91, type: 2}
+      propertyPath: SpawnPoint
+      value: 
+      objectReference: {fileID: 112592, guid: 425358e517ac5c346b65b999d2eac6e4, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4f69b655938ef70479bf01caa5767a91, type: 2}
   m_IsPrefabParent: 0

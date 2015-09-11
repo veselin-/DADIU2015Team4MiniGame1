@@ -23,6 +23,7 @@ namespace Assets.Core
         void Start()
         {
             comboHandler = GameObject.FindGameObjectWithTag(Constants.Tags.GameMaster).GetComponent<ComboHandler>();
+			//HoldCounterText.gameObject.SetActive (false);
         }
 
         // Update is called once per frame
