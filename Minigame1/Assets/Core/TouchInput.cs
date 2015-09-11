@@ -8,7 +8,7 @@ namespace Assets.Core
     public class TouchInput : MonoBehaviour
     {
         public float SecondsBeforeLongPress;
-		public Text HoldCounterText;
+		//public Text HoldCounterText;
 
         private float _lastInputDown;
         private ComboHandler comboHandler;
@@ -39,7 +39,7 @@ namespace Assets.Core
 				}
 
 				_timeCounter = Time.time;
-				HoldCounterText.text = _timeCounter.ToString();
+				//HoldCounterText.text = _timeCounter.ToString();
 				span = (_timeCounter - _startTime);
 				if(span > SecondsBeforeLongPress && !longPressDone)
 				{
@@ -64,7 +64,7 @@ namespace Assets.Core
 
 				firstClick = true;
 				longPressDone = false;
-				HoldCounterText.text = string.Empty;
+				//HoldCounterText.text = string.Empty;
 
 
 				/*
