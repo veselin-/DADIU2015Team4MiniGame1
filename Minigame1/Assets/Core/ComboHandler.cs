@@ -11,6 +11,7 @@ namespace Assets.Core
         public GameObject BackGround;
 
         public Text GoalText;
+
         public GameObject PoseButton;
 
         private List<PressType> _currentPresses;
