@@ -56,7 +56,7 @@ public class ScoreSystem : MonoBehaviour {
             poseFail = false;
             timeToCombo = false;
             comboTimeDown = comboReset;
-            lifes = lifes - 1;
+            //lifes = lifes - 1;
             comboCount = 1;
         }
         lifeText.text = "Lifes: " + lifes;
