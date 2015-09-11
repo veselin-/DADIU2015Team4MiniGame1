@@ -47,6 +47,7 @@ public class BGControl : MonoBehaviour {
 
             _destination = hit.point.x;
 
+
         }
             
     }
