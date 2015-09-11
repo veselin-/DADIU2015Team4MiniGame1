@@ -6,20 +6,25 @@ public class ScoreSystem : MonoBehaviour {
 
     public static bool poseComplete, comboComplete, timeToCombo, poseFail;
     public Text scoreText, comboText, lifeText;
-    public int points = 0, pointsPose = 50, pointsFail = 25, comboCount, lifes;
-    public float combo = 0, comboTimeDown = 5.0f;
+    public int pointsPose = 50, pointsFail = 25, lifes;
+    int points = 0, comboCount;
+    public float comboReset = 20f;
+    float comboTimeDown;
 
     // Use this for initialization
-    void Start () {
+    void Start()
+    {
         lifes = 5;
         comboCount = 1;
+        comboTimeDown = comboReset;
         scoreText.text = "Score: " + points;
-        comboText.text = "ComboTime: " + combo;
+        comboText.text = "ComboTime: No combo";
         lifeText.text = "Lifes: " + lifes;
     }
 
     // Update is called once per frame
-    void Update() {
+    void Update()
+    {
         pointSystem();
         if (timeToCombo)
         {
@@ -31,42 +36,42 @@ public class ScoreSystem : MonoBehaviour {
     {
         if (poseComplete)
         {
-            if (timeToCombo && combo < comboTimeDown)
+            if (timeToCombo && 0 < comboTimeDown)
             {
-                Debug.Log("combocount" + comboCount);
                 comboCount += 1;
                 points += pointsPose * comboCount;
-                combo = 0;
+                comboTimeDown = comboReset;
             }
             else
             {
-            points += pointsPose;
+                points += pointsPose;
             }
-        poseComplete = false;
-        timeToCombo = true;    
+            poseComplete = false;
+            timeToCombo = true;
+            Debug.Log("IM HERE NOW PLEASE");
         }
         else if (poseFail)
         {
             points -= pointsFail;
             poseFail = false;
             timeToCombo = false;
-            combo = 0;
+            comboTimeDown = comboReset;
             lifes = lifes - 1;
             comboCount = 1;
         }
-        comboText.text = "ComboTime: " + combo;
         lifeText.text = "Lifes: " + lifes;
         scoreText.text = "Score: " + points;
     }
 
     void comboTime()
     {
-        combo += Time.deltaTime;
-            if (combo >= comboTimeDown)
+        comboTimeDown -= Time.deltaTime;
+        comboText.text = "ComboTime: " + comboTimeDown.ToString("f2");
+        Debug.Log("IM HERE NOW PLEASE22222222222222222");
+        if (comboTimeDown < 0)
             {
-                combo = 0;
-                timeToCombo = false;
-            } 
-        comboText.text = "ComboTime: " + combo;
+            comboText.text = "ComboTime: No combo";
+            timeToCombo = false;
+            }
     }
 }
