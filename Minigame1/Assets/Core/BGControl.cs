@@ -34,13 +34,13 @@ public class BGControl : MonoBehaviour {
     {
         _destination = hit.point.x;
             //IM SORRY - I CHEATED A LITLE BIT ---- FOR AW SCREEN ITS 3.74158 / -3.752747
-            if (2.75f < _destination)
+            if (3.1f < _destination)
             {
-                _destination = 2.75f;
+                _destination = 3.1f;
             }
-            if (-2.75f > _destination)
+            if (-3.1f > _destination)
             {
-                _destination = -2.75f;
+                _destination = -3.1f;
             }
         }     
     }
