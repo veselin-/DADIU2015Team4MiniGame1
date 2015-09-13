@@ -24,6 +24,7 @@ namespace Assets.Core
         {
             comboHandler = GameObject.FindGameObjectWithTag(Constants.Tags.GameMaster).GetComponent<ComboHandler>();
 			//HoldCounterText.gameObject.SetActive (false);
+			comboHandler.StartCombo ();
         }
 
         // Update is called once per frame
@@ -46,7 +47,7 @@ namespace Assets.Core
 					if (span > secToLongPress) {
 						comboHandler.DoPress (PressType.Long);
 						_longPressDone = true;
-						Debug.Log ("LONG PRESS");
+						//Debug.Log ("LONG PRESS");
 
 					}
 				}
@@ -62,7 +63,7 @@ namespace Assets.Core
 				if(!_longPressDone)
 				{
 					comboHandler.DoPress(PressType.Short);
-					Debug.Log("SHORT PRESS");
+					//Debug.Log("SHORT PRESS");
 				}
 
 				_firstClick = true;
@@ -76,17 +77,9 @@ namespace Assets.Core
                 var now = DateTime.Now;
                 var span = (now - _lastInputDown).Milliseconds;
 				if(span > MsBeforeLongPress)
-				{
 
-					comboHandler.DoPress(PressType.Long);
-				}
-				else
-				{
-					comboHandler.DoPress(PressType.Short);
-				}
-				*/
-
-                //comboHandler.DoPress(span > MsBeforeLongPress ? PressType.Long : PressType.Short);
+				comboHandler.DoPress(span > MsBeforeLongPress ? PressType.Long : PressType.Short);
+                */
             }
 
 	
