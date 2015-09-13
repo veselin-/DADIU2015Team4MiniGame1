@@ -43,7 +43,6 @@ namespace Assets.Core
 					HoldCounterText.text = (_timeCounter - _startTime).ToString();
 										
 					span = (_timeCounter - _startTime);
-					Debug.Log (span);
 					if (span > secToLongPress) {
 						comboHandler.DoPress (PressType.Long);
 						_longPressDone = true;

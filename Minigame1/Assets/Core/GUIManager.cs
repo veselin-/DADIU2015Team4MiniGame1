@@ -11,13 +11,13 @@ public class GUIManager : MonoBehaviour
         LanguageManager.Instance.LoadLanguage("Swedish");
         Debug.Log(LanguageManager.Instance.Get("Phrases/Hello"));
 		*/
-		if(PlayerPrefs.GetString ("Language") != null)
+		if(!PlayerPrefs.HasKey("Language"))
 		{
+			PlayerPrefs.SetString("Language", "English");
 			LanguageManager.Instance.LoadLanguage(PlayerPrefs.GetString ("Language"));
 		}
 		else
 		{
-			PlayerPrefs.SetString("Language", "English");
 			LanguageManager.Instance.LoadLanguage(PlayerPrefs.GetString ("Language"));
 		}
     }
