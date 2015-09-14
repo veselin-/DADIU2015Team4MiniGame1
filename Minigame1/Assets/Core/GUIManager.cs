@@ -38,4 +38,9 @@ public class GUIManager : MonoBehaviour
             text.LocalizeText();
         }
     }
+
+	public void OnCreditsClick()
+	{
+
+	}
 }

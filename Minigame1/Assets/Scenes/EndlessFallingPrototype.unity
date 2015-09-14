@@ -597,10 +597,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 846673384}
   m_RootOrder: 3
-  m_AnchorMin: {x: .326717377, y: .0110000009}
-  m_AnchorMax: {x: .664880097, y: .0614205524}
-  m_AnchoredPosition: {x: 4.13800049, y: 2.61000013}
-  m_SizeDelta: {x: 2, y: -1.99999928}
+  m_AnchorMin: {x: .340000004, y: .022420546}
+  m_AnchorMax: {x: .682737231, y: .0614205524}
+  m_AnchoredPosition: {x: -.361999512, y: .610000134}
+  m_SizeDelta: {x: 1, y: 2.00000072}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &374457601
 MonoBehaviour:
@@ -887,10 +887,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 846673384}
   m_RootOrder: 2
-  m_AnchorMin: {x: .326717377, y: .0110000009}
-  m_AnchorMax: {x: .664880097, y: .0614205524}
-  m_AnchoredPosition: {x: 4.13800049, y: 37}
-  m_SizeDelta: {x: 2, y: -2}
+  m_AnchorMin: {x: .340000004, y: .0850000009}
+  m_AnchorMax: {x: .682737231, y: .131999999}
+  m_AnchoredPosition: {x: .638000488, y: .5}
+  m_SizeDelta: {x: 1, y: -1}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &733284750
 MonoBehaviour:
@@ -1869,6 +1869,10 @@ Prefab:
       propertyPath: BoundaryDist
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 11443358, guid: 9d6cd4a9298736e4cac125dc7881653d, type: 2}
+      propertyPath: pointsFail
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9d6cd4a9298736e4cac125dc7881653d, type: 2}
   m_IsPrefabParent: 0
@@ -2590,7 +2594,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Lifes:'
+  m_Text: 'Lives:'
 --- !u!222 &1717291753
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -29,7 +29,7 @@ namespace Assets.Core
 
 		public Text HoldCounterText;
 
-		void Start()
+		void Awake()
 		{
 			_playerAnimationControl = Player.GetComponent<AnimationControl>();
 			HoldCounterText.gameObject.SetActive (false);
@@ -133,6 +133,9 @@ namespace Assets.Core
 				_currentGoal = combos [_goalId];
 				_isFirstPose = false;
 			}
+
+		    _playerAnimationControl.PickAnimation();
+
 			//PoseButton.SetActive(false);
 			
 			// Print goal
