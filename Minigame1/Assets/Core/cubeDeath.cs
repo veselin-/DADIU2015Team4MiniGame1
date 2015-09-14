@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using Assets.Core;
+using Assets.Core.Scripts;
 
 public class cubeDeath : MonoBehaviour {
 
@@ -12,7 +13,7 @@ public class cubeDeath : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        //loseLife = 5;
+        loseLife = 5;
 	}
 	
 	// Update is called once per frame
@@ -33,11 +34,21 @@ public class cubeDeath : MonoBehaviour {
     void OnTriggerEnter(Collider coll)
     {
 		Camera.main.GetComponent<PerlinShake> ().PlayShake ();
-        //loseLife -= 1;
+        loseLife -= 1;
         ScoreSystem.comboCount = 1;
         coll.gameObject.GetComponentInChildren<Collider>().enabled = false;
         coll.gameObject.GetComponentInChildren<Renderer>().enabled = false;
-        //if (loseLife == 0)
-        lifeTimeHit = true;
+        if (loseLife == 0)
+        {
+            if (ScoreSystem.points > PlayerPrefs.GetInt("Best score"))
+            {
+                PlayerPrefs.SetInt("Best score", ScoreSystem.points);
+                ScoreSystem.comboCount = 1;
+            }
+            ScoreSystem.comboTimeReset();
+            ScoreSystem.points = 0;
+            GameObject.FindGameObjectWithTag(Constants.Tags.GameMaster).GetComponent<GameOverMaster>().GameOver();
+        }
+        //lifeTimeHit = true;
     }
 }

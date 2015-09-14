@@ -29,7 +29,7 @@ namespace Assets.Core
 
 		public Text HoldCounterText;
 
-		void Start()
+		void Awake()
 		{
 			_playerAnimationControl = Player.GetComponent<AnimationControl>();
 			HoldCounterText.gameObject.SetActive (false);
@@ -133,6 +133,9 @@ namespace Assets.Core
 				_currentGoal = combos [_goalId];
 				_isFirstPose = false;
 			}
+
+		    _playerAnimationControl.PickAnimation();
+
 			//PoseButton.SetActive(false);
 			
 			// Print goal
@@ -227,6 +230,7 @@ namespace Assets.Core
 			_playerAnimationControl.DidPose(_goalId);
 			ScoreSystem.poseComplete = true;
 			Debug.Log ("PoseSucceeded");
+            
 			//ElephantColor.material.color = new Color(Random.Range(0.0f,1.0f),Random.Range(0.0f,1.0f),Random.Range(0.0f,1.0f)); 
 			Reset();
 		}

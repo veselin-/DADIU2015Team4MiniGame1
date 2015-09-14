@@ -97,6 +97,26 @@ Material:
         second: 1
       data:
         first:
+          name: _DiffThreshold
+        second: .239999995
+      data:
+        first:
+          name: _Diff
+        second: .714999974
+      data:
+        first:
+          name: _SpecDiff
+        second: .99000001
+      data:
+        first:
+          name: _OutThickness
+        second: 0
+      data:
+        first:
+          name: _OutDiff
+        second: 0
+      data:
+        first:
           name: _Parallax
         second: .0199999996
       data:
@@ -130,26 +150,6 @@ Material:
       data:
         first:
           name: _Metallic
-        second: 0
-      data:
-        first:
-          name: _DiffThreshold
-        second: .0410000011
-      data:
-        first:
-          name: _Diff
-        second: .878000021
-      data:
-        first:
-          name: _SpecDiff
-        second: .99000001
-      data:
-        first:
-          name: _OutThickness
-        second: 0
-      data:
-        first:
-          name: _OutDiff
         second: 0
     m_Colors:
       data:

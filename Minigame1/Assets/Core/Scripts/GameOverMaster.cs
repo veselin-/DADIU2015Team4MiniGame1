@@ -58,8 +58,13 @@ namespace Assets.Core.Scripts
             FrontCylinder.SetActive(false);
             Hole.GetComponent<SpriteRenderer>().enabled = true;
             Camera.main.GetComponent<ShakeCam>().StopShaking();
-            BackCylinder.GetComponent<BackgroundCylinderRotation>().GameOver();
 
+            var clouds = FindObjectsOfType<CloudMovement>();
+            foreach (var cloud in clouds)
+            {
+                cloud.enabled = false;
+            }
+            
             var obstacles = GameObject.FindGameObjectsWithTag(Constants.Tags.Obstacle);
             foreach (var obstacle in obstacles)
             {

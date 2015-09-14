@@ -9,6 +9,7 @@ public class highscoreSave : MonoBehaviour {
     void Awake()
     {
         DontDestroyOnLoad(this.gameObject);
+        //PlayerPrefs.SetInt("Best score", 0);
     }
 
 	// Use this for initialization
@@ -18,6 +19,9 @@ public class highscoreSave : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
-	}
+    //    if (ScoreSystem.points > PlayerPrefs.GetInt("Best score"))
+    //    {
+    //        this.GetComponent<Text>().text = ("Best score: " + PlayerPrefs.GetInt("Best score"));
+    //    }
+    }
 }

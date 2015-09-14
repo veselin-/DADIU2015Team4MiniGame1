@@ -877,7 +877,7 @@ RectTransform:
   m_RootOrder: 2
   m_AnchorMin: {x: .326717377, y: .0110000009}
   m_AnchorMax: {x: .664880097, y: .0614205524}
-  m_AnchoredPosition: {x: 4.13800049, y: 2.60998535}
+  m_AnchoredPosition: {x: 4.13800049, y: 37}
   m_SizeDelta: {x: 2, y: -2}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &733284750
@@ -1854,7 +1854,7 @@ Prefab:
       objectReference: {fileID: 435680681}
     - target: {fileID: 11443358, guid: 9d6cd4a9298736e4cac125dc7881653d, type: 2}
       propertyPath: startTime
-      value: 10
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 11443358, guid: 9d6cd4a9298736e4cac125dc7881653d, type: 2}
       propertyPath: highscoreText
@@ -2338,6 +2338,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3139577737d0ed647975ecc64637dbc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Elephant: {fileID: 1219448895}
+  UiCamera: {fileID: 0}
 --- !u!1001 &1511642987
 Prefab:
   m_ObjectHideFlags: 0
@@ -2641,8 +2643,8 @@ RectTransform:
   m_RootOrder: 3
   m_AnchorMin: {x: .326717377, y: .0110000009}
   m_AnchorMax: {x: .664880097, y: .0614205524}
-  m_AnchoredPosition: {x: 4.13800049, y: 37}
-  m_SizeDelta: {x: 2, y: -2}
+  m_AnchoredPosition: {x: 4.13800049, y: 2.61000013}
+  m_SizeDelta: {x: 2, y: -1.99999928}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1875061065
 MonoBehaviour:
@@ -2684,7 +2686,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1875061063}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6ca82461221b5247a0e14b30cc3b369, type: 3}
+  m_Script: {fileID: 11500000, guid: 610669d92f6320e4d853cf28c31cc8be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &1979541444
