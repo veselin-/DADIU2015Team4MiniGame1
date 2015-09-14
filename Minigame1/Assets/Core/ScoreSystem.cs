@@ -20,7 +20,7 @@ public class ScoreSystem : MonoBehaviour {
         comboTimeDown = comboReset;
         scoreText.text = "Score: " + points;
         comboText.text = "Combo: x"+ comboCount;
-        lifeText.text = "Lifes: " + lifes;
+        lifeText.text = "Lives: " + lifes;
         //lifeTimeText.text = "Lifetime: " + startTime;
     }
 
@@ -83,7 +83,7 @@ public class ScoreSystem : MonoBehaviour {
             lifes = lifes - 1;
             comboCount = 1;
         }
-        lifeText.text = "Lifes: " + lifes;
+        lifeText.text = "Lives: " + lifes;
         scoreText.text = "Score: " + points;
     }
 
