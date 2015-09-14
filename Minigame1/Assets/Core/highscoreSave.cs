@@ -9,6 +9,7 @@ public class highscoreSave : MonoBehaviour {
     void Awake()
     {
         DontDestroyOnLoad(this.gameObject);
+        //PlayerPrefs.SetInt("Best score", 0);
     }
 
 	// Use this for initialization
