@@ -1,6 +1,6 @@
 using UnityEngine;
 using System.Collections;
-using TreeEditor;
+//using TreeEditor;
 
 public class ShakeCam : MonoBehaviour {
 	

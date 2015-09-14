@@ -49,7 +49,7 @@ AudioMixerController:
     - 9ba80f43784ad8a439debd13df7c91f6
     - 69a58316d19deac40821e66fa4ce83b6
     name: Signal
-  m_CurrentViewIndex: 1
+  m_CurrentViewIndex: 0
   m_TargetSnapshot: {fileID: 24500003}
 --- !u!243 &24300001
 AudioMixerGroupController:
