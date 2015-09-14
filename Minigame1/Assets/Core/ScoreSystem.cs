@@ -6,21 +6,21 @@ public class ScoreSystem : MonoBehaviour {
 
     public static bool poseComplete, comboComplete, timeToCombo, poseFail;
     public Text scoreText, comboText, lifeText, lifeTimeText;
-    public int pointsPose = 50, pointsFail = 25, lifes, points = 0;
+    public int pointsPose = 50, pointsFail = 25, lifes;
 
-    public static int comboCount;
+    public static int comboCount, points;
     public static float comboReset = 20f, comboTimeDown;
     public float startTime = 40f, timePoseComplete = 10f, timePoseFail = 5f, timeHitObstacle = 5f, timePoseCombo = 10f;
 
     // Use this for initialization
     void Start()
     {
-        //lifes = 5;
+        lifes = 5;
         comboCount = 1;
         comboTimeDown = comboReset;
         scoreText.text = "Score: " + points;
-        comboText.text = "Combo: x"+comboCount;
-        //lifeText.text = "Lifes: " + lifes;
+        comboText.text = "Combo: x"+ comboCount;
+        lifeText.text = "Lives: " + lifes;
         //lifeTimeText.text = "Lifetime: " + startTime;
     }
 
@@ -34,18 +34,24 @@ public class ScoreSystem : MonoBehaviour {
             comboTime();
         }
         comboText.text = "Combo: x" + comboCount;
-        //lifes = cubeDeath.loseLife;
-        if (cubeDeath.lifeTimeHit)
-        {
-            startTime -= timeHitObstacle;
-            //Debug.Log("starttimebuf: " + startTimeBuf);
-            //Debug.Log("hitobstaclebuf: " + hitObstacleBuf);
-            cubeDeath.lifeTimeHit = false;
-        }
-        if (startTime <= 0)
-        {
-            Application.LoadLevel("gameOverScene");
-        }
+        lifes = cubeDeath.loseLife;
+        //if (cubeDeath.lifeTimeHit)
+        //{
+        //    startTime -= timeHitObstacle;
+        //    //Debug.Log("starttimebuf: " + startTimeBuf);
+        //    //Debug.Log("hitobstaclebuf: " + hitObstacleBuf);
+        //    cubeDeath.lifeTimeHit = false;
+        //}
+        //if (1 > startTime)
+        //{
+        //    if (points > PlayerPrefs.GetInt("Best score"))
+        //    {
+        //        PlayerPrefs.SetInt("Best score", points);
+        //        comboCount = 1;
+        //    }
+        //    comboTimeReset();
+        //    Application.LoadLevel("gameOverScene");
+        //}
     }
 
     void pointSystem()
@@ -56,13 +62,13 @@ public class ScoreSystem : MonoBehaviour {
             {
                 comboCount += 1;
                 points += pointsPose * comboCount;
-                startTime += timePoseCombo;
+                //startTime += timePoseCombo;
                 comboTimeReset();
             }
             else
             {
                 points += pointsPose;
-                startTime += timePoseComplete;
+                //startTime += timePoseComplete;
             }
             poseComplete = false;
             timeToCombo = true;
@@ -70,14 +76,14 @@ public class ScoreSystem : MonoBehaviour {
         else if (poseFail)
         {
             points -= pointsFail;
-            startTime -= timePoseFail;
+            //startTime -= timePoseFail;
             poseFail = false;
             timeToCombo = false;
             comboTimeReset();
-            //lifes = lifes - 1;
+            lifes = lifes - 1;
             comboCount = 1;
         }
-        //lifeText.text = "Lifes: " + lifes;
+        lifeText.text = "Lives: " + lifes;
         scoreText.text = "Score: " + points;
     }
 
@@ -100,5 +106,6 @@ public class ScoreSystem : MonoBehaviour {
     public static void comboTimeReset()
     {
         comboTimeDown = comboReset;
+        timeToCombo = false;
     }
 }
