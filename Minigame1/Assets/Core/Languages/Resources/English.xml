@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Root>
+  <Phrases>
+    <Hello>Hello World!</Hello>
+  </Phrases>
+  <LanguageNames>
+    <English>English</English>
+    <Danish>Dansk</Danish>
+  </LanguageNames>
+</Root>

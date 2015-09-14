@@ -26,7 +26,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 137492}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.32962346, y: -2.63348722, z: 0}
+  m_LocalPosition: {x: 1.59000003, y: -5.01999998, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -73,8 +73,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee6f00a028807fa4389f2cc01201321a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
-  spawnInLanes: 1
 --- !u!135 &13583460
 SphereCollider:
   m_ObjectHideFlags: 1
