@@ -15,6 +15,6 @@ public class resButton : MonoBehaviour {
 
     void OnMouseDown()
     {
-        Application.LoadLevel("EndlessFallingPrototype");
+        Application.LoadLevel("EndlessFallingPrototypeWithTime");
     }
 }

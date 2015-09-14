@@ -6,7 +6,7 @@ public class ScoreSystem : MonoBehaviour {
 
     public static bool poseComplete, comboComplete, timeToCombo, poseFail;
     public Text scoreText, comboText, lifeText, lifeTimeText;
-    public int pointsPose = 50, pointsFail = 25, lifes, points = 0;
+    public int pointsPose = 50, pointsFail = 25, lifes, points;
 
     public static int comboCount;
     public static float comboReset = 20f, comboTimeDown;
@@ -19,7 +19,7 @@ public class ScoreSystem : MonoBehaviour {
         comboCount = 1;
         comboTimeDown = comboReset;
         scoreText.text = "Score: " + points;
-        comboText.text = "Combo: x"+comboCount;
+        comboText.text = "Combo: x"+ comboCount;
         //lifeText.text = "Lifes: " + lifes;
         //lifeTimeText.text = "Lifetime: " + startTime;
     }
@@ -42,8 +42,14 @@ public class ScoreSystem : MonoBehaviour {
             //Debug.Log("hitobstaclebuf: " + hitObstacleBuf);
             cubeDeath.lifeTimeHit = false;
         }
-        if (startTime <= 0)
+        if (1 > startTime)
         {
+            if (points > PlayerPrefs.GetInt("Best score"))
+            {
+                PlayerPrefs.SetInt("Best score", points);
+                comboCount = 1;
+            }
+            comboTimeReset();
             Application.LoadLevel("gameOverScene");
         }
     }
@@ -100,5 +106,6 @@ public class ScoreSystem : MonoBehaviour {
     public static void comboTimeReset()
     {
         comboTimeDown = comboReset;
+        timeToCombo = false;
     }
 }
