@@ -9,6 +9,7 @@ public class BGControl : MonoBehaviour {
 
 	private float _destination = 0f, edgeValue = 2.9f;
     private bool _movementEnbaled = true;
+    public Camera UiCamera;
 
     // Use this for initialization
 	void Start () {
@@ -28,7 +29,7 @@ public class BGControl : MonoBehaviour {
     }
 
     void OnMouseDown() {
-    Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+    Ray ray = UiCamera.ScreenPointToRay(Input.mousePosition);
     RaycastHit hit = new RaycastHit();
     if (Physics.Raycast(ray, out hit, 100))
     {
