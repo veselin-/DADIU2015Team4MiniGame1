@@ -44,6 +44,7 @@ public class cubeDeath : MonoBehaviour {
                 ScoreSystem.comboCount = 1;
             }
             ScoreSystem.comboTimeReset();
+            ScoreSystem.points = 0;
             Application.LoadLevel("gameOverScene");
         }
         //lifeTimeHit = true;
