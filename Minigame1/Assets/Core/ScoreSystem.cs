@@ -6,9 +6,9 @@ public class ScoreSystem : MonoBehaviour {
 
     public static bool poseComplete, comboComplete, timeToCombo, poseFail;
     public Text scoreText, comboText, lifeText, lifeTimeText;
-    public int pointsPose = 50, pointsFail = 25, lifes, points;
+    public int pointsPose = 50, pointsFail = 25, lifes;
 
-    public static int comboCount;
+    public static int comboCount, points;
     public static float comboReset = 20f, comboTimeDown;
     public float startTime = 40f, timePoseComplete = 10f, timePoseFail = 5f, timeHitObstacle = 5f, timePoseCombo = 10f;
 

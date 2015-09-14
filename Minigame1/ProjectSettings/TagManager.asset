@@ -19,8 +19,8 @@ TagManager:
   - 
   - MovementCollider
   - 3dObject
-  - 
-  - 
+  - LeftButton
+  - RightButton
   - 
   - 
   - 

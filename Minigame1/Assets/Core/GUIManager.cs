@@ -25,7 +25,7 @@ public class GUIManager : MonoBehaviour
 	public void OnStartGameClick()
 	{
 		Debug.Log ("Start the gaddeim game");
-		Application.LoadLevel ("EndlessFallingPrototype");
+		Application.LoadLevel ("EndlessFallingPrototypeWithTime");
 	}
 
     public void OnLanguageClick(string language)

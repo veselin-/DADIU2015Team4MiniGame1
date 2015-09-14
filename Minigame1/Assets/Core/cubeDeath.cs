@@ -37,6 +37,15 @@ public class cubeDeath : MonoBehaviour {
         coll.gameObject.GetComponentInChildren<Collider>().enabled = false;
         coll.gameObject.GetComponentInChildren<Renderer>().enabled = false;
         //if (loseLife == 0)
+        //{
+        //    if (ScoreSystem.points > PlayerPrefs.GetInt("Best score"))
+        //    {
+        //        PlayerPrefs.SetInt("Best score", ScoreSystem.points);
+        //        ScoreSystem.comboCount = 1;
+        //    }
+        //    ScoreSystem.comboTimeReset();
+        //    Application.LoadLevel("gameOverScene");
+        //}
         lifeTimeHit = true;
     }
 }
