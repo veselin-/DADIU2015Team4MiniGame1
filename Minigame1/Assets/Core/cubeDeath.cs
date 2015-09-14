@@ -4,6 +4,7 @@ using System.Collections;
 public class cubeDeath : MonoBehaviour {
 
     public bool enableControl = true;
+    public static bool lifeTimeHit = false;
 
     public static float espeed;
     public static int loseLife;
@@ -32,11 +33,20 @@ public class cubeDeath : MonoBehaviour {
     {
 		Camera.main.GetComponent<PerlinShake> ().PlayShake ();
         loseLife -= 1;
+        ScoreSystem.comboCount = 1;
         coll.gameObject.GetComponentInChildren<Collider>().enabled = false;
         coll.gameObject.GetComponentInChildren<Renderer>().enabled = false;
         if (loseLife == 0)
         {
+            if (ScoreSystem.points > PlayerPrefs.GetInt("Best score"))
+            {
+                PlayerPrefs.SetInt("Best score", ScoreSystem.points);
+                ScoreSystem.comboCount = 1;
+            }
+            ScoreSystem.comboTimeReset();
+            ScoreSystem.points = 0;
             Application.LoadLevel("gameOverScene");
         }
+        //lifeTimeHit = true;
     }
 }

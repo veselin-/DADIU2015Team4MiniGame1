@@ -1,7 +1,10 @@
 ﻿using System;
+using System.Collections;
 using System.Threading;
 using UnityEngine;
 using Assets.Core;
+using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 namespace Assets.Characters.Elephant.Scripts
 {
@@ -10,6 +13,21 @@ namespace Assets.Characters.Elephant.Scripts
 
         private Material _material;
         private DateTime? _goBackToNeutral;
+
+        public Image Image;
+        public Sprite[] PoseIcons;
+
+        public void PickAnimation()
+        {
+            //We choose a poseIndex based on the animations/icons we have.
+            int poseIndex = Random.Range(0, PoseIcons.Length);
+
+            //We set the image of the animation at the top of the screen
+            Image.sprite = PoseIcons[poseIndex];
+        
+            //We need to pick the animation here!
+        }
+
 
         // Use this for initialization
         void Start ()

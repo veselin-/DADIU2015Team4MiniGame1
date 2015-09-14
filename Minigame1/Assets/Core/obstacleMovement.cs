@@ -11,19 +11,20 @@ public class obstacleMovement : MonoBehaviour {
 
     public static bool isEnabled = true;
 
-    GameObject[] spawns;
+   // GameObject[] spawns;
 
 	// Use this for initialization
 	void Start () {
         gameObject.SetActive(isEnabled);
-        spawns = GameObject.FindGameObjectsWithTag("SpawnPoint");
+        
+       // spawns = GameObject.FindGameObjectsWithTag("SpawnPoint");
     }
 	
 	// Update is called once per frame
 	void FixedUpdate () {
         transform.localScale = new Vector3(scale, scale, scale);
         transform.Translate(Vector3.up * Time.deltaTime * speed);
-        if (transform.position.y > 5f)
+        if (transform.position.y > 6f)
         {
             Respawn();
         }
@@ -36,7 +37,9 @@ public class obstacleMovement : MonoBehaviour {
         this.gameObject.GetComponentInChildren<Renderer>().enabled = true;
         if (spawnInLanes)
         {
-            transform.position = spawns[Random.Range(0, spawns.Length)].transform.position;
+            //Random.seed = (int)(Time.deltaTime * 10000);
+            transform.position = SpawnPointController.spawns[Random.Range(0, SpawnPointController.spawns.Length)].transform.position;
+            Debug.Log(SpawnPointController.spawns.Length);
         }
         else
         { 

@@ -1,11 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
+using Assets.Core.Scripts.Movement;
 
 public class VariableController : MonoBehaviour {
 
     public float ElephantStrafeSpeed = 5f;
-    public float BackgroundScrollingSpeed = 1f;
-    public float ForegroundScrollingSpeed = 1f;
+   // public float BackgroundScrollingSpeed = 1f;
+   // public float ForegroundScrollingSpeed = 1f;
 
     public float ObstacleScale = 1f;
     public float ObstacleSpeed = 1f;
@@ -18,9 +19,9 @@ public class VariableController : MonoBehaviour {
     // Use this for initialization
     void Awake () {
 
-        BGControl.Speed = ElephantStrafeSpeed;
-        BackgroundCylinderRotation.bgspeed = BackgroundScrollingSpeed;
-        ForegroundCylinderRotation.fgspeed = ForegroundScrollingSpeed;
+        TouchInput.Speed = ElephantStrafeSpeed;
+      //  BackgroundCylinderRotation.bgspeed = BackgroundScrollingSpeed;
+       // ForegroundCylinderRotation.fgspeed = ForegroundScrollingSpeed;
         SpawnPointController.distance = LaneWidth;
         obstacleMovement.speed = ObstacleSpeed;
         obstacleMovement.spawnInLanes = UseLanes;

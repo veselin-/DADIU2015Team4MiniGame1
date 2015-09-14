@@ -23,17 +23,15 @@ namespace Assets.Core
 		private List<PressType> _currentGoal;
 		private int _goalId = -1;
 		private AnimationControl _playerAnimationControl;
-		private BGControl _control;
 		private bool _isCalledInThisFrame;
 		
 		private bool _isFirstPose = true;
 
 		public Text HoldCounterText;
 
-		void Start()
+		void Awake()
 		{
 			_playerAnimationControl = Player.GetComponent<AnimationControl>();
-			_control = BackGround.GetComponent<BGControl>();
 			HoldCounterText.gameObject.SetActive (false);
 		}
 		
@@ -95,6 +93,8 @@ namespace Assets.Core
 			else
 			{
 				PoseFailed();
+                ScoreSystem.comboCount = 1;
+                ScoreSystem.comboTimeReset();
 			}
 		}
 		
@@ -133,6 +133,9 @@ namespace Assets.Core
 				_currentGoal = combos [_goalId];
 				_isFirstPose = false;
 			}
+
+		    _playerAnimationControl.PickAnimation();
+
 			//PoseButton.SetActive(false);
 			
 			// Print goal
@@ -173,7 +176,7 @@ namespace Assets.Core
 			}
 
 
-			_playerAnimationControl.ReadyToPose();
+			//_playerAnimationControl.ReadyToPose();
 			
 			//_control.DisableMovement();
 		}
