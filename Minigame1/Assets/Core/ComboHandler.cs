@@ -95,6 +95,8 @@ namespace Assets.Core
 			else
 			{
 				PoseFailed();
+                ScoreSystem.comboCount = 1;
+                ScoreSystem.comboTimeReset();
 			}
 		}
 		
@@ -173,7 +175,7 @@ namespace Assets.Core
 			}
 
 
-			_playerAnimationControl.ReadyToPose();
+			//_playerAnimationControl.ReadyToPose();
 			
 			//_control.DisableMovement();
 		}

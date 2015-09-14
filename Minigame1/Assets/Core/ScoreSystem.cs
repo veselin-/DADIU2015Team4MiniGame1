@@ -5,11 +5,12 @@ using System.Collections;
 public class ScoreSystem : MonoBehaviour {
 
     public static bool poseComplete, comboComplete, timeToCombo, poseFail;
-    public Text scoreText, comboText, lifeText;
-    public int pointsPose = 50, pointsFail = 25, lifes;
-    int points = 0, comboCount;
-    public float comboReset = 20f;
-    float comboTimeDown;
+    public Text scoreText, comboText, lifeText, lifeTimeText;
+    public int pointsPose = 50, pointsFail = 25, lifes, points = 0;
+
+    public static int comboCount;
+    public static float comboReset = 20f, comboTimeDown;
+    public float startTime = 40f, timePoseComplete = 10f, timePoseFail = 5f, timeHitObstacle = 5f, timePoseCombo = 10f;
 
     // Use this for initialization
     void Start()
@@ -18,19 +19,33 @@ public class ScoreSystem : MonoBehaviour {
         comboCount = 1;
         comboTimeDown = comboReset;
         scoreText.text = "Score: " + points;
-        comboText.text = "ComboTime: No combo";
-        lifeText.text = "Lifes: " + lifes;
+        comboText.text = "Combo: x"+comboCount;
+        //lifeText.text = "Lifes: " + lifes;
+        //lifeTimeText.text = "Lifetime: " + startTime;
     }
 
     // Update is called once per frame
     void Update()
     {
+        lifeTime();
         pointSystem();
         if (timeToCombo)
         {
             comboTime();
         }
-        lifes = cubeDeath.loseLife;
+        comboText.text = "Combo: x" + comboCount;
+        //lifes = cubeDeath.loseLife;
+        if (cubeDeath.lifeTimeHit)
+        {
+            startTime -= timeHitObstacle;
+            //Debug.Log("starttimebuf: " + startTimeBuf);
+            //Debug.Log("hitobstaclebuf: " + hitObstacleBuf);
+            cubeDeath.lifeTimeHit = false;
+        }
+        if (startTime <= 0)
+        {
+            Application.LoadLevel("gameOverScene");
+        }
     }
 
     void pointSystem()
@@ -41,11 +56,13 @@ public class ScoreSystem : MonoBehaviour {
             {
                 comboCount += 1;
                 points += pointsPose * comboCount;
-                comboTimeDown = comboReset;
+                startTime += timePoseCombo;
+                comboTimeReset();
             }
             else
             {
                 points += pointsPose;
+                startTime += timePoseComplete;
             }
             poseComplete = false;
             timeToCombo = true;
@@ -53,24 +70,35 @@ public class ScoreSystem : MonoBehaviour {
         else if (poseFail)
         {
             points -= pointsFail;
+            startTime -= timePoseFail;
             poseFail = false;
             timeToCombo = false;
-            comboTimeDown = comboReset;
+            comboTimeReset();
             //lifes = lifes - 1;
             comboCount = 1;
         }
-        lifeText.text = "Lifes: " + lifes;
+        //lifeText.text = "Lifes: " + lifes;
         scoreText.text = "Score: " + points;
+    }
+
+    void lifeTime()
+    {
+        startTime -= Time.deltaTime;
+        lifeTimeText.text = "Lifetime: " + (int)startTime;
     }
 
     void comboTime()
     {
         comboTimeDown -= Time.deltaTime;
-        comboText.text = "ComboTime: " + comboTimeDown.ToString("f2");
+        //comboText.text = "ComboTime: " + comboTimeDown.ToString("f2");
         if (comboTimeDown < 0 || lifes != cubeDeath.loseLife)
             {
-            comboText.text = "ComboTime: No combo";
             timeToCombo = false;
             }
+    }
+
+    public static void comboTimeReset()
+    {
+        comboTimeDown = comboReset;
     }
 }

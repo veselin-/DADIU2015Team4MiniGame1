@@ -24,7 +24,7 @@ public class obstacleMovement : MonoBehaviour {
 	void FixedUpdate () {
         transform.localScale = new Vector3(scale, scale, scale);
         transform.Translate(Vector3.up * Time.deltaTime * speed);
-        if (transform.position.y > 5f)
+        if (transform.position.y > 6f)
         {
             Respawn();
         }
