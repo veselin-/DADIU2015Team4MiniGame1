@@ -32,10 +32,11 @@ public class CloudController : MonoBehaviour {
 
         cloud.GetComponent<Renderer>().material.SetTexture("_MainTex", textures[Random.Range(0, textures.Length)]);
 
-        cloud.transform.position = new Vector3(Random.Range(-3f, 3f), spawns[rand].transform.position.y, spawns[rand].transform.position.z + cloud.GetComponent<CloudMovement>().zOffset);
+       
 
         if(cloud.GetComponent<CloudMovement>().isInForeground)
         {
+            cloud.transform.position = new Vector3(Random.Range(-3f, 3f), spawns[0].transform.position.y, spawns[0].transform.position.z + cloud.GetComponent<CloudMovement>().zOffset);
             cloud.transform.localScale = cloud.transform.localScale * Random.Range(0.5f, 0.8f);
             //  cloud.GetComponent<CloudMovement>().speed = Random.Range(2f, 3f);
             // cloud.GetComponent<CloudMovement>().waitTime = Random.Range(1f, 5f);
@@ -45,6 +46,7 @@ public class CloudController : MonoBehaviour {
         }
         else if(cloud.GetComponent<CloudMovement>().isInForeground == false)
         {
+            cloud.transform.position = new Vector3(Random.Range(-3f, 3f), spawns[1].transform.position.y, spawns[1].transform.position.z + cloud.GetComponent<CloudMovement>().zOffset);
             cloud.transform.localScale = cloud.transform.localScale * Random.Range(2.5f, 2.8f);
             //   cloud.GetComponent<CloudMovement>().speed = Random.Range(.2f, .3f);
             //   cloud.GetComponent<CloudMovement>().waitTime = Random.Range(4f, 10f);
