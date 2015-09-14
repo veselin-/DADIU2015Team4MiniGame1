@@ -95,6 +95,8 @@ namespace Assets.Core
 			else
 			{
 				PoseFailed();
+                ScoreSystem.comboCount = 1;
+                ScoreSystem.comboTimeReset();
 			}
 		}
 		
