@@ -16,9 +16,6 @@ public class ForegroundCylinderRotation : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-
         transform.Rotate(Vector3.down * Time.deltaTime * fgspeed);
-
-
     }
 }

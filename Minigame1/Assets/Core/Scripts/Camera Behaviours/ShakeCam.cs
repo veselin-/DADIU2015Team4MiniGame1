@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using TreeEditor;
 
 public class ShakeCam : MonoBehaviour {
 	
@@ -13,7 +14,9 @@ public class ShakeCam : MonoBehaviour {
 	private Quaternion initialRotation;
 	
 	private Quaternion rotationQuat;
-	
+
+    private bool enabled = true;
+    	
 	public enum NoiseType { None, Position, Rotation, Dual };
 	public NoiseType type = NoiseType.Dual;
 	
@@ -25,6 +28,9 @@ public class ShakeCam : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+        if(!enabled) return;
+	    
 		if (type == NoiseType.Position || type == NoiseType.Dual) {
 			ShakePosition();
 		}
@@ -55,4 +61,9 @@ public class ShakeCam : MonoBehaviour {
 		 */
 		transform.localPosition = position + Vector3.Scale(SmoothRandom.GetVector3(positionShakeSpeed), positionShakeRange);
 	}
+
+    public void StopShaking()
+    {
+        enabled = false;
+    }
 }

@@ -1,4 +1,6 @@
 ﻿using System.Collections.Generic;
+using System.Net;
+using UnityEngine;
 
 namespace Assets.Core
 {
@@ -7,6 +9,7 @@ namespace Assets.Core
         public static class Tags
         {
             public static string GameMaster = "GameMaster";
+            public static string Obstacle = "Obstacle";
         }
 
         public static List<List<PressType>> Combos = new List<List<PressType>>
@@ -22,6 +25,11 @@ namespace Assets.Core
 			new List<PressType> {PressType.Long, PressType.Short, PressType.Long}
 
         };
+
+        public static class Scenes
+        {
+            public static string MainMenuSceneName = "Localization Scene";
+        }
 
     }
 }

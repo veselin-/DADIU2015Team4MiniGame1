@@ -11,6 +11,9 @@ public class obstacleMovement : MonoBehaviour {
 
     public static bool isEnabled = true;
 
+    private bool _isGameOver;
+
+
    // GameObject[] spawns;
 
 	// Use this for initialization
@@ -22,6 +25,13 @@ public class obstacleMovement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
+
+	    if (_isGameOver)
+	    {
+            transform.Translate(Vector3.up * Time.deltaTime * VariableController.DieSpeed);
+            return;
+        }
+
         transform.localScale = new Vector3(scale, scale, scale);
         transform.Translate(Vector3.up * Time.deltaTime * speed);
         if (transform.position.y > 6f)
@@ -45,5 +55,10 @@ public class obstacleMovement : MonoBehaviour {
         { 
         transform.position = new Vector3(Random.Range(-3f, 3f), -5, 0);
         }
+    }
+
+    public void StopSpawning()
+    {
+        _isGameOver = true;
     }
 }
