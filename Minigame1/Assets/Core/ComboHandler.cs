@@ -173,7 +173,7 @@ namespace Assets.Core
 			}
 
 
-			_playerAnimationControl.ReadyToPose();
+			//_playerAnimationControl.ReadyToPose();
 			
 			//_control.DisableMovement();
 		}
