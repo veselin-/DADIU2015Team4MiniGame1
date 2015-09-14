@@ -30,7 +30,7 @@ public class cubeDeath : MonoBehaviour {
     //Restart the level when you hit an object
     void OnTriggerEnter(Collider coll)
     {
-		Camera.main.GetComponent<PerlinShake> ().PlayShake ();
+        Camera.main.GetComponent<PerlinShake> ().PlayShake ();
         loseLife -= 1;
         coll.gameObject.GetComponentInChildren<Collider>().enabled = false;
         coll.gameObject.GetComponentInChildren<Renderer>().enabled = false;

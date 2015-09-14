@@ -6,6 +6,8 @@ TagManager:
   tags:
   - GameMaster
   - SpawnPoint
+  - UICamera
+  - 3DCamera
   layers:
   - Default
   - TransparentFX
@@ -16,7 +18,7 @@ TagManager:
   - 
   - 
   - MovementCollider
-  - 
+  - 3dObject
   - 
   - 
   - 
