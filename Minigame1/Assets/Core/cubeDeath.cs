@@ -4,13 +4,14 @@ using System.Collections;
 public class cubeDeath : MonoBehaviour {
 
     public bool enableControl = true;
+    public static bool lifeTimeHit = false;
 
     public static float espeed;
     public static int loseLife;
 
     // Use this for initialization
     void Start () {
-        loseLife = 5;
+        //loseLife = 5;
 	}
 	
 	// Update is called once per frame
@@ -31,12 +32,11 @@ public class cubeDeath : MonoBehaviour {
     void OnTriggerEnter(Collider coll)
     {
 		Camera.main.GetComponent<PerlinShake> ().PlayShake ();
-        loseLife -= 1;
+        //loseLife -= 1;
+        ScoreSystem.comboCount = 1;
         coll.gameObject.GetComponentInChildren<Collider>().enabled = false;
         coll.gameObject.GetComponentInChildren<Renderer>().enabled = false;
-        if (loseLife == 0)
-        {
-            Application.LoadLevel("gameOverScene");
-        }
+        //if (loseLife == 0)
+        lifeTimeHit = true;
     }
 }
