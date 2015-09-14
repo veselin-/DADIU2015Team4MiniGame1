@@ -5,17 +5,40 @@ public class CloudMovement : MonoBehaviour {
 
     public float speed = 1f;
 
+    public float waitTime;
 
+    float timeWaited;
 
-	// Use this for initialization
-	void Start () {
-	
-	}
+    public float zOffset;
+
+    public bool isInForeground;
+
+    // Use this for initialization
+    void Start () {
+
+        GetComponentInParent<CloudController>().SpawnCloud(this.gameObject);
+        timeWaited += 5;
+
+    }
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
 
-        transform.Translate(Vector3.back * Time.deltaTime * speed);
+        timeWaited += Time.deltaTime;
+
+     
+
+        if(waitTime < timeWaited)
+        {
+            transform.Translate(Vector3.back * Time.deltaTime * speed);
+        }
+
+        if(transform.position.y > 10 && GetComponent<Renderer>().isVisible == false)
+        {
+            GetComponentInParent<CloudController>().SpawnCloud(this.gameObject);
+            timeWaited = 0;
+           
+        }
 
     }
 }
