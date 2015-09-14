@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
+using Assets.Core;
+using Assets.Core.Scripts;
 
 public class cubeDeath : MonoBehaviour {
 
@@ -45,7 +47,7 @@ public class cubeDeath : MonoBehaviour {
             }
             ScoreSystem.comboTimeReset();
             ScoreSystem.points = 0;
-            Application.LoadLevel("gameOverScene");
+            GameObject.FindGameObjectWithTag(Constants.Tags.GameMaster).GetComponent<GameOverMaster>().GameOver();
         }
         //lifeTimeHit = true;
     }

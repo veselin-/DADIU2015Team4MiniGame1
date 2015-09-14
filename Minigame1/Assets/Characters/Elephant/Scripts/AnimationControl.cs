@@ -17,15 +17,19 @@ namespace Assets.Characters.Elephant.Scripts
         public Image Image;
         public Sprite[] PoseIcons;
 
+        private int poseIndex;
+
         public void PickAnimation()
         {
             //We choose a poseIndex based on the animations/icons we have.
-            int poseIndex = Random.Range(0, PoseIcons.Length);
+            poseIndex = Random.Range(0, PoseIcons.Length);
 
             //We set the image of the animation at the top of the screen
             Image.sprite = PoseIcons[poseIndex];
-        
+
             //We need to pick the animation here!
+            
+
         }
 
 
@@ -40,31 +44,35 @@ namespace Assets.Characters.Elephant.Scripts
             if (_goBackToNeutral.HasValue && _goBackToNeutral < DateTime.Now)
             {
                 _goBackToNeutral = null;
-                _material.color = Color.white;
+                
             }
         }
         
         public void DidPose(int animationId)
         {
-            _material.color = Color.green;
+            ReadyToPose();
+            gameObject.GetComponentInChildren<Animator>().SetInteger("poseID", poseIndex);
+            Debug.Log(poseIndex);
             ReturnToNeutral();
         }
 
         public void FailedPose()
         {
-            _material.color = Color.red;
+            
             ReturnToNeutral();
         }
 
         public void ReadyToPose()
         {
-            CancelReturnToNeutral();
-            _material.color = Color.yellow;
+            // CancelReturnToNeutral();
+            //gameObject.GetComponentInChildren<Animator>().SetBool("doingPose", false);
+            gameObject.GetComponentInChildren<Animator>().SetTrigger("doingPose");
         }
 
         public void ReturnToNeutral()
         {
-            _goBackToNeutral = DateTime.Now.AddSeconds(2);
+          //  _goBackToNeutral = DateTime.Now.AddSeconds(2);
+            //gameObject.GetComponentInChildren<Animator>().SetBool("doingPose", true);
         }
 
         public void CancelReturnToNeutral()

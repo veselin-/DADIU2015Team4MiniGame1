@@ -14,12 +14,12 @@ namespace Assets.Core.Scripts
 
         public void ButtonPressed()
         {
-            sr.color = new Color(sr.color.r, sr.color.g, sr.color.b, 1);
+            sr.color = new Color(sr.color.r, sr.color.g, sr.color.b, 0.7f);
         }
 
         public void ButtonNotPressed()
         {
-            sr.color = new Color(sr.color.r, sr.color.g, sr.color.b, 0.7f);
+            sr.color = new Color(sr.color.r, sr.color.g, sr.color.b, 0.37f);
         }
     }
 }

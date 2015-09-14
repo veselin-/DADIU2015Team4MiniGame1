@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using Assets.Core.Scripts;
 using Assets.Core.Scripts.Movement;
 
 public class VariableController : MonoBehaviour {
@@ -14,7 +15,9 @@ public class VariableController : MonoBehaviour {
 
     public float LaneWidth = 2f;
     public bool ObstacleIsEnabled = true;
-
+    
+    public float DieSpeedFloat;
+    public static float DieSpeed;
 
     // Use this for initialization
     void Awake () {
@@ -27,8 +30,9 @@ public class VariableController : MonoBehaviour {
         obstacleMovement.spawnInLanes = UseLanes;
         obstacleMovement.scale = ObstacleScale;
         obstacleMovement.isEnabled = ObstacleIsEnabled;
+        DieSpeed = DieSpeedFloat;
 
-	}
+    }
 	
 	// Update is called once per frame
 	void Update () {

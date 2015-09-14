@@ -3,18 +3,22 @@ using System.Collections;
 
 public class obstacleMovement : MonoBehaviour {
 
-    public static float speed = 5f;
+    public static float speed = 5f, scale = 1f, obstacleSpeedTime, speedTime1, speedTime2;
+    public static bool spawnInLanes = true, isEnabled = true;
+    public int increaseSpeedTimeInSeconds1, increaseSpeedTimeInSeconds2;
 
-    public static bool spawnInLanes = true;
 
-    public static float scale = 1f;
+    private bool _isGameOver;
 
-    public static bool isEnabled = true;
 
    // GameObject[] spawns;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
+        increaseSpeedTimeInSeconds1 = 60;
+        increaseSpeedTimeInSeconds2 = 300;
+        speedTime1 = 6f;
+        speedTime2 = 7f;
         gameObject.SetActive(isEnabled);
         
        // spawns = GameObject.FindGameObjectsWithTag("SpawnPoint");
@@ -22,7 +26,15 @@ public class obstacleMovement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
+
+	    if (_isGameOver)
+	    {
+            transform.Translate(Vector3.up * Time.deltaTime * VariableController.DieSpeed*100);
+            return;
+        }
+
         transform.localScale = new Vector3(scale, scale, scale);
+        differentWavesOfObstacles();
         transform.Translate(Vector3.up * Time.deltaTime * speed);
         if (transform.position.y > 6f)
         {
@@ -30,9 +42,22 @@ public class obstacleMovement : MonoBehaviour {
         }
     }
 
+    void differentWavesOfObstacles()
+    {
+        obstacleSpeedTime += Time.deltaTime;
+        if(obstacleSpeedTime > increaseSpeedTimeInSeconds1)
+        {
+            speed = speedTime1;
+        }
+        if (obstacleSpeedTime > increaseSpeedTimeInSeconds2)
+        {
+            speed = speedTime2;
+        }
+    }
 
     void Respawn()
     {
+        if (_isGameOver) return;
         this.gameObject.GetComponentInChildren<Collider>().enabled = true;
         this.gameObject.GetComponentInChildren<Renderer>().enabled = true;
         if (spawnInLanes)
@@ -45,5 +70,10 @@ public class obstacleMovement : MonoBehaviour {
         { 
         transform.position = new Vector3(Random.Range(-3f, 3f), -5, 0);
         }
+    }
+
+    public void StopSpawning()
+    {
+        _isGameOver = true;
     }
 }

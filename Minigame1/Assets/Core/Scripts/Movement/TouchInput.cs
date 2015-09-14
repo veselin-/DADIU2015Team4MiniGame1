@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Net;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -28,6 +29,7 @@ namespace Assets.Core.Scripts.Movement
 
         private ButtonLook _leftButtonLook;
         private ButtonLook _rightButtonLook;
+        private bool _gameOver;
 
 
 		private float span;
@@ -43,6 +45,17 @@ namespace Assets.Core.Scripts.Movement
 
         // Update is called once per frame
         void Update () {
+
+            if (_gameOver && transform.position.y > -1.5)
+            {
+                Elephant.transform.Translate(Vector3.down*Time.deltaTime*VariableController.DieSpeed);
+                return;
+            }
+            if(_gameOver)
+            {
+                gameObject.SetActive(false);
+                return;
+            }
 
             if(Input.touches.Length > 1)
                 return;
@@ -133,6 +146,17 @@ namespace Assets.Core.Scripts.Movement
             {
                 Elephant.transform.Translate(Vector3.right * Time.deltaTime * Speed);
             }
+        }
+
+        public void Gameover()
+        {
+            _gameOver = true;
+            
+        }
+
+        public float GetXPos()
+        {
+            return Elephant.transform.position.x;
         }
 
     }

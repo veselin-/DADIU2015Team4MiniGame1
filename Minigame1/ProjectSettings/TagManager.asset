@@ -8,6 +8,7 @@ TagManager:
   - SpawnPoint
   - UICamera
   - 3DCamera
+  - Obstacle
   layers:
   - Default
   - TransparentFX
