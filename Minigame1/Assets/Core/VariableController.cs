@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using Assets.Core.Scripts.Movement;
 
 public class VariableController : MonoBehaviour {
 
@@ -18,7 +19,7 @@ public class VariableController : MonoBehaviour {
     // Use this for initialization
     void Awake () {
 
-        BGControl.Speed = ElephantStrafeSpeed;
+        TouchInput.Speed = ElephantStrafeSpeed;
         BackgroundCylinderRotation.bgspeed = BackgroundScrollingSpeed;
         ForegroundCylinderRotation.fgspeed = ForegroundScrollingSpeed;
         SpawnPointController.distance = LaneWidth;

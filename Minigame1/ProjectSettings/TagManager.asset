@@ -16,8 +16,8 @@ TagManager:
   - 
   - 
   - MovementCollider
-  - 
-  - 
+  - LeftInput
+  - RightInput
   - 
   - 
   - 

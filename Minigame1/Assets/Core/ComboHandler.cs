@@ -23,7 +23,6 @@ namespace Assets.Core
 		private List<PressType> _currentGoal;
 		private int _goalId = -1;
 		private AnimationControl _playerAnimationControl;
-		private BGControl _control;
 		private bool _isCalledInThisFrame;
 		
 		private bool _isFirstPose = true;
@@ -33,7 +32,6 @@ namespace Assets.Core
 		void Start()
 		{
 			_playerAnimationControl = Player.GetComponent<AnimationControl>();
-			_control = BackGround.GetComponent<BGControl>();
 			HoldCounterText.gameObject.SetActive (false);
 		}
 		
@@ -173,9 +171,7 @@ namespace Assets.Core
 			}
 
 
-			_playerAnimationControl.ReadyToPose();
-			
-			//_control.DisableMovement();
+			//_playerAnimationControl.ReadyToPose();
 		}
 		
 		public void PoseFailed()
@@ -216,7 +212,7 @@ namespace Assets.Core
 				}
 			}
 
-			_playerAnimationControl.FailedPose();
+			//_playerAnimationControl.FailedPose();
 			ScoreSystem.poseFail = true;
 			Debug.Log ("PoseFailed");
 			Reset();
@@ -224,7 +220,7 @@ namespace Assets.Core
 		
 		public void PoseSucceeded()
 		{
-			_playerAnimationControl.DidPose(_goalId);
+			//_playerAnimationControl.DidPose(_goalId);
 			ScoreSystem.poseComplete = true;
 			Debug.Log ("PoseSucceeded");
 			//ElephantColor.material.color = new Color(Random.Range(0.0f,1.0f),Random.Range(0.0f,1.0f),Random.Range(0.0f,1.0f)); 
@@ -237,7 +233,6 @@ namespace Assets.Core
 
 			GoalText.text = "";
 			//PoseButton.SetActive(true);
-			//_control.EnableMovement();
 			HoldCounterText.gameObject.SetActive (false);
 
 			StartCoroutine (WaitForNewCombo(SecondsBeforeNewCombo));

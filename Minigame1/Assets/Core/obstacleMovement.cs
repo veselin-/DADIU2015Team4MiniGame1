@@ -37,7 +37,7 @@ public class obstacleMovement : MonoBehaviour {
         if (spawnInLanes)
         {
             transform.position = spawns[Random.Range(0, spawns.Length)].transform.position;
-        }
+           }
         else
         { 
         transform.position = new Vector3(Random.Range(-3f, 3f), -5, 0);

@@ -83,6 +83,16 @@ MonoBehaviour:
   BackGround: {fileID: 0}
   TapTapTapFrequency: 50
   GoalText: {fileID: 0}
+  SecondsBeforeNewCombo: 2
+  OneImg: {fileID: 0}
+  TwoImg: {fileID: 0}
+  ThreeImg: {fileID: 0}
+  ShortSprite: {fileID: 21300000, guid: 0e11cb73e7f600a439ef0608b00caea7, type: 3}
+  LongSprite: {fileID: 21300000, guid: 8f1ba75559eb3c14d9a4c2feb909fd33, type: 3}
+  SuccessShortSprite: {fileID: 21300000, guid: 40ba91355d5a838449f2e8ed74242974, type: 3}
+  SuccessLongSprite: {fileID: 21300000, guid: 89dc5ccbee9c7094e8551d4142e07c81, type: 3}
+  FailShortSprite: {fileID: 21300000, guid: dd23af4a442631d42948b1f1e0327c16, type: 3}
+  FailLongSprite: {fileID: 21300000, guid: c01c046de504d3847bfd80838e401671, type: 3}
   PoseButton: {fileID: 0}
   HoldCounterText: {fileID: 0}
 --- !u!114 &11489440
@@ -96,8 +106,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e73f7875a30ff3d48a4e2dd07440a6ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  secToLongPress: .300000012
+  SecToLongPress: .300000012
   HoldCounterText: {fileID: 0}
+  LeftLayerMask:
+    serializedVersion: 2
+    m_Bits: 512
+  RightLayerMask:
+    serializedVersion: 2
+    m_Bits: 1024
+  Elephant: {fileID: 0}
+  BoundaryDist: 3
+  leftButton: {fileID: 0}
+  rightButton: {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
