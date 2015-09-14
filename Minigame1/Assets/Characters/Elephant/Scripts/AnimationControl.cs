@@ -26,33 +26,33 @@ namespace Assets.Characters.Elephant.Scripts
             }
         }
         
-        //public void DidPose(int animationId)
-        //{
-        //    _material.color = Color.green;
-        //    ReturnToNeutral();
-        //}
+        public void DidPose(int animationId)
+        {
+            _material.color = Color.green;
+            ReturnToNeutral();
+        }
 
-        //public void FailedPose()
-        //{
-        //    _material.color = Color.red;
-        //    ReturnToNeutral();
-        //}
+        public void FailedPose()
+        {
+            _material.color = Color.red;
+            ReturnToNeutral();
+        }
 
-        //public void ReadyToPose()
-        //{
-        //    CancelReturnToNeutral();
-        //    _material.color = Color.yellow;
-        //}
+        public void ReadyToPose()
+        {
+            CancelReturnToNeutral();
+            _material.color = Color.yellow;
+        }
 
-        //public void ReturnToNeutral()
-        //{
-        //    _goBackToNeutral = DateTime.Now.AddSeconds(2);
-        //}
+        public void ReturnToNeutral()
+        {
+            _goBackToNeutral = DateTime.Now.AddSeconds(2);
+        }
 
-        //public void CancelReturnToNeutral()
-        //{
-        //    _goBackToNeutral = null;
-        //}
+        public void CancelReturnToNeutral()
+        {
+            _goBackToNeutral = null;
+        }
 
     }
 }
