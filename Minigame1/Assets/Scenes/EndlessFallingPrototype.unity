@@ -1974,6 +1974,10 @@ Prefab:
       propertyPath: pointsFail
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11443358, guid: 9d6cd4a9298736e4cac125dc7881653d, type: 2}
+      propertyPath: lifes
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9d6cd4a9298736e4cac125dc7881653d, type: 2}
   m_IsPrefabParent: 0
@@ -2116,7 +2120,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1.36000001, y: 1.87, z: 1}
-  m_Center: {x: 0, y: -.280000001, z: 0}
+  m_Center: {x: 0, y: .75, z: 0}
 --- !u!114 &1219448900
 MonoBehaviour:
   m_ObjectHideFlags: 0
