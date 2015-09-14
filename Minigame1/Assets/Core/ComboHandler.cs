@@ -230,6 +230,7 @@ namespace Assets.Core
 			_playerAnimationControl.DidPose(_goalId);
 			ScoreSystem.poseComplete = true;
 			Debug.Log ("PoseSucceeded");
+            
 			//ElephantColor.material.color = new Color(Random.Range(0.0f,1.0f),Random.Range(0.0f,1.0f),Random.Range(0.0f,1.0f)); 
 			Reset();
 		}
