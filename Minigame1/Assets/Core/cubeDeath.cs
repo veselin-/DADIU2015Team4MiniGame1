@@ -41,7 +41,7 @@ public class cubeDeath : MonoBehaviour {
         loseLife -= 1;
         ScoreSystem.comboCount = 1;
         coll.gameObject.GetComponentInChildren<Collider>().enabled = false;
-        coll.gameObject.GetComponentInChildren<Renderer>().enabled = false;
+        //coll.gameObject.GetComponentInChildren<Renderer>().enabled = false;
 
 		AudioMngr.FailPlay ();
 	
