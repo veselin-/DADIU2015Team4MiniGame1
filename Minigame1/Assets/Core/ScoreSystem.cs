@@ -12,7 +12,8 @@ public class ScoreSystem : MonoBehaviour {
     public static float comboReset = 7f, comboTimeDown;
     //public float startTime = 40f, timePoseComplete = 10f, timePoseFail = 5f, timeHitObstacle = 5f, timePoseCombo = 10f;
 
-    public GameObject star;
+    public GameObject star, hearts;
+    
 
     // Use this for initialization
     void Start()
@@ -22,7 +23,7 @@ public class ScoreSystem : MonoBehaviour {
         comboTimeDown = comboReset;
         scoreText.text = "Score: " + points;
         comboText.text = "X"+ comboCount;
-        lifeText.text = "Lives: " + lifes;
+      //  lifeText.text = "Lives: " + lifes;
         star.SetActive(false);
         //lifeTimeText.text = "Lifetime: " + startTime;
     }
@@ -105,8 +106,9 @@ public class ScoreSystem : MonoBehaviour {
         {
             lifes = 0;
         }
-        lifeText.text = "Lives: " + lifes;
+       // lifeText.text = "Lives: " + lifes;
         scoreText.text = "Score: " + points;
+        hearts.GetComponent<HeartController>().lives = lifes;
     }
 
     //void lifeTime()
