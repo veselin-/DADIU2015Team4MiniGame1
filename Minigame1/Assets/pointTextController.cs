@@ -3,12 +3,12 @@ using System.Collections;
 
 public class pointTextController : MonoBehaviour {
 
-    Transform elephant;
+    GameObject elephant;
 
 	// Use this for initialization
 	void Start () {
 
-        elephant = GameObject.Find("Elephant").transform;
+        elephant = GameObject.FindGameObjectWithTag("Player");
 
 	}
 	
@@ -23,7 +23,7 @@ public class pointTextController : MonoBehaviour {
     {
 
         GetComponent<TextMesh>().text = points.ToString();
-        transform.position = elephant.position;
+        this.transform.position = elephant.transform.position;
         GetComponent<Animation>().Play();
 
     }

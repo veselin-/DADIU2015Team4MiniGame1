@@ -22,7 +22,7 @@ public class ScoreSystem : MonoBehaviour {
         comboTimeDown = comboReset;
         scoreText.text = points.ToString();
         comboText.text = "x"+ comboCount;
-        lifeText.text = "Lives: " + lifes;
+        //lifeText.text = "Lives: " + lifes;
         star.SetActive(false);
         //lifeTimeText.text = "Lifetime: " + startTime;
     }
