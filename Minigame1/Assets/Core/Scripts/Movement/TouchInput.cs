@@ -46,14 +46,14 @@ namespace Assets.Core.Scripts.Movement
         // Update is called once per frame
         void Update () {
 
-            if (_gameOver && transform.position.y > -1.5)
+            if (_gameOver && Elephant.transform.position.y > -4.5f)
             {
                 Elephant.transform.Translate(Vector3.down*Time.deltaTime*VariableController.DieSpeed);
                 return;
             }
             if(_gameOver)
             {
-                gameObject.SetActive(false);
+                Elephant.SetActive(false);
                 return;
             }
 

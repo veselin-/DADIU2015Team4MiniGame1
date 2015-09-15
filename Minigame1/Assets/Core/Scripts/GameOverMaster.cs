@@ -34,11 +34,13 @@ namespace Assets.Core.Scripts
         }
 
         void Update () {
+            // Shoud move ground up
             if(_groundTransform.position.y < -0.27 && _gameIsOver) { 
                 _groundTransform.Translate(Vector3.up * Time.deltaTime * VariableController.DieSpeed);
                 _elephantMovement.Gameover();
                 _holeTransform = Hole.GetComponent<Transform>();
             }
+            //Ground is now moved up. Add hole. 
             else if (_gameIsOver)
             {
                 _holeTransform.position = new Vector3(_elephantMovement.GetXPos(), _holeTransform.position.y, _holeTransform.position.z);
@@ -55,7 +57,6 @@ namespace Assets.Core.Scripts
 
         private void StopSpawns()
         {
-            FrontCylinder.SetActive(false);
             Hole.GetComponent<SpriteRenderer>().enabled = true;
             Camera.main.GetComponent<ShakeCam>().StopShaking();
 

@@ -28,7 +28,7 @@ namespace Assets.Core
 
         public static class Scenes
         {
-            public static string MainMenuSceneName = "Localization Scene";
+            public static string MainMenuSceneName = "MainMenu";
         }
 
     }

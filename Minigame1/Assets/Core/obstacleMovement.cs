@@ -29,7 +29,7 @@ public class obstacleMovement : MonoBehaviour {
 
 	    if (_isGameOver)
 	    {
-            transform.Translate(Vector3.up * Time.deltaTime * VariableController.DieSpeed*100);
+            transform.Translate(Vector3.up * Time.deltaTime * VariableController.DieSpeed*10);
             return;
         }
 

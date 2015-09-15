@@ -845,6 +845,10 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 137492, guid: 3e602dfa590aea84d855b95290333a1b, type: 2}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3e602dfa590aea84d855b95290333a1b, type: 2}
   m_IsPrefabParent: 0
@@ -1063,7 +1067,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 2942da991abd86a40bf0b22356007cf7, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: .698039234}
+  m_Color: {r: 1, g: 1, b: 1, a: .368627459}
 --- !u!61 &900766590
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2157,6 +2161,10 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 137492, guid: 3e602dfa590aea84d855b95290333a1b, type: 2}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3e602dfa590aea84d855b95290333a1b, type: 2}
   m_IsPrefabParent: 0
@@ -2226,7 +2234,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 48e26cdf149d4624bbcc9a36926ea93e, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: .698039234}
+  m_Color: {r: 1, g: 1, b: 1, a: .368627459}
 --- !u!61 &1662267651
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2499,7 +2507,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 477400, guid: 4cd3b4d1cd5fe8a46a25222acd559678, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -5.71999979
       objectReference: {fileID: 0}
     - target: {fileID: 477400, guid: 4cd3b4d1cd5fe8a46a25222acd559678, type: 2}
       propertyPath: m_LocalRotation.x
@@ -2519,7 +2527,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 477400, guid: 4cd3b4d1cd5fe8a46a25222acd559678, type: 2}
       propertyPath: m_RootOrder
-      value: 13
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4cd3b4d1cd5fe8a46a25222acd559678, type: 2}
