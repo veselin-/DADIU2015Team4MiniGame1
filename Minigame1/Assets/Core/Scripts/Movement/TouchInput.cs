@@ -46,6 +46,11 @@ namespace Assets.Core.Scripts.Movement
         // Update is called once per frame
         void Update () {
 
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                GameOverMaster.MainMenu();
+            }
+
             if (_gameOver && Elephant.transform.position.y > -4.5f)
             {
                 Elephant.transform.Translate(Vector3.down*Time.deltaTime*VariableController.DieSpeed);

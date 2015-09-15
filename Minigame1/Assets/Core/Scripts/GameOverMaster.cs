@@ -78,12 +78,12 @@ namespace Assets.Core.Scripts
             Destroy(NavButtingRight);
         }
 
-        public void RestartScene()
+        public static void RestartScene()
         {
             Application.LoadLevel(Application.loadedLevel);
         }
 
-        public void MainMenu()
+        public static void MainMenu()
         {
             Application.LoadLevel(Constants.Scenes.MainMenuSceneName);
         }
