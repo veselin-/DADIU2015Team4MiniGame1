@@ -6,7 +6,7 @@ public class obstacleMovement : MonoBehaviour {
     public static float speed = 5f, scale = 1f, obstacleSpeedTime;
     public static bool spawnInLanes = true, isEnabled = true;
     public int secondsAfterEachIncrease = 30;
-    private float theIntervalOfSpeedBoost = 0.1f, maxSpeed = 6.5f;
+    private float theIntervalOfSpeedBoost = 0.1f, maxSpeed = 6f;
 
     private bool _isGameOver;
 
@@ -16,6 +16,7 @@ public class obstacleMovement : MonoBehaviour {
     // Use this for initialization
     void Start () {
         gameObject.SetActive(isEnabled);
+        speed = 5f;
        // spawns = GameObject.FindGameObjectsWithTag("SpawnPoint");
     }
 	

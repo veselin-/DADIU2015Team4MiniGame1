@@ -27,13 +27,11 @@ namespace Assets.Core
 		
 		private bool _isFirstPose = true;
 
-		public Text HoldCounterText;
 		private AudioManager AudioMngr;
 
 		void Awake()
 		{
 			_playerAnimationControl = Player.GetComponent<AnimationControl>();
-			HoldCounterText.gameObject.SetActive (false);
 		}
 
 		void Start()
@@ -109,7 +107,7 @@ namespace Assets.Core
 			else
 			{
 				PoseFailed();
-                ScoreSystem.comboCount = 1;
+                ScoreSystem.comboCount = 0;
                 ScoreSystem.comboTimeReset();
 			}
 		}
@@ -129,7 +127,6 @@ namespace Assets.Core
 		
 		public void StartCombo()
 		{
-			HoldCounterText.gameObject.SetActive (true);
 			_isCalledInThisFrame = true;
 			
 			// Reset current presses 
@@ -267,8 +264,6 @@ namespace Assets.Core
 			GoalText.text = "";
 			//PoseButton.SetActive(true);
 			//_control.EnableMovement();
-			HoldCounterText.gameObject.SetActive (false);
-
 			StartCoroutine (WaitForNewCombo(SecondsBeforeNewCombo));
 		}
 

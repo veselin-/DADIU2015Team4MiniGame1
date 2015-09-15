@@ -5,6 +5,8 @@
     <StartGame>Start spillet</StartGame>
     <Credits>Holdet bag</Credits>
     <Title>Skyphant</Title>
+    <Score>Din score: </Score>
+    <HighScore>Top score: </HighScore>
   </Phrases>
   <LanguageNames>
     <English>English</English>

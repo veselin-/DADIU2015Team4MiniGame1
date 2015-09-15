@@ -9,34 +9,41 @@ public class ScoreSystem : MonoBehaviour {
     public int pointsPose = 50, pointsFail = 25, lifes;
 
     public static int comboCount, points;
-    public static float comboReset = 5f, comboTimeDown;
-    public float startTime = 40f, timePoseComplete = 10f, timePoseFail = 5f, timeHitObstacle = 5f, timePoseCombo = 10f;
+    public static float comboReset = 7f, comboTimeDown;
+    //public float startTime = 40f, timePoseComplete = 10f, timePoseFail = 5f, timeHitObstacle = 5f, timePoseCombo = 10f;
 
-    public GameObject star;
+    public GameObject star, hearts, pointText;
 
     // Use this for initialization
     void Start()
     {
-        lifes = 5;
-        comboCount = 1;
+        lifes = 3;
+        comboCount = 0;
         comboTimeDown = comboReset;
-        scoreText.text = "Score: " + points;
-        comboText.text = "X"+ comboCount;
-        lifeText.text = "Lives: " + lifes;
+        scoreText.text = points.ToString();
+        comboText.text = "x"+ comboCount;
+        //lifeText.text = "Lives: " + lifes;
+        star.SetActive(false);
         //lifeTimeText.text = "Lifetime: " + startTime;
     }
 
     // Update is called once per frame
     void Update()
     {
-        lifeTime();
+        
+        //lifeTime();
+        if (comboCount == 0)
+        {
+            star.SetActive(false);
+        }
         pointSystem();
         if (timeToCombo)
         {
             comboTime();
         }
-        comboText.text = "X" + comboCount;
+        comboText.text = "x" + comboCount;
         lifes = cubeDeath.loseLife;
+
         //if (cubeDeath.lifeTimeHit)
         //{
         //    startTime -= timeHitObstacle;
@@ -60,21 +67,29 @@ public class ScoreSystem : MonoBehaviour {
     {
         if (poseComplete)
         {
+
+            star.SetActive(true);
+
             if (timeToCombo && 0 < comboTimeDown)
             {
                 comboCount += 1;
-                animateStar();
                 points += pointsPose * comboCount;
+                pointText.GetComponent<pointTextController>().showPoints(pointsPose * comboCount);
                 //startTime += timePoseCombo;
                 comboTimeReset();
             }
             else
             {
+                comboCount = 2;
                 points += pointsPose;
+                pointText.GetComponent<pointTextController>().showPoints(pointsPose);
                 //startTime += timePoseComplete;
             }
+
+            animateStar();
             poseComplete = false;
             timeToCombo = true;
+            
         }
         else if (poseFail)
         {
@@ -84,17 +99,30 @@ public class ScoreSystem : MonoBehaviour {
             timeToCombo = false;
             comboTimeReset();
             lifes = lifes - 1;
-            comboCount = 1;
+            comboCount = 0;
         }
-        lifeText.text = "Lives: " + lifes;
-        scoreText.text = "Score: " + points;
+        if (0 > comboTimeDown)
+        {
+            comboCount = 0;
+            comboText.text = "x" + comboCount;
+            comboTimeReset();
+        }
+        if (lifes < 0)
+        {
+            lifes = 0;
+        }
+
+//        lifeText.text = "Lives: " + lifes;
+        scoreText.text = points.ToString();
+        hearts.GetComponent<HeartController>().lives = lifes;
+
     }
 
-    void lifeTime()
-    {
-        startTime -= Time.deltaTime;
-        lifeTimeText.text = "Lifetime: " + (int)startTime;
-    }
+    //void lifeTime()
+    //{
+    //    startTime -= Time.deltaTime;
+    //    lifeTimeText.text = "Lifetime: " + (int)startTime;
+    //}
 
     void comboTime()
     {
