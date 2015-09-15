@@ -23,6 +23,7 @@ public class ScoreSystem : MonoBehaviour {
         scoreText.text = "Score: " + points;
         comboText.text = "X"+ comboCount;
         lifeText.text = "Lives: " + lifes;
+        star.SetActive(false);
         //lifeTimeText.text = "Lifetime: " + startTime;
     }
 
@@ -30,6 +31,10 @@ public class ScoreSystem : MonoBehaviour {
     void Update()
     {
         //lifeTime();
+        if (comboCount == 0)
+        {
+            star.SetActive(false);
+        }
         pointSystem();
         if (timeToCombo)
         {
@@ -75,8 +80,10 @@ public class ScoreSystem : MonoBehaviour {
                 points += pointsPose;
                 //startTime += timePoseComplete;
             }
+            
             poseComplete = false;
             timeToCombo = true;
+            star.SetActive(true);
         }
         else if (poseFail)
         {
