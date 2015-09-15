@@ -6,14 +6,18 @@ using Assets.Core.Scripts;
 public class cubeDeath : MonoBehaviour {
 
     public bool enableControl = true;
-    public static bool lifeTimeHit = false;
+	public AudioManager AudioMngr;
 
+    public static bool lifeTimeHit = false;
     public static float espeed;
     public static int loseLife;
+
+
 
     // Use this for initialization
     void Start () {
         loseLife = 5;
+		AudioMngr = GameObject.FindGameObjectWithTag ("AudioManager").GetComponent<AudioManager>();
 	}
 	
 	// Update is called once per frame
@@ -38,6 +42,9 @@ public class cubeDeath : MonoBehaviour {
         ScoreSystem.comboCount = 1;
         coll.gameObject.GetComponentInChildren<Collider>().enabled = false;
         coll.gameObject.GetComponentInChildren<Renderer>().enabled = false;
+
+		AudioMngr.FailPlay ();
+	
         if (loseLife == 0)
         {
             if (ScoreSystem.points > PlayerPrefs.GetInt("Best score"))

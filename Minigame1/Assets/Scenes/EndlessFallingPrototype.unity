@@ -1131,10 +1131,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 13
       objectReference: {fileID: 0}
-    - target: {fileID: 102056, guid: 6859c696feddeaa4b82b021ab0f6795f, type: 2}
-      propertyPath: m_Name
-      value: AudioManager
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6859c696feddeaa4b82b021ab0f6795f, type: 2}
   m_IsPrefabParent: 0
@@ -1859,6 +1855,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enableControl: 1
+  AudioMngr: {fileID: 0}
 --- !u!23 &1219448901
 MeshRenderer:
   m_ObjectHideFlags: 0
