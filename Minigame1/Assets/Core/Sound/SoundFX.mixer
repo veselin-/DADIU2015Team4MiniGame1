@@ -193,6 +193,7 @@ AudioMixerGroupController:
   m_Pitch: d5b79d9eb574e524e86c7fe6752f4981
   m_Effects:
   - {fileID: 24462012}
+  - {fileID: 24480852}
   m_UserColorIndex: 0
   m_Mute: 0
   m_Solo: 0
@@ -331,6 +332,47 @@ AudioMixerEffectController:
   m_SendTarget: {fileID: 0}
   m_EnableWetMix: 0
   m_Bypass: 0
+--- !u!244 &24480852
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_EffectID: 7a358bb5cf2b53d469c130c8627b87af
+  m_EffectName: SFX Reverb
+  m_MixLevel: 4e37ae861fd8d704689460e76e384e0c
+  m_Parameters:
+  - m_ParameterName: Dry Level
+    m_GUID: a564afca7f7b2044083d4570c93d806c
+  - m_ParameterName: Room
+    m_GUID: 040c1c13600c95d4f8ae78e11255590d
+  - m_ParameterName: Room HF
+    m_GUID: 92aa4ed7ca3813b4985d4887a9baefa7
+  - m_ParameterName: Decay Time
+    m_GUID: 5b7d912b0234d6e48a3f2fbfe60d5344
+  - m_ParameterName: Decay HF Ratio
+    m_GUID: c9a86361a04eb7944918f4cc89e04430
+  - m_ParameterName: Reflections
+    m_GUID: 766a5f9113cda5649b176564e7456d8c
+  - m_ParameterName: Reflect Delay
+    m_GUID: f6d515fc8db366141bbbfb03aa28b0cb
+  - m_ParameterName: Reverb
+    m_GUID: 200e8f963342af14c8e1cac9d4b79517
+  - m_ParameterName: Reverb Delay
+    m_GUID: 00e513a6ce32057448f6773476168742
+  - m_ParameterName: Diffusion
+    m_GUID: c3124a3810deeac4db16889b671a5ad9
+  - m_ParameterName: Density
+    m_GUID: 4d47240351903e1408bdb1f75ed62e30
+  - m_ParameterName: HF Reference
+    m_GUID: c79fce601d3917f49b08b0b8d23114cf
+  - m_ParameterName: Room LF
+    m_GUID: c3e4abfc299bd7e43a5822ab9bd91380
+  - m_ParameterName: LF Reference
+    m_GUID: 5b43a6f0ab0194c4fbcc356b0ca40df7
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
 --- !u!245 &24500003
 AudioMixerSnapshotController:
   m_ObjectHideFlags: 0
@@ -342,6 +384,7 @@ AudioMixerSnapshotController:
   m_FloatValues:
     d8dba1606485f524fa888c28bc1f8a25: 0
     9f53c7e1f24ead244b0bda6352e4f980: -11.944499
+    040c1c13600c95d4f8ae78e11255590d: -8000
     a2aa49e41f767a94c9d1f9e5eaa21c98: -17.9387169
     aeb911f9136542e4a92f81e2487b967d: -6.55661535
     d45f94db0ccab854f83bec3a339da031: 1
