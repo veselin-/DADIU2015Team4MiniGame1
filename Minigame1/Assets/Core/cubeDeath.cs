@@ -1,7 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Security.Cryptography;
 using Assets.Core;
 using Assets.Core.Scripts;
+using UnityEngine.UI;
 
 public class cubeDeath : MonoBehaviour {
 
@@ -11,11 +13,14 @@ public class cubeDeath : MonoBehaviour {
     public static bool lifeTimeHit = false;
     public static float espeed;
     public static int loseLife;
+    public GameObject YourScoreText;
+    public GameObject HighScoreText;
 
 
 
     // Use this for initialization
     void Start () {
+        ScoreSystem.points = 0;
         loseLife = 3;
 		AudioMngr = GameObject.FindGameObjectWithTag ("AudioManager").GetComponent<AudioManager>();
 	}
@@ -46,15 +51,19 @@ public class cubeDeath : MonoBehaviour {
 
 		AudioMngr.FailPlay ();
 	
-        if (loseLife == 0)
+        if (loseLife < 1)
         {
             if (ScoreSystem.points > PlayerPrefs.GetInt("Best score"))
             {
-                PlayerPrefs.SetInt("Best score", ScoreSystem.points);
+                PlayerPrefs.SetInt(LanguageManager.Instance.Get("Phrases/HighScore"), ScoreSystem.points);
                 ScoreSystem.comboCount = 0;
+                ScoreSystem.comboTimeReset();
+
             }
-            ScoreSystem.comboTimeReset();
-            //ScoreSystem.points = 0;
+            YourScoreText.SetActive(true);
+            YourScoreText.GetComponent<Text>().text = LanguageManager.Instance.Get("Phrases/Score") + ScoreSystem.points;
+            HighScoreText.SetActive(true);
+           
             GameObject.FindGameObjectWithTag(Constants.Tags.GameMaster).GetComponent<GameOverMaster>().GameOver();
         }
         //lifeTimeHit = true;

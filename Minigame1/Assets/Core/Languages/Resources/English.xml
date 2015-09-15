@@ -5,6 +5,8 @@
     <StartGame>Start game</StartGame>
     <Credits>Credits</Credits>
     <Title>Skyphant</Title>
+    <Score>Your score: </Score>
+    <HighScore>Highscore: </HighScore>
   </Phrases>
   <LanguageNames>
     <English>English</English>

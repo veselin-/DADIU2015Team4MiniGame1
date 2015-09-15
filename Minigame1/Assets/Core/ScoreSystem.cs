@@ -20,8 +20,8 @@ public class ScoreSystem : MonoBehaviour {
         lifes = 3;
         comboCount = 0;
         comboTimeDown = comboReset;
-        scoreText.text = "Score: " + points;
-        comboText.text = "X"+ comboCount;
+        scoreText.text = points.ToString();
+        comboText.text = "x"+ comboCount;
         lifeText.text = "Lives: " + lifes;
         star.SetActive(false);
         //lifeTimeText.text = "Lifetime: " + startTime;
@@ -40,9 +40,9 @@ public class ScoreSystem : MonoBehaviour {
         {
             comboTime();
         }
-        comboText.text = "X" + comboCount;
+        comboText.text = "x" + comboCount;
         lifes = cubeDeath.loseLife;
-        Debug.Log("KOMMER DU NOGENSINDE HER IND?"+comboTimeDown);
+
         //if (cubeDeath.lifeTimeHit)
         //{
         //    startTime -= timeHitObstacle;
@@ -66,10 +66,12 @@ public class ScoreSystem : MonoBehaviour {
     {
         if (poseComplete)
         {
+
+            star.SetActive(true);
+
             if (timeToCombo && 0 < comboTimeDown)
             {
                 comboCount += 1;
-                animateStar();
                 points += pointsPose * comboCount;
                 //startTime += timePoseCombo;
                 comboTimeReset();
@@ -80,10 +82,11 @@ public class ScoreSystem : MonoBehaviour {
                 points += pointsPose;
                 //startTime += timePoseComplete;
             }
-            
+
+            animateStar();
             poseComplete = false;
             timeToCombo = true;
-            star.SetActive(true);
+            
         }
         else if (poseFail)
         {
@@ -98,7 +101,7 @@ public class ScoreSystem : MonoBehaviour {
         if (0 > comboTimeDown)
         {
             comboCount = 0;
-            comboText.text = "X" + comboCount;
+            comboText.text = "x" + comboCount;
             comboTimeReset();
         }
         if (lifes < 0)
@@ -106,7 +109,7 @@ public class ScoreSystem : MonoBehaviour {
             lifes = 0;
         }
         lifeText.text = "Lives: " + lifes;
-        scoreText.text = "Score: " + points;
+        scoreText.text = points.ToString();
     }
 
     //void lifeTime()
