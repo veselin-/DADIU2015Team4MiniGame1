@@ -28,11 +28,17 @@ namespace Assets.Core
 		private bool _isFirstPose = true;
 
 		public Text HoldCounterText;
+		private AudioManager AudioMngr;
 
 		void Awake()
 		{
 			_playerAnimationControl = Player.GetComponent<AnimationControl>();
 			HoldCounterText.gameObject.SetActive (false);
+		}
+
+		void Start()
+		{
+			AudioMngr = GameObject.FindGameObjectWithTag ("AudioManager").GetComponent<AudioManager>();
 		}
 		
 		public void DoPress(PressType press)
@@ -54,6 +60,10 @@ namespace Assets.Core
 
 				if(_currentPresses.Count == 1)
 				{
+
+					AudioMngr.success.pitch = 1f;
+					AudioMngr.SuccessPlay();
+
 					if(OneImg.sprite == ShortSprite)
 					{
 						OneImg.sprite = SuccessShortSprite;
@@ -65,6 +75,8 @@ namespace Assets.Core
 				}
 				else if(_currentPresses.Count == 2)
 				{
+					AudioMngr.success.pitch = 1.2f;
+					AudioMngr.SuccessPlay();
 					if(TwoImg.sprite == ShortSprite)
 					{
 						TwoImg.sprite = SuccessShortSprite;
@@ -76,6 +88,8 @@ namespace Assets.Core
 				}
 				else if(_currentPresses.Count == 3)
 				{
+					AudioMngr.success.pitch = 1.4f;
+					AudioMngr.SuccessPlay();
 					if(ThreeImg.sprite == ShortSprite)
 					{
 						ThreeImg.sprite = SuccessShortSprite;

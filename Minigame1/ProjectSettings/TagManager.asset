@@ -9,6 +9,7 @@ TagManager:
   - UICamera
   - 3DCamera
   - Obstacle
+  - AudioManager
   layers:
   - Default
   - TransparentFX
