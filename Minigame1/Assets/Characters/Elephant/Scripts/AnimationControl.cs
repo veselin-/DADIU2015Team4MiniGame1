@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections;
-using System.Threading;
 using UnityEngine;
-using Assets.Core;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
@@ -21,9 +18,12 @@ namespace Assets.Characters.Elephant.Scripts
 
         public void PickAnimation()
         {
-            //We choose a poseIndex based on the animations/icons we have.
-            poseIndex = Random.Range(0, PoseIcons.Length);
+            var oldPoseIndex = poseIndex;
 
+            //We choose a poseIndex based on the animations/icons we have.
+            while (oldPoseIndex == poseIndex && PoseIcons.Length > 1)
+                poseIndex = Random.Range(0, PoseIcons.Length);
+            
             //We set the image of the animation at the top of the screen
             Image.sprite = PoseIcons[poseIndex];
 
