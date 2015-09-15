@@ -2457,6 +2457,10 @@ Prefab:
       propertyPath: m_TagString
       value: Obstacle
       objectReference: {fileID: 0}
+    - target: {fileID: 160370, guid: 0b32b9d56e63d1844aeb46c3cd07936f, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0b32b9d56e63d1844aeb46c3cd07936f, type: 2}
   m_IsPrefabParent: 0
@@ -5930,6 +5934,10 @@ Prefab:
     - target: {fileID: 160370, guid: 0b32b9d56e63d1844aeb46c3cd07936f, type: 2}
       propertyPath: m_Name
       value: Obstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 160370, guid: 0b32b9d56e63d1844aeb46c3cd07936f, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0b32b9d56e63d1844aeb46c3cd07936f, type: 2}
