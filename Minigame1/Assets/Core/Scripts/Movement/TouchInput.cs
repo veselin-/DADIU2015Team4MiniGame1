@@ -9,6 +9,7 @@ namespace Assets.Core.Scripts.Movement
     {
 		public float SecToLongPress = 0.3f;
 		public Text HoldCounterText;
+
         public LayerMask LeftLayerMask;
         public LayerMask RightLayerMask;
         public GameObject Elephant;
@@ -107,6 +108,22 @@ namespace Assets.Core.Scripts.Movement
             _timeCounter = Time.time;
             HoldCounterText.text = (_timeCounter - _startTime).ToString();
 
+			if(_comboHandler.GetCurrentGoalPressNumber() == 0 && _comboHandler.NextGoalPress() == PressType.Long)
+			{
+
+				CooldownAnimation(_comboHandler.cooldown1.GetComponent<Animator>());
+			}
+			else if (_comboHandler.GetCurrentGoalPressNumber() == 1 && _comboHandler.NextGoalPress() == PressType.Long)
+			{
+				
+				CooldownAnimation(_comboHandler.cooldown2.GetComponent<Animator>());
+			}
+			else if (_comboHandler.GetCurrentGoalPressNumber() == 2 && _comboHandler.NextGoalPress() == PressType.Long)
+			{
+				
+				CooldownAnimation(_comboHandler.cooldown3.GetComponent<Animator>());
+			}
+
             span = (_timeCounter - _startTime);
 
             if (!(span > SecToLongPress)) return;
@@ -125,6 +142,10 @@ namespace Assets.Core.Scripts.Movement
             _firstClick = true;
             _longPressDone = false;
             _timeCounter = 0;
+			
+			_comboHandler.cooldown1.GetComponent<Animator> ().SetBool("Active", false);
+			_comboHandler.cooldown2.GetComponent<Animator> ().SetBool("Active", false);
+			_comboHandler.cooldown3.GetComponent<Animator> ().SetBool("Active", false);
 
             HoldCounterText.text = string.Empty;
         }
@@ -158,6 +179,25 @@ namespace Assets.Core.Scripts.Movement
         {
             return Elephant.transform.position.x;
         }
+
+		public void CooldownAnimation(Animator cooldownAnim)
+		{
+			if (Input.GetMouseButtonDown (0)) {
+				
+				if(SecToLongPress < 1)
+				{
+					cooldownAnim.speed = 1f / SecToLongPress;
+				}
+				else
+				{
+					cooldownAnim.speed = 1f * SecToLongPress;
+				}
+				
+				//			Debug.Log(cooldownImage.speed);
+				
+				cooldownAnim.SetBool("Active", true);
+			}
+		}
 
     }
 }

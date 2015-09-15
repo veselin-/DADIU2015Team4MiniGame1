@@ -10,12 +10,12 @@ namespace Assets.Core
 	{
 		public GameObject Player;
 		public GameObject BackGround;
-		public float TapTapTapFrequency = 50f;
+		public float TapTapTapFrequency = 0f;
 		public Text GoalText;
 		public float SecondsBeforeNewCombo = 2f;
-		public Image OneImg, TwoImg, ThreeImg;
+		public Image OneImg, TwoImg, ThreeImg, cooldown1, cooldown2, cooldown3;
 		public Sprite ShortSprite, LongSprite, SuccessShortSprite, SuccessLongSprite, FailShortSprite, FailLongSprite;
-
+		//public Animator cooldownAnim;
 		public GameObject PoseButton;
 		//public MeshRenderer ElephantColor; 
 		
@@ -61,7 +61,8 @@ namespace Assets.Core
 				if(_currentPresses.Count == 1)
 				{
 
-					AudioMngr.success.pitch = 1f;
+					//AudioMngr.success.pitch = 1f;
+					AudioMngr.ChangeSuccessPitch(1f);
 					AudioMngr.SuccessPlay();
 
 					if(OneImg.sprite == ShortSprite)
@@ -75,7 +76,8 @@ namespace Assets.Core
 				}
 				else if(_currentPresses.Count == 2)
 				{
-					AudioMngr.success.pitch = 1.2f;
+					//AudioMngr.success.pitch = 1.2f;
+					AudioMngr.ChangeSuccessPitch(1.15f);
 					AudioMngr.SuccessPlay();
 					if(TwoImg.sprite == ShortSprite)
 					{
@@ -88,7 +90,8 @@ namespace Assets.Core
 				}
 				else if(_currentPresses.Count == 3)
 				{
-					AudioMngr.success.pitch = 1.4f;
+					//AudioMngr.success.pitch = 1.4f;
+					AudioMngr.ChangeSuccessPitch(1.4f);
 					AudioMngr.SuccessPlay();
 					if(ThreeImg.sprite == ShortSprite)
 					{
@@ -100,7 +103,6 @@ namespace Assets.Core
 					}
 				}
 
-				Debug.Log("success press");
 				if (_currentPresses.Count != _currentGoal.Count) return;
 				PoseSucceeded();
 			}
@@ -112,9 +114,17 @@ namespace Assets.Core
 			}
 		}
 		
-		public PressType NextGoalPress()
+		public PressType? NextGoalPress()
 		{
-			return _currentGoal[_currentPresses.Count];
+			if (_goalId != -1) {
+				return _currentGoal [_currentPresses.Count];
+			}
+			return null;
+		}
+
+		public int GetCurrentGoalPressNumber()
+		{
+			return _currentPresses.Count;
 		}
 		
 		public void StartCombo()
@@ -138,7 +148,7 @@ namespace Assets.Core
 				}
 				else
 				{
-					_goalId = new System.Random().Next(1, combos.Count);
+					_goalId = new System.Random().Next(0, combos.Count);
 					_currentGoal = combos[_goalId];
 				}
 				
@@ -252,7 +262,8 @@ namespace Assets.Core
 		public void Reset()
 		{
 			_goalId = -1;
-
+			_currentPresses = new List<PressType> ();
+			_currentGoal = new List<PressType> ();
 			GoalText.text = "";
 			//PoseButton.SetActive(true);
 			//_control.EnableMovement();
