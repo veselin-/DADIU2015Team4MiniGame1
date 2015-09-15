@@ -8,9 +8,10 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 470210}
+  - 114: {fileID: 11424020}
   m_Layer: 0
   m_Name: AudioManager
-  m_TagString: Untagged
+  m_TagString: AudioManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -720,6 +721,24 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+--- !u!114 &11424020
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 102056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dbf144bb1a88514eb6354bc97d0a35e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  music: {fileID: 8202432}
+  flapping: {fileID: 8285678}
+  success: {fileID: 8243330}
+  wind: {fileID: 8253554}
+  fail: {fileID: 8269298}
+  combo: {fileID: 8221894}
+  pose: {fileID: 8229550}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
