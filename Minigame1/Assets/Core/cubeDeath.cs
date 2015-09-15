@@ -16,7 +16,7 @@ public class cubeDeath : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        loseLife = 5;
+        loseLife = 3;
 		AudioMngr = GameObject.FindGameObjectWithTag ("AudioManager").GetComponent<AudioManager>();
 	}
 	

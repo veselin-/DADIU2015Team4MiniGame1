@@ -6,7 +6,7 @@ public class obstacleMovement : MonoBehaviour {
     public static float speed = 5f, scale = 1f, obstacleSpeedTime;
     public static bool spawnInLanes = true, isEnabled = true;
     public int secondsAfterEachIncrease = 30;
-    private float theIntervalOfSpeedBoost = 0.05f, maxSpeed = 6.5f;
+    private float theIntervalOfSpeedBoost = 0.1f, maxSpeed = 6.5f;
 
     private bool _isGameOver;
 
