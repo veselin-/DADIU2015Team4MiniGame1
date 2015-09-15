@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.Audio;
 
 public class AudioManager : MonoBehaviour {
 
@@ -10,6 +11,10 @@ public class AudioManager : MonoBehaviour {
 	public AudioSource fail;
 	public AudioSource combo;
 	public AudioSource pose;
+
+	public AudioMixer MasterMixer;
+	public AudioMixer MusicMixer;
+	public AudioMixer SoundFXMixer;
 
 	public void MusicPlay()
 	{
@@ -46,6 +51,12 @@ public class AudioManager : MonoBehaviour {
 	{
 		success.Stop ();
 	}
+
+	public void ChangeSuccessPitch(float pitch)
+	{
+		SoundFXMixer.SetFloat ("SuccessPitch", pitch);
+	}
+
 
 	public void FailPlay()
 	{
