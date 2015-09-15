@@ -39,9 +39,10 @@ public class cubeDeath : MonoBehaviour {
     {
 		Camera.main.GetComponent<PerlinShake> ().PlayShake ();
         loseLife -= 1;
-        ScoreSystem.comboCount = 1;
+        ScoreSystem.comboCount = 0;
+        ScoreSystem.comboTimeReset();
         coll.gameObject.GetComponentInChildren<Collider>().enabled = false;
-        coll.gameObject.GetComponentInChildren<Renderer>().enabled = false;
+        //coll.gameObject.GetComponentInChildren<Renderer>().enabled = false;
 
 		AudioMngr.FailPlay ();
 	
@@ -50,7 +51,7 @@ public class cubeDeath : MonoBehaviour {
             if (ScoreSystem.points > PlayerPrefs.GetInt("Best score"))
             {
                 PlayerPrefs.SetInt("Best score", ScoreSystem.points);
-                ScoreSystem.comboCount = 1;
+                ScoreSystem.comboCount = 0;
             }
             ScoreSystem.comboTimeReset();
             //ScoreSystem.points = 0;
