@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Net;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -19,6 +20,9 @@ namespace Assets.Core.Scripts.Movement
         public GameObject LeftButton;
         public GameObject RightButton;
 
+
+		public Transform RotationPoint;
+
         private float _lastInputDown;
         private ComboHandler _comboHandler;
 		private float _timeCounter;
@@ -32,6 +36,7 @@ namespace Assets.Core.Scripts.Movement
         private ButtonLook _rightButtonLook;
         private bool _gameOver;
 
+		private bool turnedLeft, turnedRight = false;
 
 		private float span;
 
@@ -41,7 +46,6 @@ namespace Assets.Core.Scripts.Movement
 			_comboHandler.StartCombo ();
             _leftButtonLook = LeftButton.GetComponent<ButtonLook>();
             _rightButtonLook = RightButton.GetComponent<ButtonLook>();
-
         }
 
         // Update is called once per frame
@@ -69,10 +73,18 @@ namespace Assets.Core.Scripts.Movement
 
                 if (hitColliderLeft) {
                     _pressingButton = true;
+					RotationPoint.GetComponent<Animator> ().SetBool ("TurnRight", false);
+					RotationPoint.GetComponent<Animator> ().SetBool ("TurnLeft", true);
+					//RotationPoint.GetComponent<Animator>().enabled = false;
+					turnedLeft = true;
                     GoLeft();
                 }
                 else if (hitColliderRight) {
                     _pressingButton = true;
+					RotationPoint.GetComponent<Animator> ().SetBool ("TurnLeft", false);
+					RotationPoint.GetComponent<Animator> ().SetBool ("TurnRight", true);
+					//RotationPoint.GetComponent<Animator>().enabled = false;
+					turnedRight = true;
                     GoRight();
                 }
                 else
@@ -85,7 +97,12 @@ namespace Assets.Core.Scripts.Movement
             {
                 if (_pressingButton)
                 {
-                    _pressingButton = false;
+					//StartCoroutine(WaitForAnimator(.5f));
+					RotationPoint.GetComponent<Animator> ().SetBool ("TurnLeft", false);
+					RotationPoint.GetComponent<Animator> ().SetBool ("TurnRight", false);
+					turnedLeft = false;
+					turnedRight = false;
+					_pressingButton = false;
                     _rightButtonLook.ButtonNotPressed();
                     _leftButtonLook.ButtonNotPressed();
                 } else { 
@@ -93,7 +110,6 @@ namespace Assets.Core.Scripts.Movement
                 }
             }
         }
-
 
         private void PoseInputDown()
         {
