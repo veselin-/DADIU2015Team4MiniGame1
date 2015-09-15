@@ -22,11 +22,8 @@ public class obstacleMovement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	    if (_isGameOver)
-	    {
-            transform.Translate(Vector3.up * Time.deltaTime * VariableController.DieSpeed*10);
-            return;
-        }
+        if (_isGameOver) return;
+
         transform.localScale = new Vector3(scale, scale, scale);
         differentWavesOfObstacles();
         transform.Translate(Vector3.up * Time.deltaTime * speed);
@@ -56,7 +53,6 @@ public class obstacleMovement : MonoBehaviour {
 
     void Respawn()
     {
-        if (_isGameOver) return;
         this.gameObject.GetComponentInChildren<Collider>().enabled = true;
         this.gameObject.GetComponentInChildren<Renderer>().enabled = true;
         if (spawnInLanes)
