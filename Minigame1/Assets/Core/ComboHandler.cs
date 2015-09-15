@@ -204,6 +204,7 @@ namespace Assets.Core
 		
 		public void PoseFailed()
 		{
+			AudioMngr.FailPlay();
 			int count = _currentPresses.Count;
 
 			if( count == 0 )
@@ -248,6 +249,7 @@ namespace Assets.Core
 		
 		public void PoseSucceeded()
 		{
+			AudioMngr.PosePlay();
 			_playerAnimationControl.DidPose(_goalId);
 			ScoreSystem.poseComplete = true;
 			Debug.Log ("PoseSucceeded");

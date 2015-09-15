@@ -9,8 +9,12 @@ public class AudioManager : MonoBehaviour {
 	public AudioSource success;
 	public AudioSource wind;
 	public AudioSource fail;
-	public AudioSource combo;
 	public AudioSource pose;
+	public AudioSource electrified;
+	public AudioSource thunder;
+	public AudioSource buttonClick;
+	public AudioSource hitGround;
+
 
 	public AudioMixer MasterMixer;
 	public AudioMixer MusicMixer;
@@ -68,16 +72,6 @@ public class AudioManager : MonoBehaviour {
 		fail.Stop ();
 	}
 
-	public void ComboPlay()
-	{
-		combo.Play ();
-	}
-
-	public void ComboStop()
-	{
-		combo.Stop ();
-	}
-
 	public void PosePlay()
 	{
 		pose.Play ();
@@ -87,4 +81,46 @@ public class AudioManager : MonoBehaviour {
 	{
 		pose.Stop ();
 	}
+
+	public void ElectrifiedPlay()
+	{
+		electrified.Play ();
+	}
+	
+	public void ElectrifiedStop()
+	{
+		electrified.Stop ();
+	}
+
+	public void ThunderPlay()
+	{
+		thunder.Play ();
+	}
+	
+	public void ThunderStop()
+	{
+		thunder.Stop ();
+	}
+	
+	public void HitGroundPlay()
+	{
+		hitGround.Play ();
+	}
+	
+	public void HitGroundStop()
+	{
+		hitGround.Stop ();
+	}
+
+	public void ButtonClickPlay()
+	{
+		buttonClick.Play ();
+	}
+	
+	public void ButtonClickStop()
+	{
+		buttonClick.Stop ();
+	}
+
+
 }

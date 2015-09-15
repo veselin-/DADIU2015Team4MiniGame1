@@ -25,12 +25,14 @@ namespace Assets.Core.Scripts
         private Transform _groundTransform;
         private Transform _holeTransform ;
         private bool _gameIsOver;
+		private AudioManager AudioMngr;
 
         void Start()
         {
             _groundTransform = Ground.GetComponent<Transform>();
             _elephantMovement = GetComponent<TouchInput>();
             Hole.GetComponent<SpriteRenderer>().enabled = false;
+			AudioMngr = GameObject.FindGameObjectWithTag ("AudioManager").GetComponent<AudioManager>();
         }
 
         void Update () {
@@ -50,7 +52,10 @@ namespace Assets.Core.Scripts
 
         public void GameOver()
         {
-            
+			AudioMngr.HitGroundPlay();
+			AudioMngr.MusicStop ();
+			AudioMngr.WindStop ();
+			AudioMngr.FlappingStop ();
             _gameIsOver = true;
 
         }

@@ -44,6 +44,8 @@ public class cubeDeath : MonoBehaviour {
     void OnTriggerEnter(Collider coll)
     {
 		Camera.main.GetComponent<PerlinShake> ().PlayShake ();
+		AudioMngr.ThunderPlay();
+		AudioMngr.ElectrifiedPlay();
         loseLife -= 1;
         heartController.GetComponent<HeartController>().loseLife(loseLife);
         ScoreSystem.comboCount = 0;
@@ -51,8 +53,6 @@ public class cubeDeath : MonoBehaviour {
         coll.gameObject.GetComponentInChildren<Collider>().enabled = false;
         //coll.gameObject.GetComponentInChildren<Renderer>().enabled = false;
 
-		AudioMngr.FailPlay ();
-	
         if (loseLife < 1)
         {
             if (ScoreSystem.points > PlayerPrefs.GetInt("Best score"))
