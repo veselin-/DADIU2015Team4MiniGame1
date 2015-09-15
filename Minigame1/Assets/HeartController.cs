@@ -15,14 +15,11 @@ public class HeartController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-
-
     }
 
     public void loseLife(int life)
     {
-
-        Hearts[life].SetActive(false);
-
+        if(life < Hearts.Length && life > 0)
+            Hearts[life].SetActive(false);
     }
 }

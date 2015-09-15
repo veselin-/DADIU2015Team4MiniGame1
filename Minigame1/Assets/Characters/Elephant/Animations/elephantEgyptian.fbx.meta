@@ -230,7 +230,233 @@ ModelImporter:
     animationScaleError: .5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 18
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: elephantAnim_REF:noTransform
+        weight: 1
+      - path: elephantAnim_REF:noTransform/elephantAnim_REF:geo
+        weight: 1
+      - path: elephantAnim_REF:noTransform/elephantAnim_REF:geo/elephantAnim_REF:elephantBody
+        weight: 1
+      - path: elephantAnim_REF:noTransform/elephantAnim_REF:geo/elephantAnim_REF:goggles
+        weight: 1
+      - path: elephantAnim_REF:skeleton
+        weight: 1
+      - path: elephantAnim_REF:skeleton/elephantAnim_REF:masterCtrl
+        weight: 1
+      - path: elephantAnim_REF:skeleton/elephantAnim_REF:masterCtrl/elephantAnim_REF:mainCtrl
+        weight: 1
+      - path: elephantAnim_REF:skeleton/elephantAnim_REF:masterCtrl/elephantAnim_REF:mainCtrl/elephantAnim_REF:ctrls
+        weight: 1
+      - path: elephantAnim_REF:skeleton/elephantAnim_REF:masterCtrl/elephantAnim_REF:mainCtrl/elephantAnim_REF:ctrls/elephantAnim_REF:root_ctrl
+        weight: 1
+      - path: elephantAnim_REF:skeleton/elephantAnim_REF:masterCtrl/elephantAnim_REF:mainCtrl/elephantAnim_REF:root
+        weight: 1
+      - path: elephantAnim_REF:skeleton/elephantAnim_REF:masterCtrl/elephantAnim_REF:mainCtrl/elephantAnim_REF:root/elephantAnim_REF:hip
+        weight: 1
+      - path: elephantAnim_REF:skeleton/elephantAnim_REF:masterCtrl/elephantAnim_REF:mainCtrl/elephantAnim_REF:root/elephantAnim_REF:hip/elephantAnim_REF:L_femur
+        weight: 1
+      - path: elephantAnim_REF:skeleton/elephantAnim_REF:masterCtrl/elephantAnim_REF:mainCtrl/elephantAnim_REF:root/elephantAnim_REF:hip/elephantAnim_REF:L_femur/elephantAnim_REF:L_knee
+        weight: 1
+      - path: elephantAnim_REF:skeleton/elephantAnim_REF:masterCtrl/elephantAnim_REF:mainCtrl/elephantAnim_REF:root/elephantAnim_REF:hip/elephantAnim_REF:L_femur/elephantAnim_REF:L_knee/elephantAnim_REF:L_ankle
+        weight: 1
+      - path: elephantAnim_REF:skeleton/elephantAnim_REF:masterCtrl/elephantAnim_REF:mainCtrl/elephantAnim_REF:root/elephantAnim_REF:hip/elephantAnim_REF:L_femur/elephantAnim_REF:L_knee/elephantAnim_REF:L_ankle/elephantAnim_REF:L_heelEnd
+        weight: 1
+      - path: elephantAnim_REF:skeleton/elephantAnim_REF:masterCtrl/elephantAnim_REF:mainCtrl/elephantAnim_REF:root/elephantAnim_REF:hip/elephantAnim_REF:L_femur/elephantAnim_REF:L_knee/elephantAnim_REF:L_ankle/elephantAnim_REF:L_toe
+        weight: 1
+      - path: elephantAnim_REF:skeleton/elephantAnim_REF:masterCtrl/elephantAnim_REF:mainCtrl/elephantAnim_REF:root/elephantAnim_REF:hip/elephantAnim_REF:L_femur/elephantAnim_REF:L_knee/elephantAnim_REF:L_ankle/elephantAnim_REF:L_toe/elephantAnim_REF:L_toeEnd
+        weight: 1
+      - path: elephantAnim_REF:skeleton/elephantAnim_REF:masterCtrl/elephantAnim_REF:mainCtrl/elephantAnim_REF:root/elephantAnim_REF:hip/elephantAnim_REF:R_femur
+        weight: 1
+      - path: elephantAnim_REF:skeleton/elephantAnim_REF:masterCtrl/elephantAnim_REF:mainCtrl/elephantAnim_REF:root/elephantAnim_REF:hip/elephantAnim_REF:R_femur/elephantAnim_REF:R_knee
+        weight: 1
+      - path: elephantAnim_REF:skeleton/elephantAnim_REF:masterCtrl/elephantAnim_REF:mainCtrl/elephantAnim_REF:root/elephantAnim_REF:hip/elephantAnim_REF:R_femur/elephantAnim_REF:R_knee/elephantAnim_REF:R_ankle
+        weight: 1
+      - path: elephantAnim_REF:skeleton/elephantAnim_REF:masterCtrl/elephantAnim_REF:mainCtrl/elephantAnim_REF:root/elephantAnim_REF:hip/elephantAnim_REF:R_femur/elephantAnim_REF:R_knee/elephantAnim_REF:R_ankle/elephantAnim_REF:R_heelEnd
+        weight: 1
+      - path: elephantAnim_REF:skeleton/elephantAnim_REF:masterCtrl/elephantAnim_REF:mainCtrl/elephantAnim_REF:root/elephantAnim_REF:hip/elephantAnim_REF:R_femur/elephantAnim_REF:R_knee/elephantAnim_REF:R_ankle/elephantAnim_REF:R_toe
+        weight: 1
+      - path: elephantAnim_REF:skeleton/elephantAnim_REF:masterCtrl/elephantAnim_REF:mainCtrl/elephantAnim_REF:root/elephantAnim_REF:hip/elephantAnim_REF:R_femur/elephantAnim_REF:R_knee/elephantAnim_REF:R_ankle/elephantAnim_REF:R_toe/elephantAnim_REF:R_toeEnd
+        weight: 1
+      - path: elephantAnim_REF:skeleton/elephantAnim_REF:masterCtrl/elephantAnim_REF:mainCtrl/elephantAnim_REF:root/elephantAnim_REF:hip/elephantAnim_REF:tail_A
+        weight: 1
+      - path: elephantAnim_REF:skeleton/elephantAnim_REF:masterCtrl/elephantAnim_REF:mainCtrl/elephantAnim_REF:root/elephantAnim_REF:hip/elephantAnim_REF:tail_A/elephantAnim_REF:tail_B
+        weight: 1
+      - path: elephantAnim_REF:skeleton/elephantAnim_REF:masterCtrl/elephantAnim_REF:mainCtrl/elephantAnim_REF:root/elephantAnim_REF:hip/elephantAnim_REF:tail_A/elephantAnim_REF:tail_B/elephantAnim_REF:tail_C
+        weight: 1
+      - path: elephantAnim_REF:skeleton/elephantAnim_REF:masterCtrl/elephantAnim_REF:mainCtrl/elephantAnim_REF:root/elephantAnim_REF:hip/elephantAnim_REF:tail_A/elephantAnim_REF:tail_B/elephantAnim_REF:tail_C/elephantAnim_REF:tail_D
+        weight: 1
+      - path: elephantAnim_REF:skeleton/elephantAnim_REF:masterCtrl/elephantAnim_REF:mainCtrl/elephantAnim_REF:root/elephantAnim_REF:hip/elephantAnim_REF:tail_A/elephantAnim_REF:tail_B/elephantAnim_REF:tail_C/elephantAnim_REF:tail_D/elephantAnim_REF:tail_E
+        weight: 1
+      - path: elephantAnim_REF:skeleton/elephantAnim_REF:masterCtrl/elephantAnim_REF:mainCtrl/elephantAnim_REF:root/elephantAnim_REF:hip/elephantAnim_REF:tail_A/elephantAnim_REF:tail_B/elephantAnim_REF:tail_C/elephantAnim_REF:tail_D/elephantAnim_REF:tail_E/elephantAnim_REF:tail_F
+        weight: 1
+      - path: elephantAnim_REF:skeleton/elephantAnim_REF:masterCtrl/elephantAnim_REF:mainCtrl/elephantAnim_REF:root/elephantAnim_REF:hip/elephantAnim_REF:tail_A/elephantAnim_REF:tail_B/elephantAnim_REF:tail_C/elephantAnim_REF:tail_D/elephantAnim_REF:tail_E/elephantAnim_REF:tail_F/elephantAnim_REF:tail_G
+        weight: 1
+      - path: elephantAnim_REF:skeleton/elephantAnim_REF:masterCtrl/elephantAnim_REF:mainCtrl/elephantAnim_REF:root/elephantAnim_REF:hip/elephantAnim_REF:tail_A/elephantAnim_REF:tail_B/elephantAnim_REF:tail_C/elephantAnim_REF:tail_D/elephantAnim_REF:tail_E/elephantAnim_REF:tail_F/elephantAnim_REF:tail_G/elephantAnim_REF:tali_H
+        weight: 1
+      - path: elephantAnim_REF:skeleton/elephantAnim_REF:masterCtrl/elephantAnim_REF:mainCtrl/elephantAnim_REF:root/elephantAnim_REF:hip/elephantAnim_REF:tail_A/elephantAnim_REF:tail_B/elephantAnim_REF:tail_C/elephantAnim_REF:tail_D/elephantAnim_REF:tail_E/elephantAnim_REF:tail_F/elephantAnim_REF:tail_G/elephantAnim_REF:tali_H/elephantAnim_REF:tail_I
+        weight: 1
+      - path: elephantAnim_REF:skeleton/elephantAnim_REF:masterCtrl/elephantAnim_REF:mainCtrl/elephantAnim_REF:root/elephantAnim_REF:hip/elephantAnim_REF:tail_A/elephantAnim_REF:tail_B/elephantAnim_REF:tail_C/elephantAnim_REF:tail_D/elephantAnim_REF:tail_E/elephantAnim_REF:tail_F/elephantAnim_REF:tail_G/elephantAnim_REF:tali_H/elephantAnim_REF:tail_I/elephantAnim_REF:tail_end
+        weight: 1
+      - path: elephantAnim_REF:skeleton/elephantAnim_REF:masterCtrl/elephantAnim_REF:mainCtrl/elephantAnim_REF:root/elephantAnim_REF:spine_A
+        weight: 1
+      - path: elephantAnim_REF:skeleton/elephantAnim_REF:masterCtrl/elephantAnim_REF:mainCtrl/elephantAnim_REF:root/elephantAnim_REF:spine_A/elephantAnim_REF:belly_zero
+        weight: 1
+      - path: elephantAnim_REF:skeleton/elephantAnim_REF:masterCtrl/elephantAnim_REF:mainCtrl/elephantAnim_REF:root/elephantAnim_REF:spine_A/elephantAnim_REF:belly_zero/elephantAnim_REF:belly
+        weight: 1
+      - path: elephantAnim_REF:skeleton/elephantAnim_REF:masterCtrl/elephantAnim_REF:mainCtrl/elephantAnim_REF:root/elephantAnim_REF:spine_A/elephantAnim_REF:spineB_
+        weight: 1
+      - path: elephantAnim_REF:skeleton/elephantAnim_REF:masterCtrl/elephantAnim_REF:mainCtrl/elephantAnim_REF:root/elephantAnim_REF:spine_A/elephantAnim_REF:spineB_/elephantAnim_REF:spine_C
+        weight: 1
+      - path: elephantAnim_REF:skeleton/elephantAnim_REF:masterCtrl/elephantAnim_REF:mainCtrl/elephantAnim_REF:root/elephantAnim_REF:spine_A/elephantAnim_REF:spineB_/elephantAnim_REF:spine_C/elephantAnim_REF:spine_D
+        weight: 1
+      - path: elephantAnim_REF:skeleton/elephantAnim_REF:masterCtrl/elephantAnim_REF:mainCtrl/elephantAnim_REF:root/elephantAnim_REF:spine_A/elephantAnim_REF:spineB_/elephantAnim_REF:spine_C/elephantAnim_REF:spine_D/elephantAnim_REF:L__clavicle
+        weight: 1
+      - path: elephantAnim_REF:skeleton/elephantAnim_REF:masterCtrl/elephantAnim_REF:mainCtrl/elephantAnim_REF:root/elephantAnim_REF:spine_A/elephantAnim_REF:spineB_/elephantAnim_REF:spine_C/elephantAnim_REF:spine_D/elephantAnim_REF:L__clavicle/elephantAnim_REF:L__shoulder
+        weight: 1
+      - path: elephantAnim_REF:skeleton/elephantAnim_REF:masterCtrl/elephantAnim_REF:mainCtrl/elephantAnim_REF:root/elephantAnim_REF:spine_A/elephantAnim_REF:spineB_/elephantAnim_REF:spine_C/elephantAnim_REF:spine_D/elephantAnim_REF:L__clavicle/elephantAnim_REF:L__shoulder/elephantAnim_REF:L__elbow
+        weight: 1
+      - path: elephantAnim_REF:skeleton/elephantAnim_REF:masterCtrl/elephantAnim_REF:mainCtrl/elephantAnim_REF:root/elephantAnim_REF:spine_A/elephantAnim_REF:spineB_/elephantAnim_REF:spine_C/elephantAnim_REF:spine_D/elephantAnim_REF:L__clavicle/elephantAnim_REF:L__shoulder/elephantAnim_REF:L__elbow/elephantAnim_REF:L__wrist
+        weight: 1
+      - path: elephantAnim_REF:skeleton/elephantAnim_REF:masterCtrl/elephantAnim_REF:mainCtrl/elephantAnim_REF:root/elephantAnim_REF:spine_A/elephantAnim_REF:spineB_/elephantAnim_REF:spine_C/elephantAnim_REF:spine_D/elephantAnim_REF:L__clavicle/elephantAnim_REF:L__shoulder/elephantAnim_REF:L__elbow/elephantAnim_REF:L__wrist/elephantAnim_REF:L__handStabilizer
+        weight: 1
+      - path: elephantAnim_REF:skeleton/elephantAnim_REF:masterCtrl/elephantAnim_REF:mainCtrl/elephantAnim_REF:root/elephantAnim_REF:spine_A/elephantAnim_REF:spineB_/elephantAnim_REF:spine_C/elephantAnim_REF:spine_D/elephantAnim_REF:neck
+        weight: 1
+      - path: elephantAnim_REF:skeleton/elephantAnim_REF:masterCtrl/elephantAnim_REF:mainCtrl/elephantAnim_REF:root/elephantAnim_REF:spine_A/elephantAnim_REF:spineB_/elephantAnim_REF:spine_C/elephantAnim_REF:spine_D/elephantAnim_REF:neck/elephantAnim_REF:head
+        weight: 1
+      - path: elephantAnim_REF:skeleton/elephantAnim_REF:masterCtrl/elephantAnim_REF:mainCtrl/elephantAnim_REF:root/elephantAnim_REF:spine_A/elephantAnim_REF:spineB_/elephantAnim_REF:spine_C/elephantAnim_REF:spine_D/elephantAnim_REF:neck/elephantAnim_REF:head/elephantAnim_REF:headConnecter
+        weight: 1
+      - path: elephantAnim_REF:skeleton/elephantAnim_REF:masterCtrl/elephantAnim_REF:mainCtrl/elephantAnim_REF:root/elephantAnim_REF:spine_A/elephantAnim_REF:spineB_/elephantAnim_REF:spine_C/elephantAnim_REF:spine_D/elephantAnim_REF:neck/elephantAnim_REF:head/elephantAnim_REF:headConnecter/elephantAnim_REF:jaw
+        weight: 1
+      - path: elephantAnim_REF:skeleton/elephantAnim_REF:masterCtrl/elephantAnim_REF:mainCtrl/elephantAnim_REF:root/elephantAnim_REF:spine_A/elephantAnim_REF:spineB_/elephantAnim_REF:spine_C/elephantAnim_REF:spine_D/elephantAnim_REF:neck/elephantAnim_REF:head/elephantAnim_REF:headConnecter/elephantAnim_REF:jaw/elephantAnim_REF:jaw_end
+        weight: 1
+      - path: elephantAnim_REF:skeleton/elephantAnim_REF:masterCtrl/elephantAnim_REF:mainCtrl/elephantAnim_REF:root/elephantAnim_REF:spine_A/elephantAnim_REF:spineB_/elephantAnim_REF:spine_C/elephantAnim_REF:spine_D/elephantAnim_REF:neck/elephantAnim_REF:head/elephantAnim_REF:headConnecter/elephantAnim_REF:L_cheek_zero
+        weight: 1
+      - path: elephantAnim_REF:skeleton/elephantAnim_REF:masterCtrl/elephantAnim_REF:mainCtrl/elephantAnim_REF:root/elephantAnim_REF:spine_A/elephantAnim_REF:spineB_/elephantAnim_REF:spine_C/elephantAnim_REF:spine_D/elephantAnim_REF:neck/elephantAnim_REF:head/elephantAnim_REF:headConnecter/elephantAnim_REF:L_cheek_zero/elephantAnim_REF:L_cheek
+        weight: 1
+      - path: elephantAnim_REF:skeleton/elephantAnim_REF:masterCtrl/elephantAnim_REF:mainCtrl/elephantAnim_REF:root/elephantAnim_REF:spine_A/elephantAnim_REF:spineB_/elephantAnim_REF:spine_C/elephantAnim_REF:spine_D/elephantAnim_REF:neck/elephantAnim_REF:head/elephantAnim_REF:headConnecter/elephantAnim_REF:L_ear_A
+        weight: 1
+      - path: elephantAnim_REF:skeleton/elephantAnim_REF:masterCtrl/elephantAnim_REF:mainCtrl/elephantAnim_REF:root/elephantAnim_REF:spine_A/elephantAnim_REF:spineB_/elephantAnim_REF:spine_C/elephantAnim_REF:spine_D/elephantAnim_REF:neck/elephantAnim_REF:head/elephantAnim_REF:headConnecter/elephantAnim_REF:L_ear_A/elephantAnim_REF:L_ear_B
+        weight: 1
+      - path: elephantAnim_REF:skeleton/elephantAnim_REF:masterCtrl/elephantAnim_REF:mainCtrl/elephantAnim_REF:root/elephantAnim_REF:spine_A/elephantAnim_REF:spineB_/elephantAnim_REF:spine_C/elephantAnim_REF:spine_D/elephantAnim_REF:neck/elephantAnim_REF:head/elephantAnim_REF:headConnecter/elephantAnim_REF:L_ear_A/elephantAnim_REF:L_ear_B/elephantAnim_REF:L_ear_C
+        weight: 1
+      - path: elephantAnim_REF:skeleton/elephantAnim_REF:masterCtrl/elephantAnim_REF:mainCtrl/elephantAnim_REF:root/elephantAnim_REF:spine_A/elephantAnim_REF:spineB_/elephantAnim_REF:spine_C/elephantAnim_REF:spine_D/elephantAnim_REF:neck/elephantAnim_REF:head/elephantAnim_REF:headConnecter/elephantAnim_REF:L_ear_A/elephantAnim_REF:L_ear_B/elephantAnim_REF:L_ear_C/elephantAnim_REF:L_ear_D
+        weight: 1
+      - path: elephantAnim_REF:skeleton/elephantAnim_REF:masterCtrl/elephantAnim_REF:mainCtrl/elephantAnim_REF:root/elephantAnim_REF:spine_A/elephantAnim_REF:spineB_/elephantAnim_REF:spine_C/elephantAnim_REF:spine_D/elephantAnim_REF:neck/elephantAnim_REF:head/elephantAnim_REF:headConnecter/elephantAnim_REF:L_ear_A/elephantAnim_REF:L_ear_B/elephantAnim_REF:L_ear_C/elephantAnim_REF:L_ear_D/elephantAnim_REF:L_ear_E
+        weight: 1
+      - path: elephantAnim_REF:skeleton/elephantAnim_REF:masterCtrl/elephantAnim_REF:mainCtrl/elephantAnim_REF:root/elephantAnim_REF:spine_A/elephantAnim_REF:spineB_/elephantAnim_REF:spine_C/elephantAnim_REF:spine_D/elephantAnim_REF:neck/elephantAnim_REF:head/elephantAnim_REF:headConnecter/elephantAnim_REF:L_ear_A/elephantAnim_REF:L_ear_B/elephantAnim_REF:L_ear_C/elephantAnim_REF:L_ear_D/elephantAnim_REF:L_flappyEarStart_A
+        weight: 1
+      - path: elephantAnim_REF:skeleton/elephantAnim_REF:masterCtrl/elephantAnim_REF:mainCtrl/elephantAnim_REF:root/elephantAnim_REF:spine_A/elephantAnim_REF:spineB_/elephantAnim_REF:spine_C/elephantAnim_REF:spine_D/elephantAnim_REF:neck/elephantAnim_REF:head/elephantAnim_REF:headConnecter/elephantAnim_REF:L_ear_A/elephantAnim_REF:L_ear_B/elephantAnim_REF:L_ear_C/elephantAnim_REF:L_ear_D/elephantAnim_REF:L_flappyEarStart_A/elephantAnim_REF:L_flappyEarStart_B
+        weight: 1
+      - path: elephantAnim_REF:skeleton/elephantAnim_REF:masterCtrl/elephantAnim_REF:mainCtrl/elephantAnim_REF:root/elephantAnim_REF:spine_A/elephantAnim_REF:spineB_/elephantAnim_REF:spine_C/elephantAnim_REF:spine_D/elephantAnim_REF:neck/elephantAnim_REF:head/elephantAnim_REF:headConnecter/elephantAnim_REF:L_ear_A/elephantAnim_REF:L_ear_B/elephantAnim_REF:L_ear_C/elephantAnim_REF:L_ear_D/elephantAnim_REF:L_flappyEarStart_A/elephantAnim_REF:L_flappyEarStart_B/elephantAnim_REF:L_flappyEar_C
+        weight: 1
+      - path: elephantAnim_REF:skeleton/elephantAnim_REF:masterCtrl/elephantAnim_REF:mainCtrl/elephantAnim_REF:root/elephantAnim_REF:spine_A/elephantAnim_REF:spineB_/elephantAnim_REF:spine_C/elephantAnim_REF:spine_D/elephantAnim_REF:neck/elephantAnim_REF:head/elephantAnim_REF:headConnecter/elephantAnim_REF:L_ear_A/elephantAnim_REF:L_ear_B/elephantAnim_REF:L_ear_C/elephantAnim_REF:L_ear_D/elephantAnim_REF:L_flappyEarStart_A/elephantAnim_REF:L_flappyEarStart_B/elephantAnim_REF:L_flappyEar_C/elephantAnim_REF:L_flappyEar_D
+        weight: 1
+      - path: elephantAnim_REF:skeleton/elephantAnim_REF:masterCtrl/elephantAnim_REF:mainCtrl/elephantAnim_REF:root/elephantAnim_REF:spine_A/elephantAnim_REF:spineB_/elephantAnim_REF:spine_C/elephantAnim_REF:spine_D/elephantAnim_REF:neck/elephantAnim_REF:head/elephantAnim_REF:headConnecter/elephantAnim_REF:L_ear_A/elephantAnim_REF:L_ear_B/elephantAnim_REF:L_ear_C/elephantAnim_REF:L_flappy_middle_A
+        weight: 1
+      - path: elephantAnim_REF:skeleton/elephantAnim_REF:masterCtrl/elephantAnim_REF:mainCtrl/elephantAnim_REF:root/elephantAnim_REF:spine_A/elephantAnim_REF:spineB_/elephantAnim_REF:spine_C/elephantAnim_REF:spine_D/elephantAnim_REF:neck/elephantAnim_REF:head/elephantAnim_REF:headConnecter/elephantAnim_REF:L_ear_A/elephantAnim_REF:L_ear_B/elephantAnim_REF:L_ear_C/elephantAnim_REF:L_flappy_middle_A/elephantAnim_REF:L_flappyEarMiddle_B
+        weight: 1
+      - path: elephantAnim_REF:skeleton/elephantAnim_REF:masterCtrl/elephantAnim_REF:mainCtrl/elephantAnim_REF:root/elephantAnim_REF:spine_A/elephantAnim_REF:spineB_/elephantAnim_REF:spine_C/elephantAnim_REF:spine_D/elephantAnim_REF:neck/elephantAnim_REF:head/elephantAnim_REF:headConnecter/elephantAnim_REF:L_ear_A/elephantAnim_REF:L_ear_B/elephantAnim_REF:L_ear_C/elephantAnim_REF:L_flappy_middle_A/elephantAnim_REF:L_flappyEarMiddle_B/elephantAnim_REF:L_flappyEarMiddle_C
+        weight: 1
+      - path: elephantAnim_REF:skeleton/elephantAnim_REF:masterCtrl/elephantAnim_REF:mainCtrl/elephantAnim_REF:root/elephantAnim_REF:spine_A/elephantAnim_REF:spineB_/elephantAnim_REF:spine_C/elephantAnim_REF:spine_D/elephantAnim_REF:neck/elephantAnim_REF:head/elephantAnim_REF:headConnecter/elephantAnim_REF:L_ear_A/elephantAnim_REF:L_ear_B/elephantAnim_REF:L_ear_C/elephantAnim_REF:L_flappy_middle_A/elephantAnim_REF:L_flappyEarMiddle_B/elephantAnim_REF:L_flappyEarMiddle_C/elephantAnim_REF:L_flappyEarMiddle_D
+        weight: 1
+      - path: elephantAnim_REF:skeleton/elephantAnim_REF:masterCtrl/elephantAnim_REF:mainCtrl/elephantAnim_REF:root/elephantAnim_REF:spine_A/elephantAnim_REF:spineB_/elephantAnim_REF:spine_C/elephantAnim_REF:spine_D/elephantAnim_REF:neck/elephantAnim_REF:head/elephantAnim_REF:headConnecter/elephantAnim_REF:L_ear_A/elephantAnim_REF:L_ear_B/elephantAnim_REF:L_flappyEarEndEnd_A
+        weight: 1
+      - path: elephantAnim_REF:skeleton/elephantAnim_REF:masterCtrl/elephantAnim_REF:mainCtrl/elephantAnim_REF:root/elephantAnim_REF:spine_A/elephantAnim_REF:spineB_/elephantAnim_REF:spine_C/elephantAnim_REF:spine_D/elephantAnim_REF:neck/elephantAnim_REF:head/elephantAnim_REF:headConnecter/elephantAnim_REF:L_ear_A/elephantAnim_REF:L_ear_B/elephantAnim_REF:L_flappyEarEndEnd_A/elephantAnim_REF:L_flappyEarEnd_B
+        weight: 1
+      - path: elephantAnim_REF:skeleton/elephantAnim_REF:masterCtrl/elephantAnim_REF:mainCtrl/elephantAnim_REF:root/elephantAnim_REF:spine_A/elephantAnim_REF:spineB_/elephantAnim_REF:spine_C/elephantAnim_REF:spine_D/elephantAnim_REF:neck/elephantAnim_REF:head/elephantAnim_REF:headConnecter/elephantAnim_REF:L_ear_A/elephantAnim_REF:L_ear_B/elephantAnim_REF:L_flappyEarEndEnd_A/elephantAnim_REF:L_flappyEarEnd_B/elephantAnim_REF:L_flappyEarEnd_C
+        weight: 1
+      - path: elephantAnim_REF:skeleton/elephantAnim_REF:masterCtrl/elephantAnim_REF:mainCtrl/elephantAnim_REF:root/elephantAnim_REF:spine_A/elephantAnim_REF:spineB_/elephantAnim_REF:spine_C/elephantAnim_REF:spine_D/elephantAnim_REF:neck/elephantAnim_REF:head/elephantAnim_REF:headConnecter/elephantAnim_REF:L_ear_A/elephantAnim_REF:L_ear_B/elephantAnim_REF:L_flappyEarEndEnd_A/elephantAnim_REF:L_flappyEarEnd_B/elephantAnim_REF:L_flappyEarEnd_C/elephantAnim_REF:L_flappyEarEnd_D
+        weight: 1
+      - path: elephantAnim_REF:skeleton/elephantAnim_REF:masterCtrl/elephantAnim_REF:mainCtrl/elephantAnim_REF:root/elephantAnim_REF:spine_A/elephantAnim_REF:spineB_/elephantAnim_REF:spine_C/elephantAnim_REF:spine_D/elephantAnim_REF:neck/elephantAnim_REF:head/elephantAnim_REF:headConnecter/elephantAnim_REF:R_cheek_zero
+        weight: 1
+      - path: elephantAnim_REF:skeleton/elephantAnim_REF:masterCtrl/elephantAnim_REF:mainCtrl/elephantAnim_REF:root/elephantAnim_REF:spine_A/elephantAnim_REF:spineB_/elephantAnim_REF:spine_C/elephantAnim_REF:spine_D/elephantAnim_REF:neck/elephantAnim_REF:head/elephantAnim_REF:headConnecter/elephantAnim_REF:R_cheek_zero/elephantAnim_REF:R_cheek
+        weight: 1
+      - path: elephantAnim_REF:skeleton/elephantAnim_REF:masterCtrl/elephantAnim_REF:mainCtrl/elephantAnim_REF:root/elephantAnim_REF:spine_A/elephantAnim_REF:spineB_/elephantAnim_REF:spine_C/elephantAnim_REF:spine_D/elephantAnim_REF:neck/elephantAnim_REF:head/elephantAnim_REF:headConnecter/elephantAnim_REF:R_ear_A
+        weight: 1
+      - path: elephantAnim_REF:skeleton/elephantAnim_REF:masterCtrl/elephantAnim_REF:mainCtrl/elephantAnim_REF:root/elephantAnim_REF:spine_A/elephantAnim_REF:spineB_/elephantAnim_REF:spine_C/elephantAnim_REF:spine_D/elephantAnim_REF:neck/elephantAnim_REF:head/elephantAnim_REF:headConnecter/elephantAnim_REF:R_ear_A/elephantAnim_REF:R_ear_B
+        weight: 1
+      - path: elephantAnim_REF:skeleton/elephantAnim_REF:masterCtrl/elephantAnim_REF:mainCtrl/elephantAnim_REF:root/elephantAnim_REF:spine_A/elephantAnim_REF:spineB_/elephantAnim_REF:spine_C/elephantAnim_REF:spine_D/elephantAnim_REF:neck/elephantAnim_REF:head/elephantAnim_REF:headConnecter/elephantAnim_REF:R_ear_A/elephantAnim_REF:R_ear_B/elephantAnim_REF:R_ear_C
+        weight: 1
+      - path: elephantAnim_REF:skeleton/elephantAnim_REF:masterCtrl/elephantAnim_REF:mainCtrl/elephantAnim_REF:root/elephantAnim_REF:spine_A/elephantAnim_REF:spineB_/elephantAnim_REF:spine_C/elephantAnim_REF:spine_D/elephantAnim_REF:neck/elephantAnim_REF:head/elephantAnim_REF:headConnecter/elephantAnim_REF:R_ear_A/elephantAnim_REF:R_ear_B/elephantAnim_REF:R_ear_C/elephantAnim_REF:R_ear_D
+        weight: 1
+      - path: elephantAnim_REF:skeleton/elephantAnim_REF:masterCtrl/elephantAnim_REF:mainCtrl/elephantAnim_REF:root/elephantAnim_REF:spine_A/elephantAnim_REF:spineB_/elephantAnim_REF:spine_C/elephantAnim_REF:spine_D/elephantAnim_REF:neck/elephantAnim_REF:head/elephantAnim_REF:headConnecter/elephantAnim_REF:R_ear_A/elephantAnim_REF:R_ear_B/elephantAnim_REF:R_ear_C/elephantAnim_REF:R_ear_D/elephantAnim_REF:R_ear_E
+        weight: 1
+      - path: elephantAnim_REF:skeleton/elephantAnim_REF:masterCtrl/elephantAnim_REF:mainCtrl/elephantAnim_REF:root/elephantAnim_REF:spine_A/elephantAnim_REF:spineB_/elephantAnim_REF:spine_C/elephantAnim_REF:spine_D/elephantAnim_REF:neck/elephantAnim_REF:head/elephantAnim_REF:headConnecter/elephantAnim_REF:R_ear_A/elephantAnim_REF:R_ear_B/elephantAnim_REF:R_ear_C/elephantAnim_REF:R_ear_D/elephantAnim_REF:R_flappyEarStart_A
+        weight: 1
+      - path: elephantAnim_REF:skeleton/elephantAnim_REF:masterCtrl/elephantAnim_REF:mainCtrl/elephantAnim_REF:root/elephantAnim_REF:spine_A/elephantAnim_REF:spineB_/elephantAnim_REF:spine_C/elephantAnim_REF:spine_D/elephantAnim_REF:neck/elephantAnim_REF:head/elephantAnim_REF:headConnecter/elephantAnim_REF:R_ear_A/elephantAnim_REF:R_ear_B/elephantAnim_REF:R_ear_C/elephantAnim_REF:R_ear_D/elephantAnim_REF:R_flappyEarStart_A/elephantAnim_REF:R_flappyEarStart_B
+        weight: 1
+      - path: elephantAnim_REF:skeleton/elephantAnim_REF:masterCtrl/elephantAnim_REF:mainCtrl/elephantAnim_REF:root/elephantAnim_REF:spine_A/elephantAnim_REF:spineB_/elephantAnim_REF:spine_C/elephantAnim_REF:spine_D/elephantAnim_REF:neck/elephantAnim_REF:head/elephantAnim_REF:headConnecter/elephantAnim_REF:R_ear_A/elephantAnim_REF:R_ear_B/elephantAnim_REF:R_ear_C/elephantAnim_REF:R_ear_D/elephantAnim_REF:R_flappyEarStart_A/elephantAnim_REF:R_flappyEarStart_B/elephantAnim_REF:R_flappyEar_C
+        weight: 1
+      - path: elephantAnim_REF:skeleton/elephantAnim_REF:masterCtrl/elephantAnim_REF:mainCtrl/elephantAnim_REF:root/elephantAnim_REF:spine_A/elephantAnim_REF:spineB_/elephantAnim_REF:spine_C/elephantAnim_REF:spine_D/elephantAnim_REF:neck/elephantAnim_REF:head/elephantAnim_REF:headConnecter/elephantAnim_REF:R_ear_A/elephantAnim_REF:R_ear_B/elephantAnim_REF:R_ear_C/elephantAnim_REF:R_ear_D/elephantAnim_REF:R_flappyEarStart_A/elephantAnim_REF:R_flappyEarStart_B/elephantAnim_REF:R_flappyEar_C/elephantAnim_REF:R_flappyEar_D
+        weight: 1
+      - path: elephantAnim_REF:skeleton/elephantAnim_REF:masterCtrl/elephantAnim_REF:mainCtrl/elephantAnim_REF:root/elephantAnim_REF:spine_A/elephantAnim_REF:spineB_/elephantAnim_REF:spine_C/elephantAnim_REF:spine_D/elephantAnim_REF:neck/elephantAnim_REF:head/elephantAnim_REF:headConnecter/elephantAnim_REF:R_ear_A/elephantAnim_REF:R_ear_B/elephantAnim_REF:R_ear_C/elephantAnim_REF:R_flappy_middle_A
+        weight: 1
+      - path: elephantAnim_REF:skeleton/elephantAnim_REF:masterCtrl/elephantAnim_REF:mainCtrl/elephantAnim_REF:root/elephantAnim_REF:spine_A/elephantAnim_REF:spineB_/elephantAnim_REF:spine_C/elephantAnim_REF:spine_D/elephantAnim_REF:neck/elephantAnim_REF:head/elephantAnim_REF:headConnecter/elephantAnim_REF:R_ear_A/elephantAnim_REF:R_ear_B/elephantAnim_REF:R_ear_C/elephantAnim_REF:R_flappy_middle_A/elephantAnim_REF:R_flappyEarMiddle_B
+        weight: 1
+      - path: elephantAnim_REF:skeleton/elephantAnim_REF:masterCtrl/elephantAnim_REF:mainCtrl/elephantAnim_REF:root/elephantAnim_REF:spine_A/elephantAnim_REF:spineB_/elephantAnim_REF:spine_C/elephantAnim_REF:spine_D/elephantAnim_REF:neck/elephantAnim_REF:head/elephantAnim_REF:headConnecter/elephantAnim_REF:R_ear_A/elephantAnim_REF:R_ear_B/elephantAnim_REF:R_ear_C/elephantAnim_REF:R_flappy_middle_A/elephantAnim_REF:R_flappyEarMiddle_B/elephantAnim_REF:R_flappyEarMiddle_C
+        weight: 1
+      - path: elephantAnim_REF:skeleton/elephantAnim_REF:masterCtrl/elephantAnim_REF:mainCtrl/elephantAnim_REF:root/elephantAnim_REF:spine_A/elephantAnim_REF:spineB_/elephantAnim_REF:spine_C/elephantAnim_REF:spine_D/elephantAnim_REF:neck/elephantAnim_REF:head/elephantAnim_REF:headConnecter/elephantAnim_REF:R_ear_A/elephantAnim_REF:R_ear_B/elephantAnim_REF:R_ear_C/elephantAnim_REF:R_flappy_middle_A/elephantAnim_REF:R_flappyEarMiddle_B/elephantAnim_REF:R_flappyEarMiddle_C/elephantAnim_REF:R_flappyEarMiddle_D
+        weight: 1
+      - path: elephantAnim_REF:skeleton/elephantAnim_REF:masterCtrl/elephantAnim_REF:mainCtrl/elephantAnim_REF:root/elephantAnim_REF:spine_A/elephantAnim_REF:spineB_/elephantAnim_REF:spine_C/elephantAnim_REF:spine_D/elephantAnim_REF:neck/elephantAnim_REF:head/elephantAnim_REF:headConnecter/elephantAnim_REF:R_ear_A/elephantAnim_REF:R_ear_B/elephantAnim_REF:R_flappyEarEndEnd_A
+        weight: 1
+      - path: elephantAnim_REF:skeleton/elephantAnim_REF:masterCtrl/elephantAnim_REF:mainCtrl/elephantAnim_REF:root/elephantAnim_REF:spine_A/elephantAnim_REF:spineB_/elephantAnim_REF:spine_C/elephantAnim_REF:spine_D/elephantAnim_REF:neck/elephantAnim_REF:head/elephantAnim_REF:headConnecter/elephantAnim_REF:R_ear_A/elephantAnim_REF:R_ear_B/elephantAnim_REF:R_flappyEarEndEnd_A/elephantAnim_REF:R_flappyEarEnd_B
+        weight: 1
+      - path: elephantAnim_REF:skeleton/elephantAnim_REF:masterCtrl/elephantAnim_REF:mainCtrl/elephantAnim_REF:root/elephantAnim_REF:spine_A/elephantAnim_REF:spineB_/elephantAnim_REF:spine_C/elephantAnim_REF:spine_D/elephantAnim_REF:neck/elephantAnim_REF:head/elephantAnim_REF:headConnecter/elephantAnim_REF:R_ear_A/elephantAnim_REF:R_ear_B/elephantAnim_REF:R_flappyEarEndEnd_A/elephantAnim_REF:R_flappyEarEnd_B/elephantAnim_REF:R_flappyEarEnd_C
+        weight: 1
+      - path: elephantAnim_REF:skeleton/elephantAnim_REF:masterCtrl/elephantAnim_REF:mainCtrl/elephantAnim_REF:root/elephantAnim_REF:spine_A/elephantAnim_REF:spineB_/elephantAnim_REF:spine_C/elephantAnim_REF:spine_D/elephantAnim_REF:neck/elephantAnim_REF:head/elephantAnim_REF:headConnecter/elephantAnim_REF:R_ear_A/elephantAnim_REF:R_ear_B/elephantAnim_REF:R_flappyEarEndEnd_A/elephantAnim_REF:R_flappyEarEnd_B/elephantAnim_REF:R_flappyEarEnd_C/elephantAnim_REF:R_flappyEarEnd_D
+        weight: 1
+      - path: elephantAnim_REF:skeleton/elephantAnim_REF:masterCtrl/elephantAnim_REF:mainCtrl/elephantAnim_REF:root/elephantAnim_REF:spine_A/elephantAnim_REF:spineB_/elephantAnim_REF:spine_C/elephantAnim_REF:spine_D/elephantAnim_REF:neck/elephantAnim_REF:head/elephantAnim_REF:headConnecter/elephantAnim_REF:trunk_A
+        weight: 1
+      - path: elephantAnim_REF:skeleton/elephantAnim_REF:masterCtrl/elephantAnim_REF:mainCtrl/elephantAnim_REF:root/elephantAnim_REF:spine_A/elephantAnim_REF:spineB_/elephantAnim_REF:spine_C/elephantAnim_REF:spine_D/elephantAnim_REF:neck/elephantAnim_REF:head/elephantAnim_REF:headConnecter/elephantAnim_REF:trunk_A/elephantAnim_REF:trunk_B
+        weight: 1
+      - path: elephantAnim_REF:skeleton/elephantAnim_REF:masterCtrl/elephantAnim_REF:mainCtrl/elephantAnim_REF:root/elephantAnim_REF:spine_A/elephantAnim_REF:spineB_/elephantAnim_REF:spine_C/elephantAnim_REF:spine_D/elephantAnim_REF:neck/elephantAnim_REF:head/elephantAnim_REF:headConnecter/elephantAnim_REF:trunk_A/elephantAnim_REF:trunk_B/elephantAnim_REF:trunk_C
+        weight: 1
+      - path: elephantAnim_REF:skeleton/elephantAnim_REF:masterCtrl/elephantAnim_REF:mainCtrl/elephantAnim_REF:root/elephantAnim_REF:spine_A/elephantAnim_REF:spineB_/elephantAnim_REF:spine_C/elephantAnim_REF:spine_D/elephantAnim_REF:neck/elephantAnim_REF:head/elephantAnim_REF:headConnecter/elephantAnim_REF:trunk_A/elephantAnim_REF:trunk_B/elephantAnim_REF:trunk_C/elephantAnim_REF:trunk_D
+        weight: 1
+      - path: elephantAnim_REF:skeleton/elephantAnim_REF:masterCtrl/elephantAnim_REF:mainCtrl/elephantAnim_REF:root/elephantAnim_REF:spine_A/elephantAnim_REF:spineB_/elephantAnim_REF:spine_C/elephantAnim_REF:spine_D/elephantAnim_REF:neck/elephantAnim_REF:head/elephantAnim_REF:headConnecter/elephantAnim_REF:trunk_A/elephantAnim_REF:trunk_B/elephantAnim_REF:trunk_C/elephantAnim_REF:trunk_D/elephantAnim_REF:trunk_E
+        weight: 1
+      - path: elephantAnim_REF:skeleton/elephantAnim_REF:masterCtrl/elephantAnim_REF:mainCtrl/elephantAnim_REF:root/elephantAnim_REF:spine_A/elephantAnim_REF:spineB_/elephantAnim_REF:spine_C/elephantAnim_REF:spine_D/elephantAnim_REF:neck/elephantAnim_REF:head/elephantAnim_REF:headConnecter/elephantAnim_REF:trunk_A/elephantAnim_REF:trunk_B/elephantAnim_REF:trunk_C/elephantAnim_REF:trunk_D/elephantAnim_REF:trunk_E/elephantAnim_REF:trunk_F
+        weight: 1
+      - path: elephantAnim_REF:skeleton/elephantAnim_REF:masterCtrl/elephantAnim_REF:mainCtrl/elephantAnim_REF:root/elephantAnim_REF:spine_A/elephantAnim_REF:spineB_/elephantAnim_REF:spine_C/elephantAnim_REF:spine_D/elephantAnim_REF:neck/elephantAnim_REF:head/elephantAnim_REF:headConnecter/elephantAnim_REF:trunk_A/elephantAnim_REF:trunk_B/elephantAnim_REF:trunk_C/elephantAnim_REF:trunk_D/elephantAnim_REF:trunk_E/elephantAnim_REF:trunk_F/elephantAnim_REF:trunk_G
+        weight: 1
+      - path: elephantAnim_REF:skeleton/elephantAnim_REF:masterCtrl/elephantAnim_REF:mainCtrl/elephantAnim_REF:root/elephantAnim_REF:spine_A/elephantAnim_REF:spineB_/elephantAnim_REF:spine_C/elephantAnim_REF:spine_D/elephantAnim_REF:R__clavicle
+        weight: 1
+      - path: elephantAnim_REF:skeleton/elephantAnim_REF:masterCtrl/elephantAnim_REF:mainCtrl/elephantAnim_REF:root/elephantAnim_REF:spine_A/elephantAnim_REF:spineB_/elephantAnim_REF:spine_C/elephantAnim_REF:spine_D/elephantAnim_REF:R__clavicle/elephantAnim_REF:R__shoulder
+        weight: 1
+      - path: elephantAnim_REF:skeleton/elephantAnim_REF:masterCtrl/elephantAnim_REF:mainCtrl/elephantAnim_REF:root/elephantAnim_REF:spine_A/elephantAnim_REF:spineB_/elephantAnim_REF:spine_C/elephantAnim_REF:spine_D/elephantAnim_REF:R__clavicle/elephantAnim_REF:R__shoulder/elephantAnim_REF:R__elbow
+        weight: 1
+      - path: elephantAnim_REF:skeleton/elephantAnim_REF:masterCtrl/elephantAnim_REF:mainCtrl/elephantAnim_REF:root/elephantAnim_REF:spine_A/elephantAnim_REF:spineB_/elephantAnim_REF:spine_C/elephantAnim_REF:spine_D/elephantAnim_REF:R__clavicle/elephantAnim_REF:R__shoulder/elephantAnim_REF:R__elbow/elephantAnim_REF:R__wrist
+        weight: 1
+      - path: elephantAnim_REF:skeleton/elephantAnim_REF:masterCtrl/elephantAnim_REF:mainCtrl/elephantAnim_REF:root/elephantAnim_REF:spine_A/elephantAnim_REF:spineB_/elephantAnim_REF:spine_C/elephantAnim_REF:spine_D/elephantAnim_REF:R__clavicle/elephantAnim_REF:R__shoulder/elephantAnim_REF:R__elbow/elephantAnim_REF:R__wrist/elephantAnim_REF:R__handStabilizer
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
     isReadable: 1
   meshes:
     lODScreenPercentages: []

@@ -17,13 +17,16 @@ public class cubeDeath : MonoBehaviour {
     public GameObject YourScoreText;
     public GameObject HighScoreText;
 
-
+    public GameObject elephantModel;
+    private Renderer[] elephantMesh;
+    public GameObject elecSprite;
 
     // Use this for initialization
     void Start () {
         ScoreSystem.points = 0;
         loseLife = 3;
 		AudioMngr = GameObject.FindGameObjectWithTag ("AudioManager").GetComponent<AudioManager>();
+        elephantMesh = elephantModel.GetComponentsInChildren<Renderer>();
 	}
 	
 	// Update is called once per frame
@@ -68,6 +71,57 @@ public class cubeDeath : MonoBehaviour {
            
             GameObject.FindGameObjectWithTag(Constants.Tags.GameMaster).GetComponent<GameOverMaster>().GameOver();
         }
+        StartCoroutine(Electricute());
         //lifeTimeHit = true;
+    }
+
+    IEnumerator Electricute()
+    {
+        Time.timeScale = 0.1f;
+
+        foreach(Renderer ren in elephantMesh)
+        {
+
+            ren.enabled = false;
+
+        }
+
+        elecSprite.SetActive(true);
+
+        yield return new WaitForSeconds(0.01f);
+
+        foreach (Renderer ren in elephantMesh)
+        {
+
+            ren.enabled = true;
+
+        }
+
+        elecSprite.SetActive(false);
+
+        yield return new WaitForSeconds(0.01f);
+
+        foreach (Renderer ren in elephantMesh)
+        {
+
+            ren.enabled = false;
+
+        }
+
+        elecSprite.SetActive(true);
+
+        yield return new WaitForSeconds(0.01f);
+
+        foreach (Renderer ren in elephantMesh)
+        {
+
+            ren.enabled = true;
+
+        }
+
+        elecSprite.SetActive(false);
+
+
+        Time.timeScale = 1f;
     }
 }

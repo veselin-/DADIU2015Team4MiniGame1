@@ -21,7 +21,7 @@ public class obstacleMovement : MonoBehaviour {
     }
 	
 	// Update is called once per frame
-	void FixedUpdate () {
+	void Update () {
 	    if (_isGameOver)
 	    {
             transform.Translate(Vector3.up * Time.deltaTime * VariableController.DieSpeed*10);
