@@ -1,7 +1,15 @@
-﻿using UnityEngine;
+﻿using Assets.Core;
+using UnityEngine;
 
 public class GUIManager : MonoBehaviour
 {
+
+    public GameObject Credits;
+    public GameObject CreditsText;
+    public float CreditSpeed;
+
+    private bool _doingCredits;
+
     void Awake()
     {
 		/*
@@ -22,10 +30,19 @@ public class GUIManager : MonoBehaviour
 		}
     }
 
+
+    void Update()
+    {
+        if (_doingCredits && CreditsText.transform.position.y < 1000)
+        {
+            CreditsText.transform.Translate(Vector3.up * Time.deltaTime * CreditSpeed);
+        }
+    }
+
 	public void OnStartGameClick()
 	{
 		Debug.Log ("Start the gaddeim game");
-		Application.LoadLevel ("EndlessFallingPrototype");
+		Application.LoadLevel (Constants.Scenes.MainLevelSceneName);
 	}
 
     public void OnLanguageClick(string language)
@@ -41,6 +58,14 @@ public class GUIManager : MonoBehaviour
 
 	public void OnCreditsClick()
 	{
+	    CreditsText.transform.position = new Vector3(CreditsText.transform.position.x, -1000);
+        _doingCredits = true;
+        Credits.SetActive(true);
+    }
 
-	}
+    public void CloseCredits()
+    {
+        _doingCredits = false;
+        Credits.SetActive(false);
+    }
 }

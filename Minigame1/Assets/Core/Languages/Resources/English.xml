@@ -2,6 +2,9 @@
 <Root>
   <Phrases>
     <Hello>Hello World!</Hello>
+    <StartGame>Start game</StartGame>
+    <Credits>Credits</Credits>
+    <Title>Skyphant</Title>
   </Phrases>
   <LanguageNames>
     <English>English</English>
