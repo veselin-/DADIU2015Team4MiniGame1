@@ -99,11 +99,13 @@ namespace Assets.Core.Scripts
         // STUPOID UNITY!!!!
         public void MainMenu2()
         {
+			GameObject.FindGameObjectWithTag ("AudioManager").GetComponent<AudioManager> ().ButtonClickPlay ();
             MainMenu();
         }
 
         public void RestartScene2()
         {
+			GameObject.FindGameObjectWithTag ("AudioManager").GetComponent<AudioManager> ().ButtonClickPlay ();
             RestartScene();
         }
 

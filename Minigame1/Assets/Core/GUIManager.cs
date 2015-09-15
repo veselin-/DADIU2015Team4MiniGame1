@@ -7,6 +7,7 @@ public class GUIManager : MonoBehaviour
     public GameObject Credits;
     public GameObject CreditsText;
     public float CreditSpeed;
+	public AudioManager AudioMngr;
 
     private bool _doingCredits;
 
@@ -28,8 +29,9 @@ public class GUIManager : MonoBehaviour
 		{
 			LanguageManager.Instance.LoadLanguage(PlayerPrefs.GetString ("Language"));
 		}
-    }
 
+		AudioMngr.WindPlay ();
+    }
 
     void Update()
     {
@@ -41,12 +43,14 @@ public class GUIManager : MonoBehaviour
 
 	public void OnStartGameClick()
 	{
+		AudioMngr.ButtonClickPlay ();
 		Debug.Log ("Start the gaddeim game");
 		Application.LoadLevel (Constants.Scenes.MainLevelSceneName);
 	}
 
     public void OnLanguageClick(string language)
     {
+		AudioMngr.ButtonClickPlay ();
         LanguageManager.Instance.LoadLanguage(language);
 		PlayerPrefs.SetString ("Language", language);
         LocalizedText[] texts = FindObjectsOfType<LocalizedText>();
@@ -58,6 +62,7 @@ public class GUIManager : MonoBehaviour
 
 	public void OnCreditsClick()
 	{
+		AudioMngr.ButtonClickPlay ();
 	    CreditsText.transform.position = new Vector3(CreditsText.transform.position.x, -1000);
         _doingCredits = true;
         Credits.SetActive(true);
@@ -65,6 +70,7 @@ public class GUIManager : MonoBehaviour
 
     public void CloseCredits()
     {
+		AudioMngr.ButtonClickPlay ();
         _doingCredits = false;
         Credits.SetActive(false);
     }
