@@ -8,7 +8,6 @@ namespace Assets.Core.Scripts.Movement
     public class TouchInput : MonoBehaviour
     {
 		public float SecToLongPress = 0.3f;
-		public Text HoldCounterText;
 
         public LayerMask LeftLayerMask;
         public LayerMask RightLayerMask;
@@ -106,7 +105,6 @@ namespace Assets.Core.Scripts.Movement
             if (_longPressDone) return;
 
             _timeCounter = Time.time;
-            HoldCounterText.text = (_timeCounter - _startTime).ToString();
 
 			if(_comboHandler.GetCurrentGoalPressNumber() == 0 && _comboHandler.NextGoalPress() == PressType.Long)
 			{
@@ -147,7 +145,6 @@ namespace Assets.Core.Scripts.Movement
 			_comboHandler.cooldown2.GetComponent<Animator> ().SetBool("Active", false);
 			_comboHandler.cooldown3.GetComponent<Animator> ().SetBool("Active", false);
 
-            HoldCounterText.text = string.Empty;
         }
 
 
