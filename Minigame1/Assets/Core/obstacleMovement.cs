@@ -3,10 +3,10 @@ using System.Collections;
 
 public class obstacleMovement : MonoBehaviour {
 
-    public static float speed = 5f, scale = 1f, obstacleSpeedTime, speedTime1, speedTime2;
+    public static float speed = 5f, scale = 1f, obstacleSpeedTime;
     public static bool spawnInLanes = true, isEnabled = true;
-    public int increaseSpeedTimeInSeconds1, increaseSpeedTimeInSeconds2;
-
+    public int secondsAfterEachIncrease = 30;
+    private float theIntervalOfSpeedBoost = 0.05f, maxSpeed = 6.5f;
 
     private bool _isGameOver;
 
@@ -15,24 +15,17 @@ public class obstacleMovement : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        increaseSpeedTimeInSeconds1 = 60;
-        increaseSpeedTimeInSeconds2 = 300;
-        speedTime1 = 6f;
-        speedTime2 = 7f;
         gameObject.SetActive(isEnabled);
-        
        // spawns = GameObject.FindGameObjectsWithTag("SpawnPoint");
     }
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-
 	    if (_isGameOver)
 	    {
             transform.Translate(Vector3.up * Time.deltaTime * VariableController.DieSpeed*10);
             return;
         }
-
         transform.localScale = new Vector3(scale, scale, scale);
         differentWavesOfObstacles();
         transform.Translate(Vector3.up * Time.deltaTime * speed);
@@ -45,13 +38,18 @@ public class obstacleMovement : MonoBehaviour {
     void differentWavesOfObstacles()
     {
         obstacleSpeedTime += Time.deltaTime;
-        if(obstacleSpeedTime > increaseSpeedTimeInSeconds1)
+        if(obstacleSpeedTime > secondsAfterEachIncrease)
         {
-            speed = speedTime1;
-        }
-        if (obstacleSpeedTime > increaseSpeedTimeInSeconds2)
-        {
-            speed = speedTime2;
+            if (speed > maxSpeed)
+            {
+                speed = maxSpeed;
+            }
+            else
+            {
+                secondsAfterEachIncrease += 30;
+                speed += theIntervalOfSpeedBoost;
+                Debug.Log("DET HER ER HASTIGHEDEN NU" + speed);
+            }
         }
     }
 

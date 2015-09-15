@@ -53,7 +53,7 @@ public class cubeDeath : MonoBehaviour {
                 ScoreSystem.comboCount = 1;
             }
             ScoreSystem.comboTimeReset();
-            ScoreSystem.points = 0;
+            //ScoreSystem.points = 0;
             GameObject.FindGameObjectWithTag(Constants.Tags.GameMaster).GetComponent<GameOverMaster>().GameOver();
         }
         //lifeTimeHit = true;
