@@ -12,8 +12,7 @@ public class ScoreSystem : MonoBehaviour {
     public static float comboReset = 7f, comboTimeDown;
     //public float startTime = 40f, timePoseComplete = 10f, timePoseFail = 5f, timeHitObstacle = 5f, timePoseCombo = 10f;
 
-    public GameObject star, hearts;
-    
+    public GameObject star, hearts, pointText;
 
     // Use this for initialization
     void Start()
@@ -31,6 +30,7 @@ public class ScoreSystem : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
+        
         //lifeTime();
         if (comboCount == 0)
         {
@@ -72,6 +72,7 @@ public class ScoreSystem : MonoBehaviour {
                 comboCount += 1;
                 animateStar();
                 points += pointsPose * comboCount;
+                pointText.GetComponent<pointTextController>().showPoints(pointsPose * comboCount);
                 //startTime += timePoseCombo;
                 comboTimeReset();
             }
@@ -79,6 +80,7 @@ public class ScoreSystem : MonoBehaviour {
             {
                 comboCount = 2;
                 points += pointsPose;
+                pointText.GetComponent<pointTextController>().showPoints(pointsPose);
                 //startTime += timePoseComplete;
             }
             
