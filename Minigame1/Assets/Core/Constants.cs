@@ -29,6 +29,7 @@ namespace Assets.Core
         public static class Scenes
         {
             public static string MainMenuSceneName = "MainMenu";
+            public static string MainLevelSceneName = "EndlessFallingPrototype";
         }
 
     }
