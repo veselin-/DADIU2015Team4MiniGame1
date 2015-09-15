@@ -9,6 +9,7 @@ public class cubeDeath : MonoBehaviour {
 
     public bool enableControl = true;
 	public AudioManager AudioMngr;
+    public GameObject heartController;
 
     public static bool lifeTimeHit = false;
     public static float espeed;
@@ -44,6 +45,7 @@ public class cubeDeath : MonoBehaviour {
     {
 		Camera.main.GetComponent<PerlinShake> ().PlayShake ();
         loseLife -= 1;
+        heartController.GetComponent<HeartController>().loseLife(loseLife);
         ScoreSystem.comboCount = 0;
         ScoreSystem.comboTimeReset();
         coll.gameObject.GetComponentInChildren<Collider>().enabled = false;
