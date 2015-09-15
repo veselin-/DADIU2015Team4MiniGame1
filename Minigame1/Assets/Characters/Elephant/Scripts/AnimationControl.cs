@@ -16,6 +16,8 @@ namespace Assets.Characters.Elephant.Scripts
 
         private int poseIndex;
 
+        private float timer = 0f;
+
         public void PickAnimation()
         {
             var oldPoseIndex = poseIndex;
@@ -41,6 +43,12 @@ namespace Assets.Characters.Elephant.Scripts
 	
         // Update is called once per frame
         void Update () {
+            //timer for increaing the length of time the pose is held
+
+
+            timer += Time.deltaTime;
+            gameObject.GetComponentInChildren<Animator>().SetFloat("timer", timer);
+
             if (_goBackToNeutral.HasValue && _goBackToNeutral < DateTime.Now)
             {
                 _goBackToNeutral = null;
@@ -67,6 +75,7 @@ namespace Assets.Characters.Elephant.Scripts
             // CancelReturnToNeutral();
             //gameObject.GetComponentInChildren<Animator>().SetBool("doingPose", false);
             gameObject.GetComponentInChildren<Animator>().SetTrigger("doingPose");
+            timer = 0;
         }
 
         public void ReturnToNeutral()
