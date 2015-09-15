@@ -32,6 +32,10 @@ public class HelpScreenHelper : MonoBehaviour
     {
 		GameObject.FindGameObjectWithTag ("AudioManager").GetComponent<AudioManager> ().ButtonClickPlay ();
         _showToturial = true;
-        GameObject.FindGameObjectWithTag("Toturial").SetActive(true);
+        GameObject[] gm = GameObject.FindGameObjectsWithTag("Toturial");
+		foreach(GameObject g in gm)
+		{
+			g.SetActive(true);
+		}
     }
 }

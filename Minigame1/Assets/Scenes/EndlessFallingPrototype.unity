@@ -690,7 +690,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 181746785}
-  m_LocalRotation: {x: .408217937, y: -.234569728, z: .109381676, w: .875426054}
+  m_LocalRotation: {x: .0233127829, y: -.144316554, z: -.00340025849, w: -.989251077}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -3469,6 +3469,7 @@ GameObject:
   - 102: {fileID: 1075847408}
   - 114: {fileID: 1075847407}
   - 111: {fileID: 1075847406}
+  - 114: {fileID: 1075847411}
   m_Layer: 0
   m_Name: pointText
   m_TagString: Untagged
@@ -3559,6 +3560,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1219448896}
   m_RootOrder: 1
+--- !u!114 &1075847411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1075847405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcb2b28d0ad69244dbdb3ab438e87d03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pixelSize: 2
+  outlineColor: {r: 0, g: 0, b: 0, a: 1}
+  resolutionDependant: 0
+  doubleResolution: 1024
 --- !u!1001 &1112944354
 Prefab:
   m_ObjectHideFlags: 0
@@ -3754,6 +3770,18 @@ Prefab:
       propertyPath: RotationPoint
       value: 
       objectReference: {fileID: 184503338}
+    - target: {fileID: 11432962, guid: 9d6cd4a9298736e4cac125dc7881653d, type: 2}
+      propertyPath: ElephantStrafeSpeed
+      value: 6.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432962, guid: 9d6cd4a9298736e4cac125dc7881653d, type: 2}
+      propertyPath: UseLanes
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432962, guid: 9d6cd4a9298736e4cac125dc7881653d, type: 2}
+      propertyPath: ObstacleSpeed
+      value: 3.3499999
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9d6cd4a9298736e4cac125dc7881653d, type: 2}
   m_IsPrefabParent: 0
@@ -4105,7 +4133,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 11
 --- !u!1 &1209471765
 GameObject:
   m_ObjectHideFlags: 0
