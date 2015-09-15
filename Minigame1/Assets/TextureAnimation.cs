@@ -7,39 +7,46 @@ public class TextureAnimation : MonoBehaviour {
 
     public float animationTime = 0;
 
+    float randomTime;
+
 	// Use this for initialization
 	void Start () {
 
-
+        randomTime = Random.Range(.5f, 2f);
 	
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
-        animationTime += Time.deltaTime;
+        randomTime -= Time.deltaTime;
 
-        if(animationTime < 3f)
-        {
-            noThunder();
-        }
-        else if(animationTime < 3.5f)
+        
+
+      if (randomTime < 0f) {
+
+            animationTime += Time.deltaTime;
+
+      if (animationTime < .5f)
         {
             thunder();
         }
-        else if(animationTime < 4f)
+        else if(animationTime < 1f)
         {
             noThunder();
         }
-        else if(animationTime < 5f)
+        else if(animationTime < 2f)
         {
             thunder();
         }
-        else if(animationTime >= 5f)
-        {
-            animationTime = 0f;
-        }
+            else if (animationTime < 3f)
+            {
+                noThunder();
+                randomTime = Random.Range(2f, 4f);
+                animationTime = 0f;
+            }
 
+        }
 	
 	}
 
