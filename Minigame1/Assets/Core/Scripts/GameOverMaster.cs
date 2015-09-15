@@ -15,7 +15,8 @@ namespace Assets.Core.Scripts
 
         public GameObject MainMenuButton;
         public GameObject RestartLevelButton;
-
+        public GameObject TuturialButtton;
+        
         public GameObject NavButtingLeft;
         public GameObject NavButtingRight;
 
@@ -74,6 +75,7 @@ namespace Assets.Core.Scripts
 
             MainMenuButton.SetActive(true);
             RestartLevelButton.SetActive(true);
+            TuturialButtton.SetActive(true);
             Destroy(NavButtingLeft);
             Destroy(NavButtingRight);
         }
@@ -87,6 +89,19 @@ namespace Assets.Core.Scripts
         {
             Application.LoadLevel(Constants.Scenes.MainMenuSceneName);
         }
+
+        // STUPOID UNITY!!!!
+        public void MainMenu2()
+        {
+            MainMenu();
+        }
+
+        public void RestartScene2()
+        {
+            RestartScene();
+        }
+
+
 
     }
 }
