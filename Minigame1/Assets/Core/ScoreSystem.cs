@@ -9,8 +9,10 @@ public class ScoreSystem : MonoBehaviour {
     public int pointsPose = 50, pointsFail = 25, lifes;
 
     public static int comboCount, points;
-    public static float comboReset = 20f, comboTimeDown;
+    public static float comboReset = 5f, comboTimeDown;
     public float startTime = 40f, timePoseComplete = 10f, timePoseFail = 5f, timeHitObstacle = 5f, timePoseCombo = 10f;
+
+    public GameObject star;
 
     // Use this for initialization
     void Start()
@@ -19,7 +21,7 @@ public class ScoreSystem : MonoBehaviour {
         comboCount = 1;
         comboTimeDown = comboReset;
         scoreText.text = "Score: " + points;
-        comboText.text = "Combo: x"+ comboCount;
+        comboText.text = "X"+ comboCount;
         lifeText.text = "Lives: " + lifes;
         //lifeTimeText.text = "Lifetime: " + startTime;
     }
@@ -33,7 +35,7 @@ public class ScoreSystem : MonoBehaviour {
         {
             comboTime();
         }
-        comboText.text = "Combo: x" + comboCount;
+        comboText.text = "X" + comboCount;
         lifes = cubeDeath.loseLife;
         //if (cubeDeath.lifeTimeHit)
         //{
@@ -61,6 +63,7 @@ public class ScoreSystem : MonoBehaviour {
             if (timeToCombo && 0 < comboTimeDown)
             {
                 comboCount += 1;
+                animateStar();
                 points += pointsPose * comboCount;
                 //startTime += timePoseCombo;
                 comboTimeReset();
@@ -107,5 +110,11 @@ public class ScoreSystem : MonoBehaviour {
     {
         comboTimeDown = comboReset;
         timeToCombo = false;
+    }
+
+    void animateStar()
+    {
+        star.GetComponent<Animation>().Play();
+        Debug.Log("Animated Star");
     }
 }
