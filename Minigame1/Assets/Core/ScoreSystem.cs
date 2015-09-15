@@ -9,16 +9,16 @@ public class ScoreSystem : MonoBehaviour {
     public int pointsPose = 50, pointsFail = 25, lifes;
 
     public static int comboCount, points;
-    public static float comboReset = 5f, comboTimeDown;
-    public float startTime = 40f, timePoseComplete = 10f, timePoseFail = 5f, timeHitObstacle = 5f, timePoseCombo = 10f;
+    public static float comboReset = 7f, comboTimeDown;
+    //public float startTime = 40f, timePoseComplete = 10f, timePoseFail = 5f, timeHitObstacle = 5f, timePoseCombo = 10f;
 
     public GameObject star;
 
     // Use this for initialization
     void Start()
     {
-        lifes = 5;
-        comboCount = 1;
+        lifes = 3;
+        comboCount = 0;
         comboTimeDown = comboReset;
         scoreText.text = "Score: " + points;
         comboText.text = "X"+ comboCount;
@@ -29,7 +29,7 @@ public class ScoreSystem : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        lifeTime();
+        //lifeTime();
         pointSystem();
         if (timeToCombo)
         {
@@ -37,6 +37,7 @@ public class ScoreSystem : MonoBehaviour {
         }
         comboText.text = "X" + comboCount;
         lifes = cubeDeath.loseLife;
+        Debug.Log("KOMMER DU NOGENSINDE HER IND?"+comboTimeDown);
         //if (cubeDeath.lifeTimeHit)
         //{
         //    startTime -= timeHitObstacle;
@@ -70,6 +71,7 @@ public class ScoreSystem : MonoBehaviour {
             }
             else
             {
+                comboCount = 2;
                 points += pointsPose;
                 //startTime += timePoseComplete;
             }
@@ -84,17 +86,27 @@ public class ScoreSystem : MonoBehaviour {
             timeToCombo = false;
             comboTimeReset();
             lifes = lifes - 1;
-            comboCount = 1;
+            comboCount = 0;
+        }
+        if (0 > comboTimeDown)
+        {
+            comboCount = 0;
+            comboText.text = "X" + comboCount;
+            comboTimeReset();
+        }
+        if (lifes < 0)
+        {
+            lifes = 0;
         }
         lifeText.text = "Lives: " + lifes;
         scoreText.text = "Score: " + points;
     }
 
-    void lifeTime()
-    {
-        startTime -= Time.deltaTime;
-        lifeTimeText.text = "Lifetime: " + (int)startTime;
-    }
+    //void lifeTime()
+    //{
+    //    startTime -= Time.deltaTime;
+    //    lifeTimeText.text = "Lifetime: " + (int)startTime;
+    //}
 
     void comboTime()
     {
