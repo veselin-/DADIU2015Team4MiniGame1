@@ -19,7 +19,7 @@ public class HeartController : MonoBehaviour {
 
     public void loseLife(int life)
     {
-        if(life < Hearts.Length && life > 0)
+        if(life < Hearts.Length && life >= 0)
             Hearts[life].SetActive(false);
     }
 }

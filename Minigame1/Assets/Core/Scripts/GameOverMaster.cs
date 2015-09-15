@@ -57,6 +57,7 @@ namespace Assets.Core.Scripts
 			AudioMngr.MusicStop ();
 			AudioMngr.WindStop ();
 			AudioMngr.FlappingStop ();
+			GameObject.FindGameObjectWithTag ("Player").GetComponent<BoxCollider>().enabled = false;
             _gameIsOver = true;
 
         }

@@ -889,10 +889,10 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 24396904, guid: a2242723eaeca9746bef0bc8b47a70df,
     type: 2}
   m_audioClip: {fileID: 8300000, guid: 7dda864ed44e8b94ab0a3d6156c4b703, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Priority: 128
   DopplerLevel: 1
