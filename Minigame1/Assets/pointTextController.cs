@@ -16,8 +16,9 @@ public class pointTextController : MonoBehaviour {
 	void Update () {
 
         GetComponent<Renderer>().enabled = GetComponent<Animation>().IsPlaying("pointFlyUp");
-	
-	}
+       
+
+    }
 
     public void showPoints(int points)
     {
