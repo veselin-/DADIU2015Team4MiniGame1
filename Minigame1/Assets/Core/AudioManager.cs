@@ -104,7 +104,7 @@ public class AudioManager : MonoBehaviour {
 	
 	public void HitGroundPlay()
 	{
-		hitGround.Play ();
+		hitGround.PlayDelayed(0.5f);
 	}
 	
 	public void HitGroundStop()
