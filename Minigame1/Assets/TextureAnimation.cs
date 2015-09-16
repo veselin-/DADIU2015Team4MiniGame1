@@ -27,7 +27,7 @@ public class TextureAnimation : MonoBehaviour {
 
             animationTime += Time.deltaTime;
 
-      if (animationTime < .5f)
+      if (animationTime < .2f)
         {
             thunder();
         }
@@ -35,7 +35,7 @@ public class TextureAnimation : MonoBehaviour {
         {
             noThunder();
         }
-        else if(animationTime < 2f)
+        else if(animationTime < 1.2f)
         {
             thunder();
         }

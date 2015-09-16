@@ -276,7 +276,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Sprite: {fileID: 21300000, guid: e5652c202d842a940ba2d396aa01b52a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ac5045d0b11fcf2498bdd4c88a2f9467, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1128,6 +1128,7 @@ GameObject:
   - 224: {fileID: 1354249567}
   - 222: {fileID: 1354249569}
   - 114: {fileID: 1354249568}
+  - 114: {fileID: 1354249570}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -1179,13 +1180,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Game Director\t\nTue Madsen \r\n\nArt Director\t\nJulie Tidsvilde Zintel\r\n\nGame
-    Designer\t\nSimon Bentzen\n\nProject Manager\t\nAmanda Natalie Rasmussen \n\r\nCG
-    Artist\t\nRosen Milev\r\nNadia Hamza \r\n\nLead Programmer\t\nIvan Dimov \r\n\nProgrammer\t\nAnders
-    Wessberg \r\nPeter Troelsen\nTomas Moesgaard\r\n\nPipeline Programmer\t\nVeselin
-    Yanakiev\n\nQA Programmer\t\nBo Olsen\r\n\nQA and UX\t\nDennis Godtfredsen\r\nSteffen
-    Nygaard\n\nAudio Designer\t\nMajbritt L\xF8fgreen\n\r\nLevel Designer\nNicholas
-    Bukdahl"
+  m_Text: 
 --- !u!222 &1354249569
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1193,6 +1188,18 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1354249566}
+--- !u!114 &1354249570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1354249566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceaf745504a18da429e64dafbeb87ce1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  localizedID: Credits
 --- !u!1 &1362614003
 GameObject:
   m_ObjectHideFlags: 0
@@ -1739,10 +1746,10 @@ RectTransform:
   - {fileID: 430049545}
   m_Father: {fileID: 240744477}
   m_RootOrder: 5
-  m_AnchorMin: {x: 0, y: .5}
-  m_AnchorMax: {x: 1, y: .63500005}
-  m_AnchoredPosition: {x: 0, y: .5}
-  m_SizeDelta: {x: -221.569946, y: -25}
+  m_AnchorMin: {x: .120543361, y: .244349211}
+  m_AnchorMax: {x: .883771777, y: .362000018}
+  m_AnchoredPosition: {x: -1, y: -.5}
+  m_SizeDelta: {x: -109.569946, y: -14}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1599671994
 MonoBehaviour:
@@ -2314,7 +2321,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Sprite: {fileID: 21300000, guid: 459d64089b5cc994fbbf62d490416a12, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0d24dcdbf94cff54e9a3d4b0652391ec, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
