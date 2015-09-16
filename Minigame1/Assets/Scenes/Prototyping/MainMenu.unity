@@ -1128,6 +1128,7 @@ GameObject:
   - 224: {fileID: 1354249567}
   - 222: {fileID: 1354249569}
   - 114: {fileID: 1354249568}
+  - 114: {fileID: 1354249570}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -1179,13 +1180,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Game Director\t\nTue Madsen \r\n\nArt Director\t\nJulie Tidsvilde Zintel\r\n\nGame
-    Designer\t\nSimon Bentzen\n\nProject Manager\t\nAmanda Natalie Rasmussen \n\r\nCG
-    Artist\t\nRosen Milev\r\nNadia Hamza \r\n\nLead Programmer\t\nIvan Dimov \r\n\nProgrammer\t\nAnders
-    Wessberg \r\nPeter Troelsen\nTomas Moesgaard\r\n\nPipeline Programmer\t\nVeselin
-    Yanakiev\n\nQA Programmer\t\nBo Olsen\r\n\nQA and UX\t\nDennis Godtfredsen\r\nSteffen
-    Nygaard\n\nAudio Designer\t\nMajbritt L\xF8fgreen\n\r\nLevel Designer\nNicholas
-    Bukdahl"
+  m_Text: 
 --- !u!222 &1354249569
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1193,6 +1188,18 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1354249566}
+--- !u!114 &1354249570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1354249566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceaf745504a18da429e64dafbeb87ce1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  localizedID: Credits
 --- !u!1 &1362614003
 GameObject:
   m_ObjectHideFlags: 0
