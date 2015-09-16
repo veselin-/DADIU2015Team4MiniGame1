@@ -5,8 +5,8 @@ public class obstacleMovement : MonoBehaviour {
 
     public static float speed = 5f, scale = 1f, obstacleSpeedTime;
     public static bool spawnInLanes = true, isEnabled = true;
-    public int secondsAfterEachIncrease = 30;
-    private float theIntervalOfSpeedBoost = 0.1f, maxSpeed = 6f;
+    public int secondsAfterEachIncrease;
+    private float theIntervalOfSpeedBoost = 0.1f, maxSpeed = 9f;
 
     private bool _isGameOver;
 
@@ -17,13 +17,14 @@ public class obstacleMovement : MonoBehaviour {
     void Start () {
         gameObject.SetActive(isEnabled);
         speed = 5f;
+        obstacleSpeedTime = 0;
+        secondsAfterEachIncrease = 20;
        // spawns = GameObject.FindGameObjectsWithTag("SpawnPoint");
     }
 	
 	// Update is called once per frame
 	void Update () {
         if (_isGameOver) return;
-
         transform.localScale = new Vector3(scale, scale, scale);
         differentWavesOfObstacles();
         transform.Translate(Vector3.up * Time.deltaTime * speed);
@@ -44,7 +45,7 @@ public class obstacleMovement : MonoBehaviour {
             }
             else
             {
-                secondsAfterEachIncrease += 30;
+                secondsAfterEachIncrease += 20;
                 speed += theIntervalOfSpeedBoost;
                 Debug.Log("DET HER ER HASTIGHEDEN NU" + speed);
             }
@@ -59,7 +60,7 @@ public class obstacleMovement : MonoBehaviour {
         {
             //Random.seed = (int)(Time.deltaTime * 10000);
             transform.position = SpawnPointController.spawns[Random.Range(0, SpawnPointController.spawns.Length)].transform.position;
-            Debug.Log(SpawnPointController.spawns.Length);
+            //Debug.Log(SpawnPointController.spawns.Length);
         }
         else
         { 
