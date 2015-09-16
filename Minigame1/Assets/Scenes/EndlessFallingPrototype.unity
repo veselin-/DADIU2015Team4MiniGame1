@@ -342,7 +342,7 @@ Transform:
   m_Children:
   - {fileID: 1467265958}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
 --- !u!1 &29800281
 GameObject:
   m_ObjectHideFlags: 0
@@ -3631,7 +3631,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Sprite: {fileID: 21300000, guid: 305d0e9b78523934cba936e4cc183b83, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ac5045d0b11fcf2498bdd4c88a2f9467, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
