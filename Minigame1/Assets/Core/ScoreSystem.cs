@@ -12,7 +12,7 @@ public class ScoreSystem : MonoBehaviour {
     public static float comboReset = 7f, comboTimeDown;
     //public float startTime = 40f, timePoseComplete = 10f, timePoseFail = 5f, timeHitObstacle = 5f, timePoseCombo = 10f;
 
-    public GameObject star, hearts, pointText;
+    public GameObject star, hearts, pointText, particles;
 
     // Use this for initialization
     void Start()
@@ -87,6 +87,7 @@ public class ScoreSystem : MonoBehaviour {
             }
 
             animateStar();
+            particles.GetComponent<ParticleSystem>().Play();
             poseComplete = false;
             timeToCombo = true;
             
