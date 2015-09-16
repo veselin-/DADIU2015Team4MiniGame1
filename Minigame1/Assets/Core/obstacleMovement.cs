@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class obstacleMovement : MonoBehaviour {
@@ -6,8 +7,8 @@ public class obstacleMovement : MonoBehaviour {
     public static float speed = 5f, scale = 1f, obstacleSpeedTime;
     public static bool spawnInLanes = true, isEnabled = true;
     public int secondsAfterEachIncrease;
-    private float theIntervalOfSpeedBoost = 0.05f, maxSpeed = 9f;
-
+    private float theIntervalOfSpeedBoost = 0.05f, maxSpeed = 8f;
+    public Text timerTest;
     private bool _isGameOver;
 
    // GameObject[] spawns;
@@ -48,6 +49,7 @@ public class obstacleMovement : MonoBehaviour {
                 speed += theIntervalOfSpeedBoost;
                 Debug.Log("DET HER ER HASTIGHEDEN NU" + speed);
             }
+            timerTest.text = "speed: " + speed.ToString("F2");
         }
     }
 
