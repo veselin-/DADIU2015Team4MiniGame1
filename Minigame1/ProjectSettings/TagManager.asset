@@ -3,7 +3,14 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - GameMaster
+  - SpawnPoint
+  - UICamera
+  - 3DCamera
+  - Obstacle
+  - AudioManager
+  - Toturial
   layers:
   - Default
   - TransparentFX
@@ -13,11 +20,11 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - MovementCollider
+  - 3dObject
+  - LeftButton
+  - RightButton
+  - Toturial
   - 
   - 
   - 
