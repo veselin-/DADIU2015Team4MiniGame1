@@ -60,7 +60,7 @@ public class cubeDeath : MonoBehaviour {
         {
             if (ScoreSystem.points > PlayerPrefs.GetInt("Best score"))
             {
-                PlayerPrefs.SetInt(LanguageManager.Instance.Get("Phrases/HighScore"), ScoreSystem.points);
+                PlayerPrefs.SetInt(("Best score"), ScoreSystem.points);
                 ScoreSystem.comboCount = 0;
                 ScoreSystem.comboTimeReset();
 
